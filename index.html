@@ -171,14 +171,18 @@
             transform: scale(1.05);
         }
 
-        /* Logo animation on page load */
-        .nav-logo img.logo-spin {
-            animation: logoSpin 1.5s ease-in-out;
+        /* Logo coin spin animation on page load */
+        .nav-logo img {
+            animation: coinSpin 5s ease-in-out;
         }
 
-        @keyframes logoSpin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
+        @keyframes coinSpin {
+            0% { transform: rotateY(0deg); }
+            20% { transform: rotateY(720deg); }
+            40% { transform: rotateY(1440deg); }
+            60% { transform: rotateY(2160deg); }
+            80% { transform: rotateY(2880deg); }
+            100% { transform: rotateY(3600deg); }
         }
 
         .nav-links {
@@ -429,6 +433,17 @@
             to {
                 opacity: 1;
                 transform: translateY(0);
+            }
+        }
+
+        @keyframes logoSpin {
+            from {
+                opacity: 0;
+                transform: rotate(-180deg) scale(0.5);
+            }
+            to {
+                opacity: 1;
+                transform: rotate(0deg) scale(1);
             }
         }
 
@@ -1196,7 +1211,7 @@
     <!-- Hero Section -->
     <section id="hero" class="hero">
         <div class="hero-content">
-            <img src="Color logo - no background.svg" alt="OMNI Logistics" style="max-width: 500px; width: 80%; margin-bottom: 2rem; animation: fadeInUp 1s ease-out;">
+            <img src="Color logo - no background.svg" alt="OMNI Logistics" style="max-width: 500px; width: 80%; margin-bottom: 2rem; animation: logoSpin 1.2s ease-out;">
             <h1>Your Trusted <span>Transportation</span> Partner</h1>
             <p>Professional distribution and transportation services</p>
         </div>
