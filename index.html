@@ -1,0 +1,2694 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OMNI Logistics - Professional Transportation & Freight Services in Greece</title>
+    <meta name="description" content="OMNI - Leading transportation and logistics company in Athens, Greece. Freight services, private transport, and comprehensive logistics solutions for businesses and individuals.">
+    <meta name="keywords" content="logistics Greece, freight Athens, transportation services, OMNI transport, cargo services Greece">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%23f65003' width='100' height='100'/><text x='50' y='70' font-size='60' fill='white' font-family='Arial' font-weight='bold' text-anchor='middle'>O</text></svg>">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="OMNI Logistics - Professional Transportation Services">
+    <meta property="og:description" content="Leading logistics and freight services in Athens, Greece">
+    <meta property="og:type" content="website">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-orange: #f65003;
+            --primary-blue: #088ee8;
+            --dark-black: #1a1a1a;
+            --grey: #666666;
+            --light-grey: #f8f9fa;
+            --white: #FFFFFF;
+            --border-color: #e5e5e5;
+        }
+
+        html {
+            scroll-behavior: auto;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: var(--dark-black);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Professional Icons */
+        .pro-icon {
+            width: 70px;
+            height: 70px;
+            margin: 0 auto 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            font-size: 2rem;
+            font-weight: bold;
+            position: relative;
+        }
+
+        .pro-icon.trophy { background: var(--primary-orange); color: white; }
+        .pro-icon.briefcase { background: var(--primary-blue); color: white; }
+        .pro-icon.shield { background: var(--primary-orange); color: white; }
+        .pro-icon.clock { background: var(--primary-blue); color: white; }
+        .pro-icon.dollar { background: var(--primary-orange); color: white; }
+        .pro-icon.leaf { background: var(--primary-blue); color: white; }
+
+        .cert-icon {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 1.5rem;
+            background: var(--primary-orange);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            color: white;
+            font-weight: bold;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .cert-icon.blue {
+            background: var(--primary-blue);
+        }
+
+        .cert-icon.green {
+            background: var(--primary-orange);
+        }
+
+        .cert-icon.gold {
+            background: var(--primary-blue);
+        }
+
+        .company-logo {
+            width: 120px;
+            height: 80px;
+            background: var(--light-grey);
+            border: 2px solid #ddd;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.9rem;
+            color: var(--grey);
+            font-weight: 600;
+            text-align: center;
+            padding: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .company-logo:hover {
+            border-color: var(--primary-orange);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .service-icon-pro {
+            width: 70px;
+            height: 70px;
+            margin: 0 auto 1.5rem;
+            background: var(--primary-orange);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            color: white;
+            font-weight: bold;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .service-icon-pro.blue {
+            background: var(--primary-blue);
+        }
+
+        .service-icon-pro.green {
+            background: var(--primary-orange);
+        }
+
+        .service-icon-pro.purple {
+            background: var(--primary-blue);
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: var(--white);
+            padding: 1.2rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+            z-index: 1000;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .nav-logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-logo img {
+            height: 50px;
+            width: auto;
+            transition: transform 0.3s ease;
+        }
+
+        .nav-logo img:hover {
+            transform: scale(1.05);
+        }
+
+        /* Logo animation on page load */
+        .nav-logo img.logo-spin {
+            animation: logoSpin 1.5s ease-in-out;
+        }
+
+        @keyframes logoSpin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 1.5rem;
+            list-style: none;
+            align-items: center;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--dark-black);
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-orange);
+        }
+
+        /* Dropdown Menu */
+        .nav-links li {
+            position: relative;
+        }
+
+        .dropdown {
+            position: relative;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            top: calc(100% + 10px);
+            left: 0;
+            background: white;
+            min-width: 220px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+            border-radius: 8px;
+            padding: 0.3rem 0;
+            z-index: 1000;
+            border-top: 3px solid var(--primary-orange);
+        }
+
+        .dropdown::before {
+            content: '';
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            height: 20px;
+            background: transparent;
+            z-index: 999;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+            animation: fadeInDown 0.3s ease;
+        }
+
+        .dropdown-content a {
+            display: block;
+            padding: 0.3rem 1.2rem;
+            color: var(--dark-black);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+            border-left: 3px solid transparent;
+        }
+
+        .dropdown-content a:hover {
+            background: var(--light-grey);
+            color: var(--primary-orange);
+            border-left-color: var(--primary-orange);
+            padding-left: 1.4rem;
+        }
+
+        .dropdown > a::after {
+            content: ' ▼';
+            font-size: 0.7rem;
+            margin-left: 0.3rem;
+            transition: transform 0.3s ease;
+        }
+
+        .dropdown:hover > a::after {
+            transform: rotate(180deg);
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .btn-quote {
+            background: var(--primary-orange);
+            color: white;
+            padding: 0.9rem 2.5rem;
+            border-radius: 4px;
+            font-weight: 600;
+            transition: all 0.2s ease;
+            border: none;
+        }
+
+        .btn-quote:hover {
+            background: #e64a00;
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(246, 80, 3, 0.2);
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            background: #fafafa;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: var(--dark-black);
+            padding: 150px 2rem 2rem;
+            position: sticky;
+            top: 0;
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="%23A8DADC" fill-opacity="0.1" d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,133.3C672,139,768,181,864,181.3C960,181,1056,139,1152,128C1248,117,1344,139,1392,149.3L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>') no-repeat bottom;
+            background-size: cover;
+            opacity: 0.5;
+        }
+
+        .hero-content {
+            max-width: 900px;
+            z-index: 1;
+            animation: fadeInUp 1s ease-out;
+            margin-top: 80px;
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            margin-bottom: 1.5rem;
+            font-weight: 900;
+            color: var(--dark-black);
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+            animation: fadeInUp 1.2s ease-out;
+        }
+
+        .hero h1 span {
+            color: var(--primary-orange);
+            position: relative;
+            display: inline-block;
+        }
+
+        .hero h1 span::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 8px;
+            background: linear-gradient(90deg, var(--primary-orange), var(--primary-blue));
+            opacity: 0.3;
+            border-radius: 4px;
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            color: var(--grey);
+            font-weight: 400;
+            animation: fadeInUp 1.4s ease-out;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary {
+            background: var(--primary-orange);
+            color: white;
+            padding: 1.2rem 3rem;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            border: 2px solid var(--primary-orange);
+        }
+
+        .btn-primary {
+            background: var(--primary-orange);
+            color: white;
+            padding: 1rem 2.5rem;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: 600;
+            font-size: 1.05rem;
+            transition: all 0.2s ease;
+            border: none;
+            display: inline-block;
+        }
+
+        .btn-primary:hover {
+            background: #e64a00;
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(246, 80, 3, 0.2);
+        }
+
+        .btn-secondary {
+            background: white;
+            color: var(--dark-black);
+            padding: 1rem 2.5rem;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: 600;
+            font-size: 1.05rem;
+            transition: all 0.2s ease;
+            border: 1px solid var(--border-color);
+            display: inline-block;
+        }
+
+        .btn-secondary:hover {
+            border-color: var(--dark-black);
+            transform: translateY(-1px);
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Loading Screen */
+        #loading-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, var(--primary-orange) 0%, var(--primary-blue) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+            opacity: 1;
+            visibility: visible;
+            transition: opacity 0.5s ease, visibility 0.5s ease;
+        }
+
+        #loading-screen.hidden {
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+        }
+
+        .loader {
+            width: 80px;
+            height: 80px;
+            border: 8px solid rgba(255, 255, 255, 0.3);
+            border-top: 8px solid white;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* Scroll to Top Button */
+        #scroll-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background: var(--primary-orange);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            font-size: 1.5rem;
+            cursor: pointer;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+            transition: all 0.2s ease;
+            opacity: 0;
+            visibility: hidden;
+            z-index: 999;
+        }
+
+        #scroll-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        #scroll-top:hover {
+            background: #e64a00;
+            transform: translateY(-2px);
+        }
+
+        /* Cookie Consent Banner */
+        #cookie-banner {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: var(--dark-black);
+            color: white;
+            padding: 1.5rem 5%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 2rem;
+            box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+            z-index: 998;
+            transform: translateY(100%);
+            transition: transform 0.3s ease;
+        }
+
+        #cookie-banner.show {
+            transform: translateY(0);
+        }
+
+        #cookie-banner p {
+            margin: 0;
+            flex: 1;
+        }
+
+        #cookie-banner button {
+            background: var(--primary-orange);
+            color: white;
+            border: none;
+            padding: 0.8rem 2rem;
+            border-radius: 5px;
+            font-weight: 600;
+            cursor: pointer;
+            white-space: nowrap;
+            transition: all 0.3s ease;
+        }
+
+        #cookie-banner button:hover {
+            background: #e64a00;
+        }
+
+        /* Live Chat Widget */
+        #chat-widget {
+            position: fixed;
+            bottom: 100px;
+            right: 30px;
+            width: 60px;
+            height: 60px;
+            background: var(--primary-blue);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            cursor: pointer;
+            box-shadow: 0 5px 20px rgba(8, 142, 232, 0.4);
+            transition: all 0.3s ease;
+            z-index: 997;
+            animation: pulse 2s infinite;
+        }
+
+        #chat-widget:hover {
+            background: var(--primary-orange);
+            transform: scale(1.1);
+        }
+
+        @keyframes pulse {
+            0%, 100% { box-shadow: 0 5px 20px rgba(8, 142, 232, 0.4); }
+            50% { box-shadow: 0 5px 30px rgba(8, 142, 232, 0.7); }
+        }
+
+        /* Scroll Animations */
+        .fade-in {
+            opacity: 0 !important;
+            transform: translateY(30px) !important;
+            transition: opacity 0.6s ease, transform 0.6s ease !important;
+        }
+
+        .fade-in.visible {
+            opacity: 1 !important;
+            transform: translateY(0) !important;
+        }
+
+        /* Section Styles */
+        section {
+            padding: 5rem 10%;
+            scroll-margin-top: 80px;
+            position: relative;
+            z-index: 2;
+            background: white;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 1rem;
+            color: var(--dark-black);
+            font-weight: 700;
+            letter-spacing: -0.5px;
+        }
+
+        .section-title span {
+            color: var(--primary-orange);
+        }
+
+        .section-subtitle {
+            text-align: center;
+            font-size: 1.2rem;
+            color: var(--grey);
+            margin-bottom: 4rem;
+        }
+
+        /* Services Section */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2.5rem;
+            margin-top: 3rem;
+        }
+
+        .service-card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+            transition: all 0.2s ease;
+            border-left: 3px solid var(--primary-orange);
+        }
+
+        .service-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+        }
+
+        .service-icon {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--primary-orange);
+        }
+
+        .service-card h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            color: var(--dark-black);
+        }
+
+        .service-card p {
+            color: var(--grey);
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+
+        .service-card ul {
+            list-style: none;
+            color: var(--grey);
+        }
+
+        .service-card ul li {
+            padding: 0.5rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .service-card ul li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--primary-orange);
+            font-weight: bold;
+        }
+
+        /* Stats Section */
+        .stats-section {
+            background: linear-gradient(135deg, var(--primary-orange) 0%, #e64a00 100%);
+            color: white;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 3rem;
+            text-align: center;
+        }
+
+        .stat-item h2 {
+            font-size: 4rem;
+            font-weight: 900;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-item p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        /* Features Section */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .feature-card {
+            background: var(--light-grey);
+            padding: 2.5rem 2rem;
+            border-radius: 10px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .feature-card:hover {
+            background: var(--primary-blue);
+            transform: scale(1.05);
+        }
+
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .feature-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--dark-black);
+        }
+
+        /* Contact Form */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: start;
+        }
+
+        .contact-info h3 {
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            color: var(--dark-black);
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .contact-icon {
+            font-size: 2rem;
+            color: var(--primary-orange);
+            min-width: 40px;
+        }
+
+        .contact-form {
+            background: white;
+            padding: 3rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: var(--dark-black);
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 1rem;
+            border: 2px solid var(--light-grey);
+            border-radius: 5px;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: var(--primary-orange);
+        }
+
+        .form-group textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+
+        .btn-submit {
+            background: var(--primary-orange);
+            color: white;
+            padding: 1rem 3rem;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 100%;
+        }
+
+        .btn-submit:hover {
+            background: #e64a00;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(230, 57, 70, 0.3);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark-black);
+            color: white;
+            padding: 4rem 10% 2rem;
+            position: relative;
+            z-index: 10;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-section h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--primary-orange);
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-section ul li a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-section ul li a:hover {
+            color: var(--primary-orange);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        /* Mobile Menu Toggle */
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            z-index: 1001;
+        }
+
+        .menu-toggle span {
+            width: 30px;
+            height: 3px;
+            background: var(--dark-black);
+            transition: all 0.3s ease;
+        }
+
+        .menu-toggle.active span:nth-child(1) {
+            transform: rotate(45deg) translate(8px, 8px);
+        }
+
+        .menu-toggle.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .menu-toggle.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(7px, -7px);
+        }
+
+        .nav-links.mobile-active {
+            display: flex;
+            flex-direction: column;
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: 80%;
+            max-width: 400px;
+            height: 100vh;
+            background: white;
+            padding: 6rem 2rem 2rem;
+            box-shadow: -5px 0 20px rgba(0, 0, 0, 0.2);
+            animation: slideIn 0.3s ease;
+        }
+
+        @keyframes slideIn {
+            from { transform: translateX(100%); }
+            to { transform: translateX(0); }
+        }
+
+        /* Fleet Gallery */
+        .fleet-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-top: 4rem;
+        }
+
+        .fleet-gallery-item {
+            position: relative;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            transition: all 0.3s ease;
+        }
+
+        .fleet-gallery-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(8, 142, 232, 0.3);
+        }
+
+        .fleet-gallery-item img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .fleet-gallery-item .caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(17, 17, 17, 0.9), transparent);
+            color: white;
+            padding: 2rem 1.5rem 1rem;
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 968px) {
+            .hero h1 {
+                font-size: 3rem;
+            }
+
+            .hero p {
+                font-size: 1.2rem;
+            }
+
+            .section-title {
+                font-size: 2.5rem;
+            }
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .nav-links:not(.mobile-active) {
+                display: none;
+            }
+
+            .menu-toggle {
+                display: flex;
+            }
+
+            section {
+                padding: 4rem 5%;
+            }
+
+            #cookie-banner {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            #scroll-top, #chat-widget {
+                bottom: 20px;
+                right: 20px;
+            }
+
+            #chat-widget {
+                bottom: 90px;
+            }
+
+            /* Mobile dropdown */
+            .dropdown-content {
+                position: static;
+                display: none;
+                box-shadow: none;
+                background: var(--light-grey);
+                border-radius: 0;
+                margin: 0.5rem 0;
+                border-top: 2px solid var(--primary-orange);
+            }
+
+            .dropdown.active .dropdown-content {
+                display: block;
+            }
+
+            .dropdown > a::after {
+                float: right;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero p {
+                font-size: 1.1rem;
+            }
+
+            .services-grid,
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+            }
+
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            section {
+                padding: 3rem 5%;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .section-subtitle {
+                font-size: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .hero-content {
+                margin-top: 40px;
+            }
+
+            section {
+                padding: 2rem 4%;
+            }
+
+            .section-title {
+                font-size: 1.8rem;
+            }
+
+            .nav-links {
+                gap: 0.5rem;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            input, select, textarea {
+                font-size: 16px !important;
+            }
+
+            .btn-primary, .btn-secondary {
+                padding: 0.9rem 2rem;
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loading-screen">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Cookie Consent Banner -->
+    <div id="cookie-banner">
+        <p>🍪 We use cookies to improve your experience. By continuing to use our site, you accept our <a href="#privacy" style="color: var(--primary-orange); text-decoration: underline;">Privacy Policy</a>.</p>
+        <button onclick="acceptCookies()">Accept</button>
+    </div>
+
+    <!-- Scroll to Top Button -->
+    <button id="scroll-top" onclick="scrollToTop()">↑</button>
+
+    <!-- Live Chat Widget -->
+    <div id="chat-widget" onclick="openChat()" title="Chat with us!">💬</div>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-logo"><img src="Color logo - no background.svg" alt="OMNI Logistics"></div>
+        <button class="menu-toggle" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <ul class="nav-links">
+            <li><a href="#" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;">Home</a></li>
+            <li class="dropdown">
+                <a href="#company">Our Company</a>
+                <div class="dropdown-content">
+                    <a href="#company">About Us</a>
+                    <a href="#who-is-omni">Who is OMNI</a>
+                    <a href="#why-omni">Why Choose OMNI</a>
+                </div>
+            </li>
+            <li><a href="#fleet">Fleet</a></li>
+            <li class="dropdown">
+                <a href="#services">Our Services</a>
+                <div class="dropdown-content">
+                    <a href="#services">Our Services</a>
+                    <a href="#calculator">Request a Quote</a>
+                    <a href="#coverage">Service Coverage</a>
+                    <a href="#industries">Industry Solutions</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="#trust">OMNI Experience</a>
+                <div class="dropdown-content">
+                    <a href="#trust">Delivery for Leading Companies</a>
+                    <a href="#faq">Frequently Asked Questions</a>
+                    <a href="#video">This Is Us</a>
+                </div>
+            </li>
+            <li><a href="#careers">Careers</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#quote" class="btn-quote">Get Quote</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <div class="hero-content">
+            <img src="Color logo - no background.svg" alt="OMNI Logistics" style="max-width: 500px; width: 80%; margin-bottom: 2rem; animation: fadeInUp 1s ease-out;">
+            <h1>Your Trusted <span>Transportation</span> Partner</h1>
+            <p>Professional distribution and transportation services</p>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section">
+        <h2 class="section-title" style="color: white;">OMNI by the <span style="color: var(--primary-blue);">Numbers</span></h2>
+        <p class="section-subtitle" style="color: rgba(255, 255, 255, 0.8);">Trusted by businesses across Greece</p>
+        
+        <div class="stats-grid">
+            <div class="stat-item">
+                <h2 class="counter" data-target="4">0</h2>
+                <p>Years in Business</p>
+            </div>
+            <div class="stat-item">
+                <h2 class="counter" data-target="10">0</h2>
+                <p>Fleet Vehicles</p>
+            </div>
+            <div class="stat-item">
+                <h2 class="counter" data-target="3900">0</h2>
+                <p>Deliveries per Month</p>
+            </div>
+            <div class="stat-item">
+                <h2 class="counter" data-target="98.6" data-decimal="1" data-suffix="%">0</h2>
+                <p>On-Time Delivery Rate</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Company Section -->
+    <section id="company" style="background: white;">
+        <div style="max-width: 1200px; margin: 0 auto;">
+            <h2 class="section-title">Our <span>Company</span></h2>
+            <p class="section-subtitle">Professional logistics solutions built on experience and innovation</p>
+            
+            <div style="background: linear-gradient(135deg, var(--primary-orange) 0%, #ff8c42 100%); padding: 3px; border-radius: 20px; box-shadow: 0 5px 15px rgba(246, 80, 3, 0.15); margin-bottom: 3rem;">
+                <div style="background: white; padding: 4rem 3rem; border-radius: 18px;">
+                    <p style="font-size: 1.25rem; line-height: 1.8; color: var(--dark-black); margin-bottom: 1.5rem; font-weight: 500;">
+                        <strong style="color: var(--primary-orange);">OMNI</strong> is a modern city logistics company, originating from the <strong>3PL services</strong> sector. We were created to cover the critical last-mile segment, offering the upgraded solutions that today's market demands.
+                    </p>
+                    <p style="font-size: 1.25rem; line-height: 1.8; color: var(--dark-black); margin: 0; font-weight: 500;">
+                        With a steadfast commitment to proper, professional, and legally compliant delivery, OMNI continuously invests in human resources, expertise, and equipment, strengthening the sales and customer service of our partners.
+                    </p>
+                </div>
+            </div>
+
+            <div style="background: linear-gradient(135deg, var(--primary-blue) 0%, #4a90e2 100%); padding: 3px; border-radius: 15px; box-shadow: 0 5px 15px rgba(12, 66, 125, 0.15); margin-bottom: 3rem;">
+                <div style="background: white; padding: 3rem; border-radius: 13px;">
+                    <h3 style="color: var(--dark-black); font-size: 2rem; margin-bottom: 1.5rem; display: flex; align-items: center; gap: 1rem;">
+                        <span style="width: 50px; height: 4px; background: var(--primary-blue); border-radius: 2px;"></span>
+                        The Company
+                    </h3>
+                    <p style="font-size: 1.15rem; line-height: 1.9; color: var(--grey); margin: 0;">
+                        <strong style="color: var(--primary-blue);">OMNI</strong> is a <strong>3PL spin-off company</strong>, leveraging deep industry experience and offering comprehensive city logistics services. We serve market demands with high-quality services, full compliance with new legislative frameworks, and absolute professionalism at every stage of delivery.
+                    </p>
+                </div>
+            </div>
+
+            <div id="who-is-omni" style="background: linear-gradient(135deg, var(--primary-orange) 0%, #ff8c42 100%); padding: 3px; border-radius: 20px; box-shadow: 0 5px 15px rgba(246, 80, 3, 0.15);">
+                <div style="background: white; padding: 4rem 3rem; border-radius: 18px;">
+                    <h3 style="color: var(--dark-black); font-size: 2rem; margin-bottom: 1.5rem; display: flex; align-items: center; gap: 1rem;">
+                        <span style="width: 50px; height: 4px; background: var(--primary-orange); border-radius: 2px;"></span>
+                        Who is OMNI
+                    </h3>
+                
+                <p style="font-size: 1.15rem; line-height: 1.9; color: var(--dark-black); margin-bottom: 1.5rem; font-weight: 500;">
+                    OMNI was founded on decades of experience in the logistics sector. We have specialized personnel with experience from multinational company projects and a fleet of high-specification vehicles.
+                </p>
+                
+                <p style="font-size: 1.15rem; line-height: 1.9; color: var(--dark-black); margin-bottom: 1.5rem; font-weight: 500;">
+                    We are committed to <strong style="color: var(--primary-orange);">sustainability</strong>, investing in new trucks as well as <strong style="color: var(--primary-orange);">fully electric vehicles</strong> up to 3.5 tons, reducing our carbon footprint and complying with new European directives for urban distribution.
+                </p>
+                
+                <p style="font-size: 1.15rem; line-height: 1.9; color: var(--dark-black); margin-bottom: 1.5rem; font-weight: 500;">
+                    Operating from a <strong style="color: var(--primary-blue);">local Hub</strong>, we cover X-docking project needs and provide the necessary immediacy in connecting the Thriasio Plain with the urban fabric.
+                </p>
+                
+                <p style="font-size: 1.15rem; line-height: 1.9; color: var(--dark-black); margin: 0; font-weight: 500;">
+                    The Hub can function as an <strong style="color: var(--primary-blue);">Urban Consolidation Center (UCC)</strong>, in accordance with European practices and modern city logistics standards.
+                </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose OMNI Section -->
+    <section id="why-omni" style="background: white;">
+        <h2 class="section-title">Why Choose <span>OMNI</span></h2>
+        <p class="section-subtitle">What sets us apart from the competition</p>
+        
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="pro-icon trophy">3PL</div>
+                <h3>Multi-Year 3PL Expertise</h3>
+                <p>Years of experience providing <strong>3PL services</strong> with complete understanding of last-mile delivery needs.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="pro-icon briefcase">◆</div>
+                <h3>Client Representation</h3>
+                <p>Every contact with the final recipient is a <strong>representation of our client</strong> - we understand this responsibility.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="pro-icon shield">▣</div>
+                <h3>Appliance Specialists</h3>
+                <p>Specialized expertise in <strong>white and black goods deliveries</strong> with careful handling and professional service.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="pro-icon clock">❄</div>
+                <h3>Commercial Refrigeration</h3>
+                <p>Extensive experience in <strong>delivery and installation of commercial refrigerators</strong> for businesses.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="pro-icon dollar">POD</div>
+                <h3>POD Systems</h3>
+                <p>Using <strong>Proof of Delivery systems</strong> for over 5 years, ensuring full tracking and documentation.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="pro-icon leaf">⚖</div>
+                <h3>Code of Ethics</h3>
+                <p>Operating under a strict <strong>code of ethics</strong> with clear principles of operation, responsibility, and professionalism.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="pro-icon shield">SOP</div>
+                <h3>Standardized Procedures</h3>
+                <p>Faithful application of <strong>S.O.P.s (Standard Operating Procedures)</strong> across all services for consistent quality.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="pro-icon trophy">↗</div>
+                <h3>Continuous Improvement</h3>
+                <p>Ongoing enhancement through internal reorganization and active client participation in our evolution process.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Fleet Section -->
+    <section id="fleet" style="background: var(--light-grey);">
+        <h2 class="section-title">Our <span>Fleet</span></h2>
+        <p class="section-subtitle">Modern, well-maintained vehicles for every logistics need</p>
+        
+        <div class="services-grid">
+            <div class="service-card">
+                <div style="margin: 0 auto 1.5rem; max-width: 120px;">
+                    <div style="height: 4px; background: linear-gradient(90deg, var(--primary-orange) 0%, #ff8c42 100%); border-radius: 2px;"></div>
+                </div>
+                <h3>Vans</h3>
+                <div style="background: var(--light-grey); padding: 1.5rem; border-radius: 8px; margin-bottom: 1.5rem;">
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; text-align: left;">
+                        <div>
+                            <p style="color: var(--primary-orange); font-weight: 700; font-size: 0.85rem; margin-bottom: 0.3rem;">CAPACITY</p>
+                            <p style="color: var(--dark-black); font-weight: 600; font-size: 1.1rem; margin: 0;">Up to 1,000 kg</p>
+                        </div>
+                        <div>
+                            <p style="color: var(--primary-orange); font-weight: 700; font-size: 0.85rem; margin-bottom: 0.3rem;">VOLUME</p>
+                            <p style="color: var(--dark-black); font-weight: 600; font-size: 1.1rem; margin: 0;">6-8 m³</p>
+                        </div>
+                    </div>
+                </div>
+                <p style="color: var(--grey); line-height: 1.6;">Perfect for urban deliveries, documents, and small parcels.</p>
+            </div>
+
+            <div class="service-card">
+                <div style="margin: 0 auto 1.5rem; max-width: 160px;">
+                    <div style="height: 8px; background: linear-gradient(90deg, var(--primary-blue) 0%, #42b4ff 100%); border-radius: 2px;"></div>
+                </div>
+                <h3>Small Trucks</h3>
+                <div style="background: var(--light-grey); padding: 1.5rem; border-radius: 8px; margin-bottom: 1.5rem;">
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; text-align: left;">
+                        <div>
+                            <p style="color: var(--primary-blue); font-weight: 700; font-size: 0.85rem; margin-bottom: 0.3rem;">CAPACITY</p>
+                            <p style="color: var(--dark-black); font-weight: 600; font-size: 1.1rem; margin: 0;">Up to 3,500 kg</p>
+                        </div>
+                        <div>
+                            <p style="color: var(--primary-blue); font-weight: 700; font-size: 0.85rem; margin-bottom: 0.3rem;">VOLUME</p>
+                            <p style="color: var(--dark-black); font-weight: 600; font-size: 1.1rem; margin: 0;">15-20 m³</p>
+                        </div>
+                    </div>
+                </div>
+                <p style="color: var(--grey); line-height: 1.6;">Ideal for palletized goods and medium-sized shipments.</p>
+            </div>
+
+            <div class="service-card">
+                <div style="margin: 0 auto 1.5rem; max-width: 200px;">
+                    <div style="height: 12px; background: linear-gradient(90deg, var(--primary-orange) 0%, #ff8c42 100%); border-radius: 2px;"></div>
+                </div>
+                <h3>Medium Trucks</h3>
+                <div style="background: var(--light-grey); padding: 1.5rem; border-radius: 8px; margin-bottom: 1.5rem;">
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; text-align: left;">
+                        <div>
+                            <p style="color: var(--primary-orange); font-weight: 700; font-size: 0.85rem; margin-bottom: 0.3rem;">CAPACITY</p>
+                            <p style="color: var(--dark-black); font-weight: 600; font-size: 1.1rem; margin: 0;">Up to 6,000 kg</p>
+                        </div>
+                        <div>
+                            <p style="color: var(--primary-orange); font-weight: 700; font-size: 0.85rem; margin-bottom: 0.3rem;">VOLUME</p>
+                            <p style="color: var(--dark-black); font-weight: 600; font-size: 1.1rem; margin: 0;">24-35 m³</p>
+                        </div>
+                    </div>
+                </div>
+                <p style="color: var(--grey); line-height: 1.6;">Full truckload shipments and long-distance freight.</p>
+            </div>
+
+            <div class="service-card">
+                <div style="margin: 0 auto 1.5rem; max-width: 160px;">
+                    <div style="height: 8px; background: linear-gradient(90deg, var(--primary-blue) 0%, #42b4ff 100%); border-radius: 2px;"></div>
+                </div>
+                <h3>Refrigerated Vehicles</h3>
+                <div style="background: var(--light-grey); padding: 1.5rem; border-radius: 8px; margin-bottom: 1.5rem;">
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; text-align: left;">
+                        <div>
+                            <p style="color: var(--primary-blue); font-weight: 700; font-size: 0.85rem; margin-bottom: 0.3rem;">TEMPERATURE</p>
+                            <p style="color: var(--dark-black); font-weight: 600; font-size: 1.1rem; margin: 0;">-25°C to +25°C</p>
+                        </div>
+                        <div>
+                            <p style="color: var(--primary-blue); font-weight: 700; font-size: 0.85rem; margin-bottom: 0.3rem;">MONITORING</p>
+                            <p style="color: var(--dark-black); font-weight: 600; font-size: 1.1rem; margin: 0;">Real-time</p>
+                        </div>
+                    </div>
+                </div>
+                <p style="color: var(--grey); line-height: 1.6;">Temperature-controlled transport for sensitive goods.</p>
+            </div>
+        </div>
+
+        <!-- Fleet Photo Gallery -->
+        <div style="margin-top: 5rem;">
+            <h3 style="text-align: center; font-size: 2.5rem; margin-bottom: 1rem; color: var(--dark-black);">Our Fleet in <span style="color: var(--primary-orange);">Action</span></h3>
+            <p style="text-align: center; font-size: 1.2rem; color: var(--grey); margin-bottom: 3rem;">See our modern, well-maintained vehicles ready to serve you</p>
+            
+            <div class="fleet-gallery">
+                <div class="fleet-gallery-item">
+                    <img src="trucks_Overview.jpg" alt="OMNI Fleet Overview">
+                    <div class="caption">Fleet Overview - Ready for Service</div>
+                </div>
+
+                <div class="fleet-gallery-item">
+                    <img src="big_trucks_overview.jpg" alt="Large Trucks Fleet">
+                    <div class="caption">Last Mile Delivery - Fleet</div>
+                </div>
+
+                <div class="fleet-gallery-item">
+                    <img src="Big_truck_blue.jpg" alt="Blue Large Truck">
+                    <div class="caption">Medium Truck - Urban deliveries</div>
+                </div>
+
+                <div class="fleet-gallery-item">
+                    <img src="Medium_truck.jpg" alt="Medium Delivery Truck">
+                    <div class="caption">Medium Truck - Long distance</div>
+                </div>
+
+                <div class="fleet-gallery-item">
+                    <img src="Medium_truck_white.jpg" alt="White Medium Truck">
+                    <div class="caption">Medium Truck - Versatile Transport</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" style="background: var(--light-grey);">
+        <h2 class="section-title">Our <span>Services</span></h2>
+        <p class="section-subtitle">Comprehensive logistics solutions tailored to your needs</p>
+        
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon-pro">■</div>
+                <h3>Transportation Services</h3>
+                <p>Complete transportation solutions for businesses and individuals with reliable and professional service.</p>
+                <ul>
+                    <li><strong>B2B</strong> & <strong>B2C</strong> goods distribution</li>
+                    <li>Parcel and small package delivery</li>
+                    <li>Corporate transfers between branches and central warehouses</li>
+                    <li>Provincial agency deliveries</li>
+                </ul>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon-pro blue">📦</div>
+                <h3>Courier Services</h3>
+                <p>Fast and reliable courier solutions for businesses and e-commerce operations.</p>
+                <ul>
+                    <li>Parcel deliveries</li>
+                    <li>E-shop support and fulfillment</li>
+                    <li>Express courier services</li>
+                    <li>Same-day delivery options</li>
+                </ul>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon-pro green">🏠</div>
+                <h3>Moving Services</h3>
+                <p>Professional moving services with careful handling of your belongings and equipment.</p>
+                <ul>
+                    <li>Residential moves</li>
+                    <li>Corporate and office relocations</li>
+                    <li>Professional packing services</li>
+                    <li>Furniture handling</li>
+                </ul>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon-pro purple">■</div>
+                <h3>Warehousing & Distribution</h3>
+                <p>State-of-the-art warehousing facilities with advanced inventory management systems and efficient distribution networks.</p>
+                <ul>
+                    <li>Secure storage facilities</li>
+                    <li>Inventory management</li>
+                    <li>Order fulfillment</li>
+                    <li>Cross-docking services</li>
+                    <li>Pick and pack operations</li>
+                </ul>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon-pro">◆</div>
+                <h3>Last Mile Delivery</h3>
+                <p>Efficient final delivery solutions ensuring your products reach customers quickly and safely.</p>
+                <ul>
+                    <li>Urban delivery services</li>
+                    <li>Residential delivery</li>
+                    <li>Scheduled time windows</li>
+                    <li>Signature on delivery</li>
+                    <li>Failed delivery management</li>
+                </ul>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon-pro blue">●</div>
+                <h3>Real-Time Tracking</h3>
+                <p>Advanced GPS tracking system allowing you to monitor your shipments 24/7 from pickup to delivery.</p>
+                <ul>
+                    <li>Live GPS tracking</li>
+                    <li>SMS & email updates</li>
+                    <li>Proof of delivery</li>
+                    <li>Estimated delivery times</li>
+                    <li>Route optimization</li>
+                </ul>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon-pro">▲</div>
+                <h3>International Logistics</h3>
+                <p>Seamless cross-border transportation with customs clearance and documentation support.</p>
+                <ul>
+                    <li>European Union coverage</li>
+                    <li>Customs documentation</li>
+                    <li>Import/export services</li>
+                    <li>Multi-modal transport</li>
+                    <li>Trade compliance</li>
+                </ul>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon-pro blue">►</div>
+                <h3>Express & Same-Day</h3>
+                <p>Urgent shipments? We offer express and same-day delivery services throughout Athens and major Greek cities.</p>
+                <ul>
+                    <li>Same-day delivery Athens</li>
+                    <li>Express nationwide</li>
+                    <li>Priority handling</li>
+                    <li>Time-definite delivery</li>
+                    <li>Emergency logistics</li>
+                </ul>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon-pro green">+</div>
+                <h3>Value-Added Services</h3>
+                <p>Comprehensive additional services that go beyond standard delivery to meet all your logistics needs.</p>
+                <ul>
+                    <li>P.O.D. / I.O.D. (Proof of Delivery / Installation on Delivery)</li>
+                    <li>Cash on Delivery (COD) services</li>
+                    <li>White goods installation and setup</li>
+                    <li>Collection for recycling or disposal</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quote Calculator Section -->
+    <section id="calculator" style="background: white;">
+        <h2 class="section-title">Request a <span>Quote</span></h2>
+        <p class="section-subtitle">Tell us about your shipment and we'll get back to you with a customized quote</p>
+        
+        <div style="max-width: 800px; margin: 0 auto; background: linear-gradient(135deg, var(--primary-orange) 0%, #ff8c42 100%); padding: 3rem; border-radius: 15px; box-shadow: 0 10px 40px rgba(255, 107, 0, 0.3);">
+            <form action="https://formsubmit.co/omni@omnids.gr" method="POST">
+                <input type="hidden" name="_subject" value="New Quote Request - OMNI Logistics">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_next" value="#thank-you">
+                <input type="hidden" name="_template" value="table">
+                
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; margin-bottom: 1.5rem;">
+                    <div class="form-group">
+                        <label style="color: white; font-weight: 600;">Your Name *</label>
+                        <input type="text" name="name" placeholder="Full Name" required style="width: 100%; padding: 1rem; border: 2px solid rgba(255,255,255,0.3); border-radius: 5px; background: white;">
+                    </div>
+                    <div class="form-group">
+                        <label style="color: white; font-weight: 600;">Your Email *</label>
+                        <input type="email" name="email" placeholder="email@example.com" required style="width: 100%; padding: 1rem; border: 2px solid rgba(255,255,255,0.3); border-radius: 5px; background: white;">
+                    </div>
+                    <div class="form-group">
+                        <label style="color: white; font-weight: 600;">Phone Number *</label>
+                        <input type="tel" name="phone" placeholder="+30 123 456 7890" required style="width: 100%; padding: 1rem; border: 2px solid rgba(255,255,255,0.3); border-radius: 5px; background: white;">
+                    </div>
+                    <div class="form-group">
+                        <label style="color: white; font-weight: 600;">Service Type *</label>
+                        <select name="service" required style="width: 100%; padding: 1rem; border: 2px solid rgba(255,255,255,0.3); border-radius: 5px; background: white;">
+                            <option value="">Select service</option>
+                            <option value="express">Express Same-Day</option>
+                            <option value="standard">Standard Delivery</option>
+                            <option value="international">International</option>
+                            <option value="freight">Full Truck Load</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label style="color: white; font-weight: 600;">From (City) *</label>
+                        <input type="text" name="from_city" placeholder="e.g., Athens" required style="width: 100%; padding: 1rem; border: 2px solid rgba(255,255,255,0.3); border-radius: 5px; background: white;">
+                    </div>
+                    <div class="form-group">
+                        <label style="color: white; font-weight: 600;">To (City) *</label>
+                        <input type="text" name="to_city" placeholder="e.g., Thessaloniki" required style="width: 100%; padding: 1rem; border: 2px solid rgba(255,255,255,0.3); border-radius: 5px; background: white;">
+                    </div>
+                    <div class="form-group">
+                        <label style="color: white; font-weight: 600;">Weight (kg) *</label>
+                        <input type="number" name="weight" placeholder="0" required style="width: 100%; padding: 1rem; border: 2px solid rgba(255,255,255,0.3); border-radius: 5px; background: white;">
+                    </div>
+                    <div class="form-group">
+                        <label style="color: white; font-weight: 600;">Dimensions (cm)</label>
+                        <input type="text" name="dimensions" placeholder="L x W x H" style="width: 100%; padding: 1rem; border: 2px solid rgba(255,255,255,0.3); border-radius: 5px; background: white;">
+                    </div>
+                    <div class="form-group">
+                        <label style="color: white; font-weight: 600;">Package Type *</label>
+                        <select name="package" id="packageType" required style="width: 100%; padding: 1rem; border: 2px solid rgba(255,255,255,0.3); border-radius: 5px; background: white;" onchange="togglePackageFields()">
+                            <option value="">Please select</option>
+                            <option value="parcel">Parcel</option>
+                            <option value="pallet">Pallet</option>
+                            <option value="container">Container</option>
+                        </select>
+                    </div>
+                    <div class="form-group" id="parcelQuantityField" style="display: none;">
+                        <label style="color: white; font-weight: 600;">Number of Parcels *</label>
+                        <input type="number" name="number_of_parcels" id="parcelQuantity" placeholder="0" min="1" style="width: 100%; padding: 1rem; border: 2px solid rgba(255,255,255,0.3); border-radius: 5px; background: white;">
+                    </div>
+                    <div class="form-group" id="palletQuantityField" style="display: none;">
+                        <label style="color: white; font-weight: 600;">Number of Pallets *</label>
+                        <input type="number" name="number_of_pallets" id="palletQuantity" placeholder="0" min="1" style="width: 100%; padding: 1rem; border: 2px solid rgba(255,255,255,0.3); border-radius: 5px; background: white;">
+                    </div>
+                    <div class="form-group" id="palletTypeField" style="display: none;">
+                        <label style="color: white; font-weight: 600;">Type of Pallets *</label>
+                        <select name="type_of_pallets" id="palletType" style="width: 100%; padding: 1rem; border: 2px solid rgba(255,255,255,0.3); border-radius: 5px; background: white;">
+                            <option value="">Please select</option>
+                            <option value="euro">Euro Pallet (80x120cm)</option>
+                            <option value="standard">Standard Pallet (100x120cm)</option>
+                            <option value="custom">Custom Size</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div style="margin-bottom: 1.5rem;">
+                    <label style="color: white; font-weight: 600; display: block; margin-bottom: 0.5rem;">Additional Notes</label>
+                    <textarea name="notes" placeholder="Please provide any additional details about your shipment..." style="width: 100%; padding: 1rem; border: 2px solid rgba(255,255,255,0.3); border-radius: 5px; background: white; min-height: 100px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 1rem; resize: vertical;"></textarea>
+                </div>
+                
+                <button type="submit" id="quoteSubmitBtn" style="width: 100%; background: white; color: var(--primary-orange); padding: 1.2rem; border: none; border-radius: 50px; font-size: 1.2rem; font-weight: 700; cursor: pointer; transition: all 0.3s ease; box-shadow: 0 5px 15px rgba(0,0,0,0.2);" onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 8px 20px rgba(0,0,0,0.3)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 5px 15px rgba(0,0,0,0.2)'" onclick="this.innerHTML='Sending...'; this.disabled=true;">
+                    Request Quote
+                </button>
+                
+                <p style="text-align: center; margin-top: 1.5rem; color: white; font-size: 0.9rem;">* We'll review your request and send you a detailed quote within 24 hours</p>
+            </form>
+        </div>
+    </section>
+
+    <!-- Service Coverage Map Section -->
+    <section id="coverage" style="background: var(--light-grey);">
+        <h2 class="section-title">Service <span>Coverage</span></h2>
+        <p class="section-subtitle">We deliver across Greece and throughout Europe with scheduled routes</p>
+        
+        <div style="max-width: 1200px; margin: 0 auto;">
+            <!-- Greece Coverage -->
+            <div style="background: white; padding: 3rem; border-radius: 15px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); margin-bottom: 2rem;">
+                <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 2rem; border-bottom: 3px solid var(--primary-orange); padding-bottom: 1rem;">
+                    <div>
+                        <h3 style="color: var(--dark-black); font-size: 2rem; margin: 0;">Greece - Special Dedicated Services</h3>
+                        <p style="color: var(--grey); margin: 0.5rem 0 0 0;">Full truck loads for dedicated deliveries to all major cities and islands</p>
+                    </div>
+                </div>
+                
+                <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem;">
+                    <div>
+                        <h4 style="color: var(--primary-orange); margin-bottom: 1rem;">Attica Region</h4>
+                        <p style="color: var(--grey); line-height: 2;">Same day deliveries</p>
+                    </div>
+                    
+                    <div>
+                        <h4 style="color: var(--primary-blue); margin-bottom: 1rem;">Northern Greece</h4>
+                        <ul style="color: var(--grey); line-height: 2;">
+                            <li><strong>Thessaloniki</strong> - Next Day</li>
+                            <li><strong>Kavala</strong> - Next Day</li>
+                            <li><strong>Alexandroupoli</strong> - Next Day</li>
+                            <li><strong>Ioannina</strong> - Next Day</li>
+                            <li><strong>Kastoria</strong> - Next Day</li>
+                        </ul>
+                    </div>
+                    
+                    <div>
+                        <h4 style="color: var(--primary-orange); margin-bottom: 1rem;">Islands & Coastal</h4>
+                        <ul style="color: var(--grey); line-height: 2;">
+                            <li><strong>Crete (Heraklion)</strong> - Next Day</li>
+                            <li><strong>Rhodes</strong> - Next Day</li>
+                            <li><strong>Corfu</strong> - Next Day</li>
+                            <li><strong>Mykonos</strong> - Next Day</li>
+                            <li><strong>Santorini</strong> - Next Day</li>
+                        </ul>
+                    </div>
+                    
+                    <div>
+                        <h4 style="color: var(--primary-blue); margin-bottom: 1rem;">Peloponnese</h4>
+                        <ul style="color: var(--grey); line-height: 2;">
+                            <li><strong>Patras</strong> - Next Day</li>
+                            <li><strong>Kalamata</strong> - Next Day</li>
+                            <li><strong>Tripoli</strong> - Next Day</li>
+                            <li><strong>Corinth</strong> - Next Day</li>
+                            <li><strong>Sparta</strong> - Next Day</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- European Union Coverage -->
+            <div style="background: white; padding: 3rem; border-radius: 15px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); margin-bottom: 2rem;">
+                <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 2rem; border-bottom: 3px solid var(--primary-blue); padding-bottom: 1rem;">
+                    <div>
+                        <h3 style="color: var(--dark-black); font-size: 2rem; margin: 0;">European Union</h3>
+                        <p style="color: var(--grey); margin: 0.5rem 0 0 0;">Regular scheduled deliveries to 20+ EU countries</p>
+                    </div>
+                </div>
+                
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem;">
+                    <div style="background: var(--light-grey); padding: 1rem; border-radius: 10px; border-left: 4px solid var(--primary-orange);">
+                        <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.3rem;">
+                            <span style="font-size: 1.2rem;">🇮🇹</span>
+                            <h4 style="color: var(--dark-black); margin: 0; font-size: 1rem;">Italy</h4>
+                        </div>
+                        <p style="color: var(--grey); margin: 0;">Rome, Milan, Venice</p>
+                    </div>
+                    
+                    <div style="background: var(--light-grey); padding: 1rem; border-radius: 10px; border-left: 4px solid var(--primary-blue);">
+                        <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.3rem;">
+                            <span style="font-size: 1.2rem;">🇩🇪</span>
+                            <h4 style="color: var(--dark-black); margin: 0; font-size: 1rem;">Germany</h4>
+                        </div>
+                        <p style="color: var(--grey); margin: 0; font-size: 0.85rem;">Berlin, Munich, Hamburg</p>
+                    </div>
+                    
+                    <div style="background: var(--light-grey); padding: 1rem; border-radius: 10px; border-left: 4px solid var(--primary-orange);">
+                        <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.3rem;">
+                            <span style="font-size: 1.2rem;">🇧🇬</span>
+                            <h4 style="color: var(--dark-black); margin: 0; font-size: 1rem;">Bulgaria</h4>
+                        </div>
+                        <p style="color: var(--grey); margin: 0; font-size: 0.85rem;">Sofia, Plovdiv, Varna</p>
+                    </div>
+                    
+                    <div style="background: var(--light-grey); padding: 1rem; border-radius: 10px; border-left: 4px solid var(--primary-blue);">
+                        <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.3rem;">
+                            <span style="font-size: 1.2rem;">🇷🇴</span>
+                            <h4 style="color: var(--dark-black); margin: 0; font-size: 1rem;">Romania</h4>
+                        </div>
+                        <p style="color: var(--grey); margin: 0; font-size: 0.85rem;">Bucharest, Cluj, Timișoara</p>
+                    </div>
+                    
+                    <div style="background: var(--light-grey); padding: 1rem; border-radius: 10px; border-left: 4px solid var(--primary-orange);">
+                        <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.3rem;">
+                            <span style="font-size: 1.2rem;">🇦🇹</span>
+                            <h4 style="color: var(--dark-black); margin: 0; font-size: 1rem;">Austria</h4>
+                        </div>
+                        <p style="color: var(--grey); margin: 0; font-size: 0.85rem;">Vienna, Salzburg, Graz</p>
+                    </div>
+                    
+                    <div style="background: var(--light-grey); padding: 1rem; border-radius: 10px; border-left: 4px solid var(--primary-blue);">
+                        <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.3rem;">
+                            <span style="font-size: 1.2rem;">🇭🇺</span>
+                            <h4 style="color: var(--dark-black); margin: 0; font-size: 1rem;">Hungary</h4>
+                        </div>
+                        <p style="color: var(--grey); margin: 0; font-size: 0.85rem;">Budapest, Debrecen</p>
+                    </div>
+                    
+                    <div style="background: var(--light-grey); padding: 1rem; border-radius: 10px; border-left: 4px solid var(--primary-orange);">
+                        <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.3rem;">
+                            <span style="font-size: 1.2rem;">🇵🇱</span>
+                            <h4 style="color: var(--dark-black); margin: 0; font-size: 1rem;">Poland</h4>
+                        </div>
+                        <p style="color: var(--grey); margin: 0; font-size: 0.85rem;">Warsaw, Kraków, Gdańsk</p>
+                    </div>
+                    
+                    <div style="background: var(--light-grey); padding: 1rem; border-radius: 10px; border-left: 4px solid var(--primary-blue);">
+                        <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.3rem;">
+                            <span style="font-size: 1.2rem;">🇨🇿</span>
+                            <h4 style="color: var(--dark-black); margin: 0; font-size: 1rem;">Czech Republic</h4>
+                        </div>
+                        <p style="color: var(--grey); margin: 0; font-size: 0.85rem;">Prague, Brno</p>
+                    </div>
+                    
+                    <div style="background: var(--light-grey); padding: 1rem; border-radius: 10px; border-left: 4px solid var(--primary-orange);">
+                        <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.3rem;">
+                            <span style="font-size: 1.2rem;">🇫🇷</span>
+                            <h4 style="color: var(--dark-black); margin: 0; font-size: 1rem;">France</h4>
+                        </div>
+                        <p style="color: var(--grey); margin: 0; font-size: 0.85rem;">Paris, Lyon, Marseille</p>
+                    </div>
+                    
+                    <div style="background: var(--light-grey); padding: 1rem; border-radius: 10px; border-left: 4px solid var(--primary-blue);">
+                        <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.3rem;">
+                            <span style="font-size: 1.2rem;">🇪🇸</span>
+                            <h4 style="color: var(--dark-black); margin: 0; font-size: 1rem;">Spain</h4>
+                        </div>
+                        <p style="color: var(--grey); margin: 0; font-size: 0.85rem;">Madrid, Barcelona</p>
+                    </div>
+                    
+                    <div style="background: var(--light-grey); padding: 1rem; border-radius: 10px; border-left: 4px solid var(--primary-orange);">
+                        <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.3rem;">
+                            <span style="font-size: 1.2rem;">🇳🇱</span>
+                            <h4 style="color: var(--dark-black); margin: 0; font-size: 1rem;">Netherlands</h4>
+                        </div>
+                        <p style="color: var(--grey); margin: 0; font-size: 0.85rem;">Amsterdam, Rotterdam</p>
+                    </div>
+                    
+                    <div style="background: var(--light-grey); padding: 1rem; border-radius: 10px; border-left: 4px solid var(--primary-blue);">
+                        <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.3rem;">
+                            <span style="font-size: 1.2rem;">🇧🇪</span>
+                            <h4 style="color: var(--dark-black); margin: 0; font-size: 1rem;">Belgium</h4>
+                        </div>
+                        <p style="color: var(--grey); margin: 0; font-size: 0.85rem;">Brussels, Antwerp</p>
+                    </div>
+                </div>
+                
+                <div style="margin-top: 2rem; padding: 1.5rem; background: linear-gradient(135deg, var(--light-grey) 0%, #fff 100%); border-radius: 10px; border: 2px dashed var(--primary-orange);">
+                    <p style="color: var(--grey); margin: 0; text-align: center;"><strong>Plus:</strong> Slovakia, Slovenia, Croatia, Serbia, Albania, North Macedonia & more • <a href="#contact" style="color: var(--primary-orange); text-decoration: none; font-weight: bold;">Contact us</a> for specific route inquiries</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Industry Solutions Section -->
+    <section id="industries" style="background: white;">
+        <h2 class="section-title">Industry <span>Solutions</span></h2>
+        <p class="section-subtitle">Specialized logistics services tailored to your industry needs</p>
+        
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon-pro">■</div>
+                <h3>Retail & E-commerce</h3>
+                <p>Fast fulfillment, returns management, and last-mile delivery solutions for online and brick-and-mortar retailers.</p>
+                <ul>
+                    <li>Same-day delivery in Athens</li>
+                    <li>Nationwide 1-2 day shipping</li>
+                    <li>Returns processing</li>
+                    <li>Peak season handling</li>
+                </ul>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon-pro blue">■</div>
+                <h3>Manufacturing</h3>
+                <p>Just-in-time delivery, raw material transport, and finished goods distribution for manufacturing operations.</p>
+                <ul>
+                    <li>Scheduled deliveries</li>
+                    <li>Raw materials transport</li>
+                    <li>Warehouse consolidation</li>
+                    <li>Cross-docking services</li>
+                </ul>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon-pro green">■</div>
+                <h3>Food & Beverage</h3>
+                <p>Temperature-controlled transport and rapid delivery for perishable goods, ensuring freshness and quality.</p>
+                <ul>
+                    <li>Refrigerated vehicles (-25°C to +25°C)</li>
+                    <li>Real-time temperature monitoring</li>
+                    <li>HACCP compliance</li>
+                    <li>Express delivery options</li>
+                </ul>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon-pro purple">+</div>
+                <h3>Healthcare & Pharma</h3>
+                <p>Secure, compliant transport for medical supplies, pharmaceuticals, and sensitive healthcare products.</p>
+                <ul>
+                    <li>GDP certified transport</li>
+                    <li>Controlled temperature</li>
+                    <li>Secure handling protocols</li>
+                    <li>Track & trace compliance</li>
+                </ul>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon-pro">▲</div>
+                <h3>Construction</h3>
+                <p>Heavy equipment transport, building materials delivery, and project logistics for construction sites.</p>
+                <ul>
+                    <li>Heavy load capacity</li>
+                    <li>Site delivery coordination</li>
+                    <li>Equipment transport</li>
+                    <li>Bulk materials handling</li>
+                </ul>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon-pro blue">◆</div>
+                <h3>Technology</h3>
+                <p>Secure transport for electronics, IT equipment, and high-value technology products with specialized handling.</p>
+                <ul>
+                    <li>Climate-controlled vehicles</li>
+                    <li>Security protocols</li>
+                    <li>White glove service</li>
+                    <li>Insurance coverage up to €50K</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="trust" style="background: white;">
+        <h2 class="section-title">Delivery for Leading <span>Companies</span></h2>
+        <p class="section-subtitle">Proud to serve Greece's top businesses and international brands</p>
+        
+        <div style="background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); padding: 4rem 3rem; border-radius: 20px; margin-bottom: 4rem; box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08); position: relative; overflow: hidden;">
+            <!-- Decorative background elements -->
+            <div style="position: absolute; top: -50px; right: -50px; width: 200px; height: 200px; background: linear-gradient(135deg, var(--primary-orange) 0%, var(--primary-blue) 100%); opacity: 0.05; border-radius: 50%;"></div>
+            <div style="position: absolute; bottom: -30px; left: -30px; width: 150px; height: 150px; background: linear-gradient(135deg, var(--primary-blue) 0%, var(--primary-orange) 100%); opacity: 0.05; border-radius: 50%;"></div>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 2.5rem; align-items: center; justify-items: center; position: relative; z-index: 1;">
+                <div style="background: white; width: 100%; height: 120px; border-radius: 12px; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08); transition: all 0.3s ease; border: 2px solid transparent; border-left: 4px solid var(--primary-orange); position: relative; overflow: hidden;" onmouseover="this.style.borderColor='var(--primary-orange)'; this.style.transform='translateY(-8px)'; this.style.boxShadow='0 8px 25px rgba(246, 80, 3, 0.15)';" onmouseout="this.style.borderColor='transparent'; this.style.borderLeft='4px solid var(--primary-orange)'; this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 15px rgba(0, 0, 0, 0.08)';">
+                    <div style="text-align: center; padding: 1rem;">
+                        <div style="font-weight: 700; font-size: 1.2rem; color: var(--dark-black); line-height: 1.3;">RETAIL<br>GROUP</div>
+                    </div>
+                </div>
+                
+                <div style="background: white; width: 100%; height: 120px; border-radius: 12px; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08); transition: all 0.3s ease; border: 2px solid transparent; border-left: 4px solid var(--primary-blue); position: relative; overflow: hidden;" onmouseover="this.style.borderColor='var(--primary-blue)'; this.style.transform='translateY(-8px)'; this.style.boxShadow='0 8px 25px rgba(8, 142, 232, 0.15)';" onmouseout="this.style.borderColor='transparent'; this.style.borderLeft='4px solid var(--primary-blue)'; this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 15px rgba(0, 0, 0, 0.08)';">
+                    <div style="text-align: center; padding: 1rem;">
+                        <div style="font-weight: 700; font-size: 1.2rem; color: var(--dark-black); line-height: 1.3;">MANUFACTURING<br>CO.</div>
+                    </div>
+                </div>
+                
+                <div style="background: white; width: 100%; height: 120px; border-radius: 12px; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08); transition: all 0.3s ease; border: 2px solid transparent; border-left: 4px solid var(--primary-orange); position: relative; overflow: hidden;" onmouseover="this.style.borderColor='var(--primary-orange)'; this.style.transform='translateY(-8px)'; this.style.boxShadow='0 8px 25px rgba(246, 80, 3, 0.15)';" onmouseout="this.style.borderColor='transparent'; this.style.borderLeft='4px solid var(--primary-orange)'; this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 15px rgba(0, 0, 0, 0.08)';">
+                    <div style="text-align: center; padding: 1rem;">
+                        <div style="font-weight: 700; font-size: 1.2rem; color: var(--dark-black); line-height: 1.3;">FOOD &<br>BEVERAGE</div>
+                    </div>
+                </div>
+                
+                <div style="background: white; width: 100%; height: 120px; border-radius: 12px; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08); transition: all 0.3s ease; border: 2px solid transparent; border-left: 4px solid var(--primary-blue); position: relative; overflow: hidden;" onmouseover="this.style.borderColor='var(--primary-blue)'; this.style.transform='translateY(-8px)'; this.style.boxShadow='0 8px 25px rgba(8, 142, 232, 0.15)';" onmouseout="this.style.borderColor='transparent'; this.style.borderLeft='4px solid var(--primary-blue)'; this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 15px rgba(0, 0, 0, 0.08)';">
+                    <div style="text-align: center; padding: 1rem;">
+                        <div style="font-weight: 700; font-size: 1.2rem; color: var(--dark-black); line-height: 1.3;">PHARMA<br>CORP</div>
+                    </div>
+                </div>
+                
+                <div style="background: white; width: 100%; height: 120px; border-radius: 12px; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08); transition: all 0.3s ease; border: 2px solid transparent; border-left: 4px solid var(--primary-orange); position: relative; overflow: hidden;" onmouseover="this.style.borderColor='var(--primary-orange)'; this.style.transform='translateY(-8px)'; this.style.boxShadow='0 8px 25px rgba(246, 80, 3, 0.15)';" onmouseout="this.style.borderColor='transparent'; this.style.borderLeft='4px solid var(--primary-orange)'; this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 15px rgba(0, 0, 0, 0.08)';">
+                    <div style="text-align: center; padding: 1rem;">
+                        <div style="font-weight: 700; font-size: 1.2rem; color: var(--dark-black); line-height: 1.3;">CONSTRUCTION<br>LTD</div>
+                    </div>
+                </div>
+                
+                <div style="background: white; width: 100%; height: 120px; border-radius: 12px; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08); transition: all 0.3s ease; border: 2px solid transparent; border-left: 4px solid var(--primary-blue); position: relative; overflow: hidden;" onmouseover="this.style.borderColor='var(--primary-blue)'; this.style.transform='translateY(-8px)'; this.style.boxShadow='0 8px 25px rgba(8, 142, 232, 0.15)';" onmouseout="this.style.borderColor='transparent'; this.style.borderLeft='4px solid var(--primary-blue)'; this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 15px rgba(0, 0, 0, 0.08)';">
+                    <div style="text-align: center; padding: 1rem;">
+                        <div style="font-weight: 700; font-size: 1.2rem; color: var(--dark-black); line-height: 1.3;">TECH<br>SOLUTIONS</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 3rem; position: relative; z-index: 1;">
+                <p style="color: var(--grey); font-size: 0.95rem;">
+                    Across retail, manufacturing, construction, food & beverage, healthcare, and technology sectors
+                </p>
+            </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" style="background: var(--light-grey);">
+        <h2 class="section-title">Frequently Asked <span>Questions</span></h2>
+        <p class="section-subtitle">Quick answers to common questions about our services</p>
+        
+        <div style="max-width: 900px; margin: 0 auto;">
+            <div style="background: white; padding: 2rem; border-radius: 10px; margin-bottom: 1.5rem; border-left: 4px solid var(--primary-orange);">
+                <h3 style="color: var(--dark-black); margin-bottom: 1rem; font-size: 1.3rem;">📦 What areas do you deliver to?</h3>
+                <p style="color: var(--grey); line-height: 1.8;">We deliver across all of Greece including islands, with same-day service in Athens metro area. We also offer international shipping to 20+ European countries and worldwide through our partner network.</p>
+            </div>
+
+            <div style="background: white; padding: 2rem; border-radius: 10px; margin-bottom: 1.5rem; border-left: 4px solid var(--primary-blue);">
+                <h3 style="color: var(--dark-black); margin-bottom: 1rem; font-size: 1.3rem;">💰 How is shipping cost calculated?</h3>
+                <p style="color: var(--grey); line-height: 1.8;">Shipping costs depend on weight, dimensions, distance, and service type. Use our Quote Calculator above for instant estimates, or contact us for exact pricing. We offer volume discounts for regular customers.</p>
+            </div>
+
+            <div style="background: white; padding: 2rem; border-radius: 10px; margin-bottom: 1.5rem; border-left: 4px solid var(--primary-orange);">
+                <h3 style="color: var(--dark-black); margin-bottom: 1rem; font-size: 1.3rem;">🕐 What are your delivery times?</h3>
+                <p style="color: var(--grey); line-height: 1.8;">Same-day delivery in Athens, 1-2 days nationwide, 3-7 days for international shipments. Express and time-definite options available for urgent deliveries.</p>
+            </div>
+
+            <div style="background: white; padding: 2rem; border-radius: 10px; margin-bottom: 1.5rem; border-left: 4px solid var(--primary-orange);">
+                <h3 style="color: var(--dark-black); margin-bottom: 1rem; font-size: 1.3rem;">🛡️ Is my shipment insured?</h3>
+                <p style="color: var(--grey); line-height: 1.8;">Yes! All shipments include €100 basic insurance at no extra cost. Additional insurance up to €50,000. See our Insurance Information section for details.</p>
+            </div>
+
+            <div style="background: white; padding: 2rem; border-radius: 10px; margin-bottom: 1.5rem; border-left: 4px solid var(--primary-blue);">
+                <h3 style="color: var(--dark-black); margin-bottom: 1rem; font-size: 1.3rem;">📋 What items cannot be shipped?</h3>
+                <p style="color: var(--grey); line-height: 1.8;">We cannot transport hazardous materials (except with special permits), illegal items, perishables without proper packaging, or items exceeding our vehicle capacity. Contact us if you're unsure about your shipment.</p>
+            </div>
+
+            <div style="background: white; padding: 2rem; border-radius: 10px; margin-bottom: 1.5rem; border-left: 4px solid var(--primary-orange);">
+                <h3 style="color: var(--dark-black); margin-bottom: 1rem; font-size: 1.3rem;">🚚 Do you offer recurring delivery services?</h3>
+                <p style="color: var(--grey); line-height: 1.8;">Absolutely! We provide scheduled delivery services for businesses with regular shipping needs. Enjoy volume discounts, dedicated account management, and flexible scheduling. Contact us to set up a corporate account.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video / About Us Section -->
+    <section id="video" style="background: white;">
+        <h2 class="section-title">This Is <span>Us</span></h2>
+        <p class="section-subtitle">See our facilities, fleet, and team in action</p>
+        
+        <div style="max-width: 1000px; margin: 0 auto;">
+            <div style="background: white; padding: 3rem; border-radius: 15px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);">
+                <div style="width: 100%; height: 500px; background: linear-gradient(135deg, var(--dark-black) 0%, var(--primary-blue) 100%); border-radius: 10px; display: flex; align-items: center; justify-content: center; margin-bottom: 2rem; position: relative;">
+                    <div style="text-align: center; color: white;">
+                        <div style="font-size: 5rem; margin-bottom: 1rem;">▶️</div>
+                        <h3 style="font-size: 2rem; margin-bottom: 1rem;">Virtual Tour Coming Soon</h3>
+                        <p style="font-size: 1.1rem; opacity: 0.9;">See our 10,000m² warehouse facility and modern fleet</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Careers Section -->
+    <section id="careers" style="background: var(--light-grey);">
+        <h2 class="section-title">Join Our <span>Team</span></h2>
+        <p class="section-subtitle">Build your career with a leading transportation company</p>
+        
+        <div style="max-width: 900px; margin: 0 auto 4rem; text-align: center;">
+            <p style="font-size: 1.2rem; color: var(--grey); line-height: 1.8;">
+                At OMNI Logistics, we're always looking for talented, driven individuals to join our growing team. 
+                We offer competitive salaries, comprehensive benefits, and opportunities for career advancement in a 
+                dynamic and fast-paced industry.
+            </p>
+        </div>
+
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon-pro">■</div>
+                <h3>Professional Drivers</h3>
+                <p>Join our fleet of professional drivers. We're looking for experienced, safety-conscious drivers with excellent customer service skills.</p>
+                <ul>
+                    <li>Competitive salary + bonuses</li>
+                    <li>Modern, well-maintained vehicles</li>
+                    <li>Health insurance coverage</li>
+                    <li>Paid vacation & holidays</li>
+                    <li>Professional development</li>
+                </ul>
+                <div style="margin-top: 1.5rem;">
+                    <strong>Requirements:</strong> Valid driver's license (B and C category), clean driving record, 2+ years experience
+                </div>
+            </div>
+        </div>
+
+        <div style="max-width: 800px; margin: 4rem auto 0;">
+            <div style="background: linear-gradient(135deg, var(--primary-orange) 0%, #ff6b35 100%); padding: 3px; border-radius: 20px; box-shadow: 0 15px 40px rgba(246, 80, 3, 0.3);">
+                <div style="background: white; padding: 3.5rem; border-radius: 18px;">
+                    <div style="text-align: center; margin-bottom: 3rem;">
+                        <h3 style="font-size: 2.5rem; color: var(--dark-black); margin-bottom: 1rem;">Apply Now</h3>
+                        <div style="width: 80px; height: 4px; background: linear-gradient(90deg, var(--primary-orange) 0%, var(--primary-blue) 100%); margin: 0 auto 1rem; border-radius: 2px;"></div>
+                        <p style="color: var(--grey); font-size: 1.1rem;">Join the OMNI family and grow your career with us</p>
+                    </div>
+                    
+                    <form action="https://formsubmit.co/omni@omnids.gr" method="POST" enctype="multipart/form-data">
+                        <input type="hidden" name="_subject" value="New Job Application - OMNI Logistics">
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="hidden" name="_next" value="#thank-you">
+                        <input type="hidden" name="_template" value="table">
+                        
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 1.5rem;">
+                            <div class="form-group">
+                                <label style="color: var(--dark-black); font-weight: 600;">Full Name *</label>
+                                <input type="text" name="name" required style="border: 2px solid #e9ecef; transition: all 0.3s;">
+                            </div>
+
+                            <div class="form-group">
+                                <label style="color: var(--dark-black); font-weight: 600;">Phone *</label>
+                                <input type="tel" name="phone" required style="border: 2px solid #e9ecef; transition: all 0.3s;">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label style="color: var(--dark-black); font-weight: 600;">Email Address *</label>
+                            <input type="email" name="email" required style="border: 2px solid #e9ecef; transition: all 0.3s;">
+                        </div>
+
+                        <div class="form-group">
+                            <label style="color: var(--dark-black); font-weight: 600;">Position Applying For *</label>
+                            <select name="position" required style="border: 2px solid #e9ecef; transition: all 0.3s;">
+                                <option value="">Select a position</option>
+                                <option value="driver">Professional Driver</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label style="color: var(--dark-black); font-weight: 600;">Cover Letter / Why OMNI? *</label>
+                            <textarea name="message" required placeholder="Tell us why you want to join OMNI and what makes you a great fit for this role..." style="border: 2px solid #e9ecef; transition: all 0.3s; min-height: 140px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 1rem; line-height: 1.6;"></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label style="color: var(--dark-black); font-weight: 600; display: flex; align-items: center; gap: 0.5rem;">
+                                <span>CV/Resume (PDF or Word) *</span>
+                                <span style="color: var(--grey); font-size: 0.85rem; font-weight: 400;">(Max 10MB)</span>
+                            </label>
+                            <div style="position: relative;">
+                                <input type="file" name="attachment" accept=".pdf,.doc,.docx" required id="fileInput" style="position: absolute; opacity: 0; width: 100%; height: 100%; cursor: pointer; z-index: 2;">
+                                <div style="padding: 1.5rem; border: 2px dashed var(--primary-orange); background: linear-gradient(135deg, #fff5f0 0%, #ffffff 100%); border-radius: 8px; transition: all 0.3s; text-align: center; cursor: pointer;">
+                                    <div style="color: var(--primary-orange); font-size: 2rem; margin-bottom: 0.5rem;">📎</div>
+                                    <p style="color: var(--dark-black); font-weight: 600; margin-bottom: 0.3rem;">Choose File or Drag & Drop</p>
+                                    <p style="color: var(--grey); font-size: 0.9rem; margin: 0;">PDF, DOC, or DOCX (Max 10MB)</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn-submit" style="width: 100%; padding: 1.2rem; font-size: 1.1rem; background: linear-gradient(135deg, var(--primary-orange) 0%, #ff6b35 100%); border: none; box-shadow: 0 8px 20px rgba(246, 80, 3, 0.3); transition: all 0.3s;">Submit Application</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Quote Section -->
+    <section id="contact" style="background: white;">
+        <h2 class="section-title">Get in <span>Touch</span></h2>
+        
+        <div style="max-width: 700px; margin: 0 auto;">
+            <div class="contact-form" id="quote">
+                <h3 style="margin-bottom: 2rem;">Request a Quote</h3>
+                <form action="https://formsubmit.co/omni@omnids.gr" method="POST">
+                    <input type="hidden" name="_subject" value="New Quote Request - OMNI Logistics">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_next" value="#thank-you">
+                    <input type="hidden" name="_template" value="table">
+                    
+                    <div class="form-group">
+                        <label>Full Name *</label>
+                        <input type="text" name="name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Email Address *</label>
+                        <input type="email" name="email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Phone Number *</label>
+                        <input type="tel" name="phone" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Company Name</label>
+                        <input type="text" name="company">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Message</label>
+                        <textarea name="message" rows="5" placeholder="Tell us about your logistics needs..." style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 1rem; line-height: 1.6;"></textarea>
+                    </div>
+
+                    <button type="submit" class="btn-submit">Submit Quote Request</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Thank You Section -->
+    <section id="thank-you" style="background: linear-gradient(135deg, var(--primary-orange) 0%, #ff6b35 100%); min-height: 70vh; align-items: center; justify-content: center; display: none;">
+        <div style="text-align: center; color: white; max-width: 600px; padding: 3rem;">
+            <div style="font-size: 5rem; margin-bottom: 1.5rem; animation: fadeInUp 0.6s ease-out;">✓</div>
+            <h2 style="font-size: 3rem; margin-bottom: 1rem; color: white; animation: fadeInUp 0.8s ease-out;">Thank You!</h2>
+            <p style="font-size: 1.3rem; margin-bottom: 2rem; color: rgba(255,255,255,0.95); line-height: 1.6; animation: fadeInUp 1s ease-out;">We've received your submission and will get back to you shortly. Our team typically responds within 24 hours.</p>
+            <a href="#hero" onclick="document.getElementById('thank-you').style.display='none'" style="display: inline-block; background: white; color: var(--primary-orange); padding: 1rem 2.5rem; border-radius: 50px; font-weight: 700; text-decoration: none; transition: all 0.3s; box-shadow: 0 5px 15px rgba(0,0,0,0.2); animation: fadeInUp 1.2s ease-out;" onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 8px 20px rgba(0,0,0,0.3)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 5px 15px rgba(0,0,0,0.2)'">Back to Home</a>
+        </div>
+    </section>
+
+    <!-- Privacy Policy Section -->
+    <section id="privacy" style="background: white; display: none;">
+        <h2 class="section-title">Privacy <span>Policy</span></h2>
+        <div style="max-width: 900px; margin: 0 auto; line-height: 1.8;">
+            <p style="margin-bottom: 2rem; color: var(--grey);">Last updated: November 21, 2025</p>
+            
+            <h3 style="margin-bottom: 1rem; color: var(--dark-black);">1. Information We Collect</h3>
+            <p style="margin-bottom: 2rem; color: var(--grey);">OMNI Logistics collects information necessary to provide our transportation and logistics services, including contact details, shipment information, and billing data. We use this information solely for service delivery and customer support.</p>
+            
+            <h3 style="margin-bottom: 1rem; color: var(--dark-black);">2. How We Use Your Information</h3>
+            <p style="margin-bottom: 2rem; color: var(--grey);">Your information is used to process shipments, communicate delivery updates, provide customer support, and improve our services. We do not sell or share your personal information with third parties except as required for service delivery.</p>
+            
+            <h3 style="margin-bottom: 1rem; color: var(--dark-black);">3. Data Security</h3>
+            <p style="margin-bottom: 2rem; color: var(--grey);">We implement industry-standard security measures to protect your data. All sensitive information is encrypted and stored securely in compliance with Greek and European data protection regulations (GDPR).</p>
+            
+            <h3 style="margin-bottom: 1rem; color: var(--dark-black);">4. Your Rights</h3>
+            <p style="margin-bottom: 2rem; color: var(--grey);">You have the right to access, correct, or delete your personal data. Contact us at omni@omnids.gr to exercise these rights.</p>
+        </div>
+    </section>
+
+    <!-- Terms of Service Section -->
+    <section id="terms" style="background: var(--light-grey); display: none;">
+        <h2 class="section-title">Terms of <span>Service</span></h2>
+        <div style="max-width: 900px; margin: 0 auto; line-height: 1.8;">
+            <p style="margin-bottom: 2rem; color: var(--grey);">Last updated: November 21, 2025</p>
+            
+            <h3 style="margin-bottom: 1rem; color: var(--dark-black);">1. Service Agreement</h3>
+            <p style="margin-bottom: 2rem; color: var(--grey);">By using OMNI Logistics services, you agree to these terms. We provide transportation and logistics services as described in our service offerings and quotes.</p>
+            
+            <h3 style="margin-bottom: 1rem; color: var(--dark-black);">2. Customer Responsibilities</h3>
+            <p style="margin-bottom: 2rem; color: var(--grey);">Customers must provide accurate shipment information, proper packaging, and ensure all items comply with transportation regulations. Prohibited items will not be transported.</p>
+            
+            <h3 style="margin-bottom: 1rem; color: var(--dark-black);">3. Payment Terms</h3>
+            <p style="margin-bottom: 2rem; color: var(--grey);">Payment is due as specified in the service agreement. Late payments may result in service suspension and additional charges.</p>
+            
+            <h3 style="margin-bottom: 1rem; color: var(--dark-black);">4. Limitation of Liability</h3>
+            <p style="margin-bottom: 2rem; color: var(--grey);">OMNI Logistics liability is limited to the declared value of the shipment as specified in our insurance policy. See our Insurance Information for details.</p>
+        </div>
+    </section>
+
+    <!-- Shipping Policy Section -->
+    <section id="shipping" style="background: white; display: none;">
+        <h2 class="section-title">Shipping <span>Policy</span></h2>
+        <div style="max-width: 900px; margin: 0 auto; line-height: 1.8;">
+            <p style="margin-bottom: 2rem; color: var(--grey);">Last updated: November 21, 2025</p>
+            
+            <h3 style="margin-bottom: 1rem; color: var(--dark-black);">1. Delivery Times</h3>
+            <p style="margin-bottom: 2rem; color: var(--grey);">Standard delivery times vary by service type and destination. Same-day delivery available in Athens metro area. Express nationwide delivery 1-2 business days. International shipping 3-7 business days depending on destination.</p>
+            
+            <h3 style="margin-bottom: 1rem; color: var(--dark-black);">2. Tracking</h3>
+            <p style="margin-bottom: 2rem; color: var(--grey);">All shipments include real-time GPS tracking. You will receive tracking information via email and SMS. Track your shipment 24/7 through our website or mobile app.</p>
+            
+            <h3 style="margin-bottom: 1rem; color: var(--dark-black);">3. Packaging Requirements</h3>
+            <p style="margin-bottom: 2rem; color: var(--grey);">Items must be properly packaged to withstand normal transportation conditions. Fragile items require special packaging. We offer packaging services for an additional fee.</p>
+            
+            <h3 style="margin-bottom: 1rem; color: var(--dark-black);">4. Refused or Undeliverable Shipments</h3>
+            <p style="margin-bottom: 2rem; color: var(--grey);">If a shipment cannot be delivered, we will contact you to arrange redelivery or return. Additional charges may apply for storage and redelivery attempts.</p>
+        </div>
+    </section>
+
+    <!-- Insurance Info Section -->
+    <section id="insurance" style="background: var(--light-grey); display: none;">
+        <h2 class="section-title">Insurance <span>Information</span></h2>
+        <div style="max-width: 900px; margin: 0 auto; line-height: 1.8;">
+            <p style="margin-bottom: 2rem; color: var(--grey);">Last updated: November 21, 2025</p>
+            
+            <h3 style="margin-bottom: 1rem; color: var(--dark-black);">1. Standard Coverage</h3>
+            <p style="margin-bottom: 2rem; color: var(--grey);">All shipments include basic insurance coverage up to €100 per shipment at no additional cost. This covers loss or damage during normal transportation.</p>
+            
+            <h3 style="margin-bottom: 1rem; color: var(--dark-black);">2. Additional Insurance</h3>
+            <p style="margin-bottom: 2rem; color: var(--grey);">Higher value shipments can be insured for their full declared value. Premium insurance rates are 2% of declared value. Maximum coverage available: €50,000 per shipment.</p>
+            
+            <h3 style="margin-bottom: 1rem; color: var(--dark-black);">3. Claims Process</h3>
+            <p style="margin-bottom: 2rem; color: var(--grey);">To file a claim, contact us within 7 days of delivery with photos and documentation. Claims are typically processed within 14 business days. Approved claims are paid within 30 days.</p>
+            
+            <h3 style="margin-bottom: 1rem; color: var(--dark-black);">4. Exclusions</h3>
+            <p style="margin-bottom: 2rem; color: var(--grey);">Insurance does not cover improper packaging, prohibited items, acts of nature, or items not declared on the shipping manifest. See full terms for complete exclusion list.</p>
+            
+            <p style="margin-top: 3rem; padding: 2rem; background: white; border-left: 4px solid var(--primary-orange); border-radius: 5px;">
+                <strong>Questions about insurance?</strong> Contact our team at omni@omnids.gr or call +30 2295 029810 for personalized assistance.
+            </p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <p style="margin-bottom: 1rem;"><strong>📍 Address</strong><br><a href="https://www.google.com/maps/search/?api=1&query=Afidnes,Greece" target="_blank" style="color: rgba(255,255,255,0.9); text-decoration: none; transition: all 0.3s;" onmouseover="this.style.color='var(--primary-orange)'" onmouseout="this.style.color='rgba(255,255,255,0.9)'">Afidnes, Greece</a></p>
+                <p style="margin-bottom: 1rem;"><strong>📞 Phone</strong><br><a href="tel:+302295029810" style="color: rgba(255,255,255,0.9); text-decoration: none; transition: all 0.3s;" onmouseover="this.style.color='var(--primary-orange)'" onmouseout="this.style.color='rgba(255,255,255,0.9)'">+30 2295 029810</a></p>
+                <p><strong>✉️ Email</strong><br><a href="mailto:omni@omnids.gr" style="color: rgba(255,255,255,0.9); text-decoration: none; transition: all 0.3s;" onmouseover="this.style.color='var(--primary-orange)'" onmouseout="this.style.color='rgba(255,255,255,0.9)'">omni@omnids.gr</a></p>
+            </div>
+
+            <div class="footer-section">
+                <h3>Our Services</h3>
+                <ul>
+                    <li><a href="#services">Transportation Services</a></li>
+                    <li><a href="#services">Courier Services</a></li>
+                    <li><a href="#services">Moving Services</a></li>
+                    <li><a href="#services">Warehousing & Distribution</a></li>
+                    <li><a href="#services">Last Mile Delivery</a></li>
+                    <li><a href="#services">Real-Time Tracking</a></li>
+                    <li><a href="#services">International Logistics</a></li>
+                    <li><a href="#services">Express & Same-Day</a></li>
+                    <li><a href="#services">Value-Added Services</a></li>
+                </ul>
+                <p style="margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid rgba(255,255,255,0.2);">Need a custom route or express delivery? <a href="#contact" style="color: var(--primary-orange); text-decoration: none; font-weight: bold; transition: all 0.3s;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">Contact our team</a></p>
+            </div>
+
+            <div class="footer-section">
+                <h3>Newsletter</h3>
+                <p style="margin-bottom: 1.5rem;">Subscribe to get updates on special offers, new routes, and company news.</p>
+                <form action="https://formsubmit.co/omni@omnids.gr" method="POST" style="display: flex; flex-direction: column; gap: 1rem;">
+                    <input type="hidden" name="_subject" value="Newsletter Subscription - OMNI Logistics">
+                    <input type="email" name="email" placeholder="Your email address" required style="padding: 0.8rem; border: 1px solid rgba(255,255,255,0.3); border-radius: 5px; background: rgba(255,255,255,0.1); color: white; font-size: 1rem;">
+                    <button type="submit" style="background: var(--primary-orange); color: white; padding: 0.8rem; border: none; border-radius: 5px; font-weight: 600; cursor: pointer; transition: all 0.3s ease;">Subscribe</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2025 OMNI Logistics. All rights reserved. | Professional Transportation Services in Greece</p>
+            <p style="margin-top: 1rem; font-size: 0.9rem;">
+                <a href="#" onclick="showModal('privacy'); return false;" style="color: rgba(255,255,255,0.7); text-decoration: none; margin: 0 1rem; cursor: pointer;">Privacy Policy</a> | 
+                <a href="#" onclick="showModal('terms'); return false;" style="color: rgba(255,255,255,0.7); text-decoration: none; margin: 0 1rem; cursor: pointer;">Terms of Service</a> | 
+                <a href="#" onclick="showModal('shipping'); return false;" style="color: rgba(255,255,255,0.7); text-decoration: none; margin: 0 1rem; cursor: pointer;">Shipping Policy</a> | 
+                <a href="#" onclick="showModal('insurance'); return false;" style="color: rgba(255,255,255,0.7); text-decoration: none; margin: 0 1rem; cursor: pointer;">Insurance Info</a>
+            </p>
+        </div>
+    </footer>
+
+    <!-- Modal for Legal Pages -->
+    <div id="legalModal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); z-index: 10000; overflow-y: auto; padding: 2rem;">
+        <div style="max-width: 900px; margin: 0 auto; background: white; border-radius: 15px; padding: 3rem; position: relative; box-shadow: 0 20px 60px rgba(0,0,0,0.3);">
+            <button onclick="closeModal()" style="position: absolute; top: 1.5rem; right: 1.5rem; background: var(--primary-orange); color: white; border: none; width: 40px; height: 40px; border-radius: 50%; font-size: 1.5rem; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: all 0.3s;" onmouseover="this.style.transform='rotate(90deg)'" onmouseout="this.style.transform='rotate(0)'">&times;</button>
+            <div id="modalContent"></div>
+        </div>
+    </div>
+
+    <script>
+        // Mobile Menu Toggle
+        function toggleMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            const menuToggle = document.querySelector('.menu-toggle');
+            navLinks.classList.toggle('mobile-active');
+            menuToggle.classList.toggle('active');
+        }
+
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                const navLinks = document.querySelector('.nav-links');
+                const menuToggle = document.querySelector('.menu-toggle');
+                if (navLinks.classList.contains('mobile-active')) {
+                    navLinks.classList.remove('mobile-active');
+                    menuToggle.classList.remove('active');
+                }
+            });
+        });
+
+        // Mobile dropdown toggle
+        document.addEventListener('DOMContentLoaded', () => {
+            const dropdowns = document.querySelectorAll('.dropdown');
+            dropdowns.forEach(dropdown => {
+                const mainLink = dropdown.querySelector('a');
+                mainLink.addEventListener('click', (e) => {
+                    if (window.innerWidth <= 968) {
+                        e.preventDefault();
+                        dropdown.classList.toggle('active');
+                    }
+                });
+            });
+        });
+
+        // Loading Screen
+        window.addEventListener('load', () => {
+            const loadingScreen = document.getElementById('loading-screen');
+            if (loadingScreen) {
+                setTimeout(() => {
+                    loadingScreen.classList.add('hidden');
+                }, 800);
+            }
+            
+            // Spin logo on page load
+            const navLogo = document.querySelector('.nav-logo img');
+            if (navLogo) {
+                setTimeout(() => {
+                    navLogo.classList.add('logo-spin');
+                    // Remove class after animation completes
+                    setTimeout(() => {
+                        navLogo.classList.remove('logo-spin');
+                    }, 1500);
+                }, 900); // Start after loading screen fades
+            }
+        });
+
+        // Also hide on DOMContentLoaded as fallback
+        document.addEventListener('DOMContentLoaded', () => {
+            const loadingScreen = document.getElementById('loading-screen');
+            if (loadingScreen && document.readyState === 'complete') {
+                setTimeout(() => {
+                    loadingScreen.classList.add('hidden');
+                }, 800);
+            }
+        });
+
+        // Cookie Consent
+        function acceptCookies() {
+            localStorage.setItem('cookiesAccepted', 'true');
+            document.getElementById('cookie-banner').classList.remove('show');
+        }
+
+        if (!localStorage.getItem('cookiesAccepted')) {
+            setTimeout(() => {
+                document.getElementById('cookie-banner').classList.add('show');
+            }, 1500);
+        }
+
+        // Scroll to Top Button
+        const scrollTopBtn = document.getElementById('scroll-top');
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                scrollTopBtn.classList.add('visible');
+            } else {
+                scrollTopBtn.classList.remove('visible');
+            }
+        });
+
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // Live Chat Widget
+        function openChat() {
+            const email = 'omni@omnids.gr';
+            const subject = 'Chat Request - OMNI Logistics';
+            const body = 'Hello OMNI Team,%0D%0A%0D%0AI would like to inquire about your services.%0D%0A%0D%0AThank you!';
+            window.location.href = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${body}`;
+        }
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+
+        // Animated Counters
+        function animateCounter(element) {
+            const target = parseFloat(element.getAttribute('data-target'));
+            const decimals = parseInt(element.getAttribute('data-decimal')) || 0;
+            const suffix = element.getAttribute('data-suffix') || '+';
+            const duration = 2000;
+            const increment = target / (duration / 16);
+            let current = 0;
+
+            const timer = setInterval(() => {
+                current += increment;
+                if (current >= target) {
+                    current = target;
+                    clearInterval(timer);
+                }
+                
+                if (suffix === 'K') {
+                    element.textContent = Math.floor(current / 1000) + 'K+';
+                } else if (suffix === '%') {
+                    element.textContent = current.toFixed(decimals) + '%';
+                } else {
+                    element.textContent = Math.floor(current) + '+';
+                }
+            }, 16);
+        }
+
+        // Scroll Animations with Intersection Observer
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    
+                    // Animate counters when stats section is visible
+                    if (entry.target.classList.contains('stats-section')) {
+                        const counters = entry.target.querySelectorAll('.counter');
+                        counters.forEach(counter => {
+                            if (!counter.classList.contains('animated')) {
+                                counter.classList.add('animated');
+                                animateCounter(counter);
+                            }
+                        });
+                    }
+                }
+            });
+        }, observerOptions);
+
+        // Initialize on DOM ready
+        document.addEventListener('DOMContentLoaded', () => {
+            // Add fade-in animation to cards
+            const fadeElements = document.querySelectorAll('.service-card, .feature-card, .fleet-gallery-item');
+            console.log(`Found ${fadeElements.length} elements for fade-in animation`);
+            
+            fadeElements.forEach(el => {
+                el.classList.add('fade-in');
+                observer.observe(el);
+            });
+
+            // Observe stats section for counter animation
+            const statsSection = document.querySelector('.stats-section');
+            if (statsSection) observer.observe(statsSection);
+
+            // Add lazy loading to images
+            if ('loading' in HTMLImageElement.prototype) {
+                const images = document.querySelectorAll('img');
+                images.forEach(img => {
+                    if (!img.hasAttribute('loading')) {
+                        img.setAttribute('loading', 'lazy');
+                    }
+                });
+            }
+        });
+
+        // Parallax Effect on Hero
+        let ticking = false;
+        window.addEventListener('scroll', () => {
+            if (!ticking) {
+                window.requestAnimationFrame(() => {
+                    const scrolled = window.pageYOffset;
+                    const hero = document.querySelector('.hero');
+                    if (hero && scrolled < hero.offsetHeight) {
+                        hero.style.transform = `translateY(${scrolled * 0.3}px)`;
+                    }
+                    ticking = false;
+                });
+                ticking = true;
+            }
+        });
+
+        // Form Enhancement - Loading States
+        document.querySelectorAll('form').forEach(form => {
+            form.addEventListener('submit', function(e) {
+                const submitBtn = this.querySelector('button[type="submit"]');
+                if (submitBtn && !submitBtn.disabled) {
+                    const originalText = submitBtn.textContent;
+                    submitBtn.textContent = '⏳ Sending...';
+                    submitBtn.disabled = true;
+                    submitBtn.style.opacity = '0.7';
+                    
+                    // Re-enable after timeout (FormSubmit will redirect)
+                    setTimeout(() => {
+                        submitBtn.textContent = originalText;
+                        submitBtn.disabled = false;
+                        submitBtn.style.opacity = '1';
+                    }, 3000);
+                }
+            });
+        });
+
+        // Active Navigation Highlighting
+        const sections = document.querySelectorAll('section[id]');
+        const navLinkElements = document.querySelectorAll('.nav-links a');
+        
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                if (pageYOffset >= sectionTop - 200) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinkElements.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('active');
+                }
+            });
+        });
+
+        // Add active link styling dynamically
+        const style = document.createElement('style');
+        style.textContent = `
+            .nav-links a.active {
+                color: var(--primary-orange) !important;
+                position: relative;
+            }
+            .nav-links a.active::after {
+                content: '';
+                position: absolute;
+                bottom: -5px;
+                left: 0;
+                right: 0;
+                height: 2px;
+                background: var(--primary-orange);
+            }
+        `;
+        document.head.appendChild(style);
+
+        // Modal functions for legal pages
+        function showModal(pageId) {
+            const modal = document.getElementById('legalModal');
+            const modalContent = document.getElementById('modalContent');
+            const pageSection = document.getElementById(pageId);
+            
+            if (pageSection) {
+                modalContent.innerHTML = pageSection.innerHTML;
+                modal.style.display = 'block';
+                document.body.style.overflow = 'hidden';
+            }
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('legalModal');
+            modal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+
+        // Close modal when clicking outside content
+        document.getElementById('legalModal')?.addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeModal();
+            }
+        });
+
+        // Close modal with Escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeModal();
+            }
+        });
+
+        // Toggle package-specific fields
+        function togglePackageFields() {
+            const packageType = document.getElementById('packageType').value;
+            const parcelField = document.getElementById('parcelQuantityField');
+            const parcelInput = document.getElementById('parcelQuantity');
+            const palletQuantityField = document.getElementById('palletQuantityField');
+            const palletQuantityInput = document.getElementById('palletQuantity');
+            const palletTypeField = document.getElementById('palletTypeField');
+            const palletTypeInput = document.getElementById('palletType');
+            
+            // Hide all fields first
+            parcelField.style.display = 'none';
+            palletQuantityField.style.display = 'none';
+            palletTypeField.style.display = 'none';
+            parcelInput.removeAttribute('required');
+            palletQuantityInput.removeAttribute('required');
+            palletTypeInput.removeAttribute('required');
+            parcelInput.value = '';
+            palletQuantityInput.value = '';
+            palletTypeInput.value = '';
+            
+            // Show relevant fields based on selection
+            if (packageType === 'parcel') {
+                parcelField.style.display = 'block';
+                parcelInput.setAttribute('required', 'required');
+            } else if (packageType === 'pallet') {
+                palletQuantityField.style.display = 'block';
+                palletTypeField.style.display = 'block';
+                palletQuantityInput.setAttribute('required', 'required');
+                palletTypeInput.setAttribute('required', 'required');
+            }
+        }
+
+        console.log('🚀 OMNI Logistics - All systems operational!');
+    </script>
+
+    <!-- Google LocalBusiness Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "OMNI Logistics",
+      "description": "Professional transportation and logistics company offering freight services, warehousing, last-mile delivery, and comprehensive logistics solutions across Greece and Europe.",
+      "image": "https://www.omnids.gr/omni-logo.png",
+      "url": "https://www.omnids.gr",
+      "telephone": "+306937077778",
+      "email": "omni@omnids.gr",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Afidnes",
+        "addressLocality": "Athens",
+        "addressRegion": "Attica",
+        "addressCountry": "GR"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 38.2974,
+        "longitude": 23.8447
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+          "opens": "08:00",
+          "closes": "18:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Saturday",
+          "opens": "09:00",
+          "closes": "14:00"
+        }
+      ],
+      "sameAs": [
+        "https://facebook.com/omnilogistics",
+        "https://instagram.com/omnilogistics",
+        "https://linkedin.com/company/omnilogistics"
+      ],
+      "priceRange": "€€",
+      "areaServed": [
+        {
+          "@type": "Country",
+          "name": "Greece"
+        },
+        {
+          "@type": "Place",
+          "name": "European Union"
+        }
+      ],
+      "serviceType": [
+        "Transportation Services",
+        "Courier Services",
+        "Moving Services",
+        "Warehousing & Distribution",
+        "Last Mile Delivery",
+        "International Logistics",
+        "Express Delivery",
+        "Same-Day Delivery"
+      ]
+    }
+    </script>
+</body>
+</html>
