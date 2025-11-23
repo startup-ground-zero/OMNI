@@ -3,23 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OMNI Logistics - Professional Transportation & Freight Services in Greece</title>
-    <meta name="description" content="OMNI - Leading transportation and logistics company in Athens, Greece. Freight services, private transport, and comprehensive logistics solutions for businesses and individuals.">
-    <meta name="keywords" content="logistics Greece, freight Athens, transportation services, OMNI transport, cargo services Greece">
+    <title>OMNI Logistics - Professional Transportation & Courier Services in Greece & EU</title>
+    <meta name="description" content="Professional courier and logistics services across Greece and EU. Same-day delivery in Athens, express shipping, full truck loads. 4 years experience, 98.6% on-time delivery. Get a free quote today.">
+    <meta name="keywords" content="logistics Greece, courier Athens, transportation services, express delivery, freight services, same day delivery Greece, EU shipping, OMNI logistics, transportation Greece, transport company Athens">
     
     <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="Color logo - no background.svg">
     <link rel="icon" type="image/png" sizes="32x32" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%23f65003' width='100' height='100'/><text x='50' y='70' font-size='60' fill='white' font-family='Arial' font-weight='bold' text-anchor='middle'>O</text></svg>">
     
-    <!-- Open Graph -->
-    <meta property="og:title" content="OMNI Logistics - Professional Transportation Services">
-    <meta property="og:description" content="Leading logistics and freight services in Athens, Greece">
+    <!-- Open Graph / Social Media -->
+    <meta property="og:title" content="OMNI Logistics - Professional Transportation Services in Greece & EU">
+    <meta property="og:description" content="Professional courier and logistics services. Same-day delivery in Athens, express EU shipping, full truck loads. 98.6% on-time delivery rate. Get your free quote today!">
     <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.omnids.gr">
+    <meta property="og:image" content="https://www.omnids.gr/Color logo - no background.svg">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:locale:alternate" content="el_GR">
+    <meta property="og:site_name" content="OMNI Logistics">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="OMNI Logistics - Professional Transportation Services">
+    <meta name="twitter:description" content="Professional courier and logistics services across Greece and EU. Same-day delivery, express shipping, full truck loads.">
+    <meta name="twitter:image" content="https://www.omnids.gr/Color logo - no background.svg">
+    
+    <!-- Google Analytics - Add your GA4 Measurement ID here -->
+    <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-XXXXXXXXXX');
+    </script> -->
     
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+        }
+
+        html {
+            scroll-padding-top: 40px; /* Offset for fixed navigation */
+            scroll-behavior: smooth;
         }
 
         :root {
@@ -171,14 +197,18 @@
             transform: scale(1.05);
         }
 
-        /* Logo animation on page load */
-        .nav-logo img.logo-spin {
-            animation: logoSpin 1.5s ease-in-out;
+        /* Logo coin spin animation on page load */
+        .nav-logo img {
+            animation: coinSpin 5s ease-in-out;
         }
 
-        @keyframes logoSpin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
+        @keyframes coinSpin {
+            0% { transform: rotateY(0deg); }
+            20% { transform: rotateY(720deg); }
+            40% { transform: rotateY(1440deg); }
+            60% { transform: rotateY(2160deg); }
+            80% { transform: rotateY(2880deg); }
+            100% { transform: rotateY(3600deg); }
         }
 
         .nav-links {
@@ -237,6 +267,13 @@
         .dropdown:hover .dropdown-content {
             display: block;
             animation: fadeInDown 0.3s ease;
+        }
+        
+        /* Disable hover on mobile - use click instead */
+        @media (max-width: 968px) {
+            .dropdown:hover .dropdown-content {
+                display: none;
+            }
         }
 
         .dropdown-content a {
@@ -304,7 +341,7 @@
             justify-content: center;
             text-align: center;
             color: var(--dark-black);
-            padding: 150px 2rem 2rem;
+            padding: 120px 2rem 4rem;
             position: sticky;
             top: 0;
             overflow: hidden;
@@ -327,7 +364,7 @@
             max-width: 900px;
             z-index: 1;
             animation: fadeInUp 1s ease-out;
-            margin-top: 80px;
+            margin-top: 0px;
         }
 
         .hero h1 {
@@ -599,8 +636,8 @@
 
         /* Section Styles */
         section {
-            padding: 5rem 10%;
-            scroll-margin-top: 80px;
+            padding: 3rem 10%;
+            scroll-margin-top: 40px;
             position: relative;
             z-index: 2;
             background: white;
@@ -609,7 +646,7 @@
         .section-title {
             font-size: 2.5rem;
             text-align: center;
-            margin-bottom: 1rem;
+            margin-bottom: 0.5rem;
             color: var(--dark-black);
             font-weight: 700;
             letter-spacing: -0.5px;
@@ -623,7 +660,7 @@
             text-align: center;
             font-size: 1.2rem;
             color: var(--grey);
-            margin-bottom: 4rem;
+            margin-bottom: 2rem;
         }
 
         /* Services Section */
@@ -851,10 +888,13 @@
 
         .footer-section ul {
             list-style: none;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.8rem 1.5rem;
         }
 
         .footer-section ul li {
-            margin-bottom: 0.8rem;
+            margin-bottom: 0;
         }
 
         .footer-section ul li a {
@@ -904,19 +944,95 @@
             transform: rotate(-45deg) translate(7px, -7px);
         }
 
+        .mobile-close {
+            display: none;
+            position: absolute;
+            top: 1.5rem;
+            right: 1.5rem;
+            background: var(--primary-orange);
+            color: white;
+            border: none;
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            font-size: 1.8rem;
+            cursor: pointer;
+            z-index: 1002;
+            transition: all 0.3s ease;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+        }
+
+        .mobile-close:hover {
+            background: #e64a00;
+            transform: rotate(90deg);
+        }
+
+        .nav-links.mobile-active .mobile-close {
+            display: flex;
+        }
+
         .nav-links.mobile-active {
             display: flex;
             flex-direction: column;
             position: fixed;
             top: 0;
             right: 0;
-            width: 80%;
+            width: 85%;
             max-width: 400px;
             height: 100vh;
-            background: white;
-            padding: 6rem 2rem 2rem;
-            box-shadow: -5px 0 20px rgba(0, 0, 0, 0.2);
+            background: linear-gradient(180deg, #fafafa 0%, white 100%);
+            padding: 5rem 0 2rem;
+            box-shadow: -5px 0 40px rgba(0, 0, 0, 0.15);
             animation: slideIn 0.3s ease;
+            gap: 0;
+            overflow-y: auto;
+        }
+
+        .nav-links.mobile-active > li {
+            width: 100%;
+            flex-shrink: 0;
+        }
+
+        .nav-links.mobile-active a {
+            padding: 1.2rem 2rem;
+            margin: 0;
+            font-size: 1.1rem;
+            font-weight: 500;
+            color: var(--dark-black);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+            transition: all 0.2s ease;
+            display: block;
+        }
+
+        .nav-links.mobile-active a:hover {
+            background: rgba(246, 80, 3, 0.05);
+            padding-left: 2.5rem;
+            color: var(--primary-orange);
+        }
+
+        .nav-links.mobile-active .btn-quote {
+            margin: 1.5rem 2rem;
+            padding: 1rem 2rem;
+            text-align: center;
+            border-bottom: none;
+            background: var(--primary-orange);
+            color: white;
+            border-radius: 8px;
+            font-weight: 600;
+            display: block;
+        }
+
+        .nav-links.mobile-active .btn-quote:hover {
+            background: #e64a00;
+            padding-left: 2rem;
+        }
+
+        .nav-links.mobile-active .dropdown > a {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
 
         @keyframes slideIn {
@@ -929,7 +1045,7 @@
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
             gap: 2rem;
-            margin-top: 4rem;
+            margin-top: 2rem;
         }
 
         .fleet-gallery-item {
@@ -1013,10 +1129,18 @@
                 position: static;
                 display: none;
                 box-shadow: none;
-                background: var(--light-grey);
+                background: rgba(246, 80, 3, 0.03);
                 border-radius: 0;
-                margin: 0.5rem 0;
-                border-top: 2px solid var(--primary-orange);
+                margin: 0;
+                border-left: 3px solid var(--primary-orange);
+                padding-left: 1rem;
+            }
+
+            .dropdown-content a {
+                font-size: 1rem;
+                font-weight: 400;
+                color: var(--grey);
+                padding: 1rem 2rem;
             }
 
             .dropdown.active .dropdown-content {
@@ -1024,7 +1148,13 @@
             }
 
             .dropdown > a::after {
-                float: right;
+                content: '▼';
+                font-size: 0.7rem;
+                transition: transform 0.2s ease;
+            }
+
+            .dropdown.active > a::after {
+                transform: rotate(180deg);
             }
         }
 
@@ -1090,8 +1220,12 @@
                 font-size: 1rem;
             }
 
+            .hero {
+                padding: 100px 1rem 3rem !important;
+            }
+
             .hero-content {
-                margin-top: 40px;
+                margin-top: 0px;
             }
 
             section {
@@ -1141,6 +1275,19 @@
             #coverage li {
                 margin-left: 0 !important;
             }
+
+            #video > div > div {
+                grid-template-columns: 1fr !important;
+                padding: 1rem !important;
+            }
+
+            #video > div > div > div > div {
+                height: 500px !important;
+            }
+
+            .hero img {
+                max-width: 300px !important;
+            }
         }
     </style>
 </head>
@@ -1164,16 +1311,17 @@
 
     <!-- Navigation -->
     <nav>
-        <div class="nav-logo"><img src="Color logo - no background.svg" alt="OMNI Logistics"></div>
+        <a href="#" class="nav-logo" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;"><img src="Color logo - no background.svg" alt="OMNI Logistics"></a>
         <button class="menu-toggle" onclick="toggleMenu()">
             <span></span>
             <span></span>
             <span></span>
         </button>
         <ul class="nav-links">
+            <button class="mobile-close" onclick="toggleMenu()" style="display: none;">✕</button>
             <li><a href="#" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;">Home</a></li>
             <li class="dropdown">
-                <a href="#company">Our Company</a>
+                <a href="#company" onclick="return toggleDropdown(event);">Our Company</a>
                 <div class="dropdown-content">
                     <a href="#company">About Us</a>
                     <a href="#who-is-omni">Who is OMNI</a>
@@ -1182,7 +1330,7 @@
             </li>
             <li><a href="#fleet">Fleet</a></li>
             <li class="dropdown">
-                <a href="#services">Our Services</a>
+                <a href="#services" onclick="return toggleDropdown(event);">Our Services</a>
                 <div class="dropdown-content">
                     <a href="#services">Our Services</a>
                     <a href="#calculator">Request a Quote</a>
@@ -1191,7 +1339,7 @@
                 </div>
             </li>
             <li class="dropdown">
-                <a href="#trust">OMNI Experience</a>
+                <a href="#trust" onclick="return toggleDropdown(event);">OMNI Experience</a>
                 <div class="dropdown-content">
                     <a href="#trust">Delivery for Leading Companies</a>
                     <a href="#faq">Frequently Asked Questions</a>
@@ -1200,14 +1348,14 @@
             </li>
             <li><a href="#careers">Careers</a></li>
             <li><a href="#contact">Contact</a></li>
-            <li><a href="#quote" class="btn-quote">Get Quote</a></li>
+            <li><a href="#calculator" class="btn-quote">Get Quote</a></li>
         </ul>
     </nav>
 
     <!-- Hero Section -->
     <section id="hero" class="hero">
         <div class="hero-content">
-            <img src="Color logo - no background.svg" alt="OMNI Logistics" style="max-width: 500px; width: 80%; margin-bottom: 2rem; animation: logoSpin 1.2s ease-out;">
+            <img src="Color logo - no background.svg" alt="OMNI Logistics" style="max-width: 500px; width: 80%; margin-bottom: 1rem; animation: logoSpin 1.2s ease-out;">
             <h1>Your Trusted <span>Transportation</span> Partner</h1>
             <p>Professional distribution and transportation services</p>
         </div>
@@ -1438,8 +1586,8 @@
         </div>
 
         <!-- Fleet Photo Gallery -->
-        <div style="margin-top: 5rem;">
-            <h3 style="text-align: center; font-size: 2.5rem; margin-bottom: 1rem; color: var(--dark-black);">Our Fleet in <span style="color: var(--primary-orange);">Action</span></h3>
+        <div style="margin-top: 2rem;">
+            <h3 style="text-align: center; font-size: 2.5rem; margin-bottom: 0.5rem; color: var(--dark-black);">Our Fleet in <span style="color: var(--primary-orange);">Action</span></h3>
             <p style="text-align: center; font-size: 1.2rem; color: var(--grey); margin-bottom: 3rem;">See our modern, well-maintained vehicles ready to serve you</p>
             
             <div class="fleet-gallery">
@@ -1601,7 +1749,7 @@
             <form action="https://formsubmit.co/omni@omnids.gr" method="POST">
                 <input type="hidden" name="_subject" value="New Quote Request - OMNI Logistics">
                 <input type="hidden" name="_captcha" value="false">
-                <input type="hidden" name="_next" value="#thank-you">
+                <input type="hidden" name="_next" value="https://www.omnids.gr/#calculator">
                 <input type="hidden" name="_template" value="table">
                 
                 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; margin-bottom: 1.5rem;">
@@ -1676,7 +1824,7 @@
                     <textarea name="notes" placeholder="Please provide any additional details about your shipment..." style="width: 100%; padding: 1rem; border: 2px solid rgba(255,255,255,0.3); border-radius: 5px; background: white; min-height: 100px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 1rem; resize: vertical;"></textarea>
                 </div>
                 
-                <button type="submit" id="quoteSubmitBtn" style="width: 100%; background: white; color: var(--primary-orange); padding: 1.2rem; border: none; border-radius: 50px; font-size: 1.2rem; font-weight: 700; cursor: pointer; transition: all 0.3s ease; box-shadow: 0 5px 15px rgba(0,0,0,0.2);" onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 8px 20px rgba(0,0,0,0.3)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 5px 15px rgba(0,0,0,0.2)'" onclick="this.innerHTML='Sending...'; this.disabled=true;">
+                <button type="submit" id="quoteSubmitBtn" style="width: 100%; background: white; color: var(--primary-orange); padding: 1.2rem; border: none; border-radius: 50px; font-size: 1.2rem; font-weight: 700; cursor: pointer; transition: all 0.3s ease; box-shadow: 0 5px 15px rgba(0,0,0,0.2);" onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 8px 20px rgba(0,0,0,0.3)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 5px 15px rgba(0,0,0,0.2)'">
                     Request Quote
                 </button>
                 
@@ -2032,13 +2180,27 @@
         <h2 class="section-title">This Is <span>Us</span></h2>
         <p class="section-subtitle">See our facilities, fleet, and team in action</p>
         
-        <div style="max-width: 1000px; margin: 0 auto;">
-            <div style="background: white; padding: 3rem; border-radius: 15px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);">
-                <div style="width: 100%; height: 500px; background: linear-gradient(135deg, var(--dark-black) 0%, var(--primary-blue) 100%); border-radius: 10px; display: flex; align-items: center; justify-content: center; margin-bottom: 2rem; position: relative;">
-                    <div style="text-align: center; color: white;">
-                        <div style="font-size: 5rem; margin-bottom: 1rem;">▶️</div>
-                        <h3 style="font-size: 2rem; margin-bottom: 1rem;">Virtual Tour Coming Soon</h3>
-                        <p style="font-size: 1.1rem; opacity: 0.9;">See our 10,000m² warehouse facility and modern fleet</p>
+        <div style="max-width: 1200px; margin: 0 auto;">
+            <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem; padding: 2rem;">
+                <!-- Video 1 - Portrait -->
+                <div style="background: white; padding: 2rem; border-radius: 15px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);">
+                    <div style="width: 100%; height: 600px; background: linear-gradient(135deg, var(--primary-orange) 0%, #ff8c42 100%); border-radius: 10px; display: flex; align-items: center; justify-content: center; position: relative;">
+                        <div style="text-align: center; color: white;">
+                            <div style="font-size: 4rem; margin-bottom: 1rem;">▶️</div>
+                            <h3 style="font-size: 1.5rem; margin-bottom: 0.5rem;">Day in the Life</h3>
+                            <p style="font-size: 1rem; opacity: 0.9;">Coming Soon</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Video 2 - Portrait -->
+                <div style="background: white; padding: 2rem; border-radius: 15px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);">
+                    <div style="width: 100%; height: 600px; background: linear-gradient(135deg, var(--primary-blue) 0%, #0a6fb8 100%); border-radius: 10px; display: flex; align-items: center; justify-content: center; position: relative;">
+                        <div style="text-align: center; color: white;">
+                            <div style="font-size: 4rem; margin-bottom: 1rem;">▶️</div>
+                            <h3 style="font-size: 1.5rem; margin-bottom: 0.5rem;">Behind the Scenes</h3>
+                            <p style="font-size: 1rem; opacity: 0.9;">Coming Soon</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -2088,7 +2250,7 @@
                     <form action="https://formsubmit.co/omni@omnids.gr" method="POST" enctype="multipart/form-data">
                         <input type="hidden" name="_subject" value="New Job Application - OMNI Logistics">
                         <input type="hidden" name="_captcha" value="false">
-                        <input type="hidden" name="_next" value="#thank-you">
+                        <input type="hidden" name="_next" value="https://www.omnids.gr/#careers">
                         <input type="hidden" name="_template" value="table">
                         
                         <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 1.5rem;">
@@ -2151,9 +2313,9 @@
             <div class="contact-form" id="quote">
                 <h3 style="margin-bottom: 2rem;">Request a Quote</h3>
                 <form action="https://formsubmit.co/omni@omnids.gr" method="POST">
-                    <input type="hidden" name="_subject" value="New Quote Request - OMNI Logistics">
+                    <input type="hidden" name="_subject" value="New Contact Request - OMNI Logistics">
                     <input type="hidden" name="_captcha" value="false">
-                    <input type="hidden" name="_next" value="#thank-you">
+                    <input type="hidden" name="_next" value="https://www.omnids.gr/#contact">
                     <input type="hidden" name="_template" value="table">
                     
                     <div class="form-group">
@@ -2286,7 +2448,7 @@
         <div class="footer-grid">
             <div class="footer-section">
                 <h3>Contact</h3>
-                <p style="margin-bottom: 1rem;"><strong>📍 Address</strong><br><a href="https://www.google.com/maps/search/?api=1&query=Afidnes,Greece" target="_blank" style="color: rgba(255,255,255,0.9); text-decoration: none; transition: all 0.3s;" onmouseover="this.style.color='var(--primary-orange)'" onmouseout="this.style.color='rgba(255,255,255,0.9)'">Afidnes, Greece</a></p>
+                <p style="margin-bottom: 1rem;"><strong>📍 Address</strong><br><a href="https://www.google.com/maps/search/?api=1&query=Leoforos+Tirteou,Afidnes,Greece" target="_blank" style="color: rgba(255,255,255,0.9); text-decoration: none; transition: all 0.3s;" onmouseover="this.style.color='var(--primary-orange)'" onmouseout="this.style.color='rgba(255,255,255,0.9)'">Afidnes Leoforos Tirteou</a></p>
                 <p style="margin-bottom: 1rem;"><strong>📞 Phone</strong><br><a href="tel:+302295029810" style="color: rgba(255,255,255,0.9); text-decoration: none; transition: all 0.3s;" onmouseover="this.style.color='var(--primary-orange)'" onmouseout="this.style.color='rgba(255,255,255,0.9)'">+30 2295 029810</a></p>
                 <p><strong>✉️ Email</strong><br><a href="mailto:omni@omnids.gr" style="color: rgba(255,255,255,0.9); text-decoration: none; transition: all 0.3s;" onmouseover="this.style.color='var(--primary-orange)'" onmouseout="this.style.color='rgba(255,255,255,0.9)'">omni@omnids.gr</a></p>
             </div>
@@ -2312,6 +2474,7 @@
                 <p style="margin-bottom: 1.5rem;">Subscribe to get updates on special offers, new routes, and company news.</p>
                 <form action="https://formsubmit.co/omni@omnids.gr" method="POST" style="display: flex; flex-direction: column; gap: 1rem;">
                     <input type="hidden" name="_subject" value="Newsletter Subscription - OMNI Logistics">
+                    <input type="hidden" name="_next" value="https://www.omnids.gr/#newsletter">
                     <input type="email" name="email" placeholder="Your email address" required style="padding: 0.8rem; border: 1px solid rgba(255,255,255,0.3); border-radius: 5px; background: rgba(255,255,255,0.1); color: white; font-size: 1rem;">
                     <button type="submit" style="background: var(--primary-orange); color: white; padding: 0.8rem; border: none; border-radius: 5px; font-weight: 600; cursor: pointer; transition: all 0.3s ease;">Subscribe</button>
                 </form>
@@ -2344,31 +2507,91 @@
             const menuToggle = document.querySelector('.menu-toggle');
             navLinks.classList.toggle('mobile-active');
             menuToggle.classList.toggle('active');
+            
+            // Close all dropdowns when closing menu
+            if (!navLinks.classList.contains('mobile-active')) {
+                document.querySelectorAll('.dropdown').forEach(dd => {
+                    dd.classList.remove('active');
+                });
+            }
         }
 
-        // Close mobile menu when clicking a link
-        document.querySelectorAll('.nav-links a').forEach(link => {
+        // Dropdown toggle function for mobile
+        function toggleDropdown(event) {
+            // Only on mobile
+            if (window.innerWidth <= 968) {
+                event.preventDefault();
+                event.stopPropagation();
+                
+                const clickedLink = event.currentTarget;
+                const dropdown = clickedLink.closest('.dropdown');
+                
+                if (dropdown) {
+                    // Use a small timeout to let any other events finish
+                    setTimeout(() => {
+                        const isCurrentlyActive = dropdown.classList.contains('active');
+                        
+                        // Close all dropdowns
+                        document.querySelectorAll('.dropdown').forEach(dd => {
+                            dd.classList.remove('active');
+                        });
+                        
+                        // If this one was closed, open it
+                        if (!isCurrentlyActive) {
+                            dropdown.classList.add('active');
+                        }
+                    }, 10);
+                }
+                
+                return false; // Prevent navigation
+            }
+            
+            return true; // Allow navigation on desktop
+        }
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', (e) => {
+            const navLinks = document.querySelector('.nav-links');
+            const menuToggle = document.querySelector('.menu-toggle');
+            const nav = document.querySelector('nav');
+            
+            if (navLinks.classList.contains('mobile-active') && 
+                !nav.contains(e.target)) {
+                navLinks.classList.remove('mobile-active');
+                menuToggle.classList.remove('active');
+                // Close all dropdowns
+                document.querySelectorAll('.dropdown').forEach(dd => {
+                    dd.classList.remove('active');
+                });
+            }
+        });
+
+        // Close mobile menu when clicking dropdown content links
+        document.querySelectorAll('.dropdown-content a').forEach(link => {
             link.addEventListener('click', () => {
                 const navLinks = document.querySelector('.nav-links');
                 const menuToggle = document.querySelector('.menu-toggle');
+                
+                if (navLinks.classList.contains('mobile-active')) {
+                    navLinks.classList.remove('mobile-active');
+                    menuToggle.classList.remove('active');
+                    document.querySelectorAll('.dropdown').forEach(dd => {
+                        dd.classList.remove('active');
+                    });
+                }
+            });
+        });
+        
+        // Close mobile menu when clicking non-dropdown links
+        document.querySelectorAll('.nav-links > li > a:not([onclick*="toggleDropdown"])').forEach(link => {
+            link.addEventListener('click', () => {
+                const navLinks = document.querySelector('.nav-links');
+                const menuToggle = document.querySelector('.menu-toggle');
+                
                 if (navLinks.classList.contains('mobile-active')) {
                     navLinks.classList.remove('mobile-active');
                     menuToggle.classList.remove('active');
                 }
-            });
-        });
-
-        // Mobile dropdown toggle
-        document.addEventListener('DOMContentLoaded', () => {
-            const dropdowns = document.querySelectorAll('.dropdown');
-            dropdowns.forEach(dropdown => {
-                const mainLink = dropdown.querySelector('a');
-                mainLink.addEventListener('click', (e) => {
-                    if (window.innerWidth <= 968) {
-                        e.preventDefault();
-                        dropdown.classList.toggle('active');
-                    }
-                });
             });
         });
 
@@ -2427,7 +2650,26 @@
         });
 
         function scrollToTop() {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
+            // Faster scroll with custom animation
+            const start = window.pageYOffset;
+            const duration = 600; // Reduced from default ~2000ms to 600ms
+            const startTime = performance.now();
+
+            function scroll(currentTime) {
+                const elapsed = currentTime - startTime;
+                const progress = Math.min(elapsed / duration, 1);
+                
+                // Easing function for smooth deceleration
+                const easing = 1 - Math.pow(1 - progress, 3);
+                
+                window.scrollTo(0, start * (1 - easing));
+                
+                if (progress < 1) {
+                    requestAnimationFrame(scroll);
+                }
+            }
+            
+            requestAnimationFrame(scroll);
         }
 
         // Live Chat Widget
@@ -2635,6 +2877,93 @@
             }
         });
 
+        // Check for successful form submission (from URL hash)
+        window.addEventListener('load', function() {
+            const hash = window.location.hash;
+            
+            // Show thank you message if redirected back after form submission
+            if (document.referrer.includes('formsubmit.co')) {
+                if (hash === '#calculator') {
+                    showThankYouMessage('quote');
+                } else if (hash === '#careers') {
+                    showThankYouMessage('application');
+                } else if (hash === '#contact') {
+                    showThankYouMessage('contact');
+                } else if (hash === '#newsletter') {
+                    showThankYouMessage('newsletter');
+                }
+            }
+        });
+
+        function showThankYouMessage(formType) {
+            let title = 'Thank You!';
+            let message = '';
+            
+            switch(formType) {
+                case 'quote':
+                    message = 'Your quote request has been submitted successfully. We\'ll review your request and contact you within 24 hours with a detailed quote.';
+                    break;
+                case 'application':
+                    message = 'Your job application has been submitted successfully. Our HR team will review your application and contact you soon.';
+                    break;
+                case 'contact':
+                    message = 'Your message has been sent successfully. We\'ll get back to you as soon as possible.';
+                    break;
+                case 'newsletter':
+                    message = 'You\'ve successfully subscribed to our newsletter! You\'ll receive updates on special offers, new routes, and company news.';
+                    break;
+            }
+            
+            // Create thank you overlay
+            const overlay = document.createElement('div');
+            overlay.style.cssText = `
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(0, 0, 0, 0.8);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                z-index: 10000;
+                animation: fadeIn 0.3s ease-out;
+            `;
+            
+            const messageBox = document.createElement('div');
+            messageBox.style.cssText = `
+                background: white;
+                padding: 3rem;
+                border-radius: 15px;
+                box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+                text-align: center;
+                max-width: 500px;
+                animation: slideUp 0.4s ease-out;
+            `;
+            
+            messageBox.innerHTML = `
+                <div style="font-size: 4rem; margin-bottom: 1rem;">✅</div>
+                <h2 style="color: var(--primary-orange); margin-bottom: 1rem; font-size: 2rem;">${title}</h2>
+                <p style="color: var(--grey); font-size: 1.1rem; line-height: 1.6; margin-bottom: 2rem;">
+                    ${message}
+                </p>
+                <button onclick="this.parentElement.parentElement.remove()" style="background: var(--primary-orange); color: white; padding: 1rem 2.5rem; border: none; border-radius: 50px; font-size: 1.1rem; font-weight: 700; cursor: pointer; transition: all 0.3s ease;">
+                    Close
+                </button>
+            `;
+            
+            overlay.appendChild(messageBox);
+            document.body.appendChild(overlay);
+            
+            // Auto close after 10 seconds
+            setTimeout(() => {
+                overlay.remove();
+            }, 10000);
+            
+            // Clean URL
+            history.replaceState(null, '', window.location.pathname + window.location.hash);
+        }
+
         // Toggle package-specific fields
         function togglePackageFields() {
             const packageType = document.getElementById('packageType').value;
@@ -2684,7 +3013,7 @@
       "email": "omni@omnids.gr",
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "Afidnes",
+        "streetAddress": "Leoforos Tirteou, Afidnes",
         "addressLocality": "Athens",
         "addressRegion": "Attica",
         "addressCountry": "GR"
