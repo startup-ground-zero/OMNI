@@ -43,6 +43,11 @@
             box-sizing: border-box;
         }
 
+        html {
+            scroll-padding-top: 40px; /* Offset for fixed navigation */
+            scroll-behavior: smooth;
+        }
+
         :root {
             --primary-orange: #f65003;
             --primary-blue: #088ee8;
@@ -624,8 +629,8 @@
 
         /* Section Styles */
         section {
-            padding: 5rem 10%;
-            scroll-margin-top: 80px;
+            padding: 3rem 10%;
+            scroll-margin-top: 40px;
             position: relative;
             z-index: 2;
             background: white;
@@ -634,7 +639,7 @@
         .section-title {
             font-size: 2.5rem;
             text-align: center;
-            margin-bottom: 1rem;
+            margin-bottom: 0.5rem;
             color: var(--dark-black);
             font-weight: 700;
             letter-spacing: -0.5px;
@@ -648,7 +653,7 @@
             text-align: center;
             font-size: 1.2rem;
             color: var(--grey);
-            margin-bottom: 4rem;
+            margin-bottom: 2rem;
         }
 
         /* Services Section */
@@ -876,10 +881,13 @@
 
         .footer-section ul {
             list-style: none;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.8rem 1.5rem;
         }
 
         .footer-section ul li {
-            margin-bottom: 0.8rem;
+            margin-bottom: 0;
         }
 
         .footer-section ul li a {
@@ -935,13 +943,52 @@
             position: fixed;
             top: 0;
             right: 0;
-            width: 80%;
+            width: 85%;
             max-width: 400px;
             height: 100vh;
-            background: white;
-            padding: 6rem 2rem 2rem;
-            box-shadow: -5px 0 20px rgba(0, 0, 0, 0.2);
+            background: linear-gradient(180deg, #fafafa 0%, white 100%);
+            padding: 5rem 0 2rem;
+            box-shadow: -5px 0 40px rgba(0, 0, 0, 0.15);
             animation: slideIn 0.3s ease;
+            gap: 0;
+        }
+
+        .nav-links.mobile-active a {
+            padding: 1.2rem 2rem;
+            margin: 0;
+            font-size: 1.1rem;
+            font-weight: 500;
+            color: var(--dark-black);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+            transition: all 0.2s ease;
+        }
+
+        .nav-links.mobile-active a:hover {
+            background: rgba(246, 80, 3, 0.05);
+            padding-left: 2.5rem;
+            color: var(--primary-orange);
+        }
+
+        .nav-links.mobile-active .btn-primary {
+            margin: 1.5rem 2rem 0.5rem;
+            padding: 1rem 2rem;
+            text-align: center;
+            border-bottom: none;
+            background: var(--primary-orange);
+            color: white;
+            border-radius: 8px;
+            font-weight: 600;
+        }
+
+        .nav-links.mobile-active .btn-primary:hover {
+            background: #e64a00;
+            padding-left: 2rem;
+        }
+
+        .nav-links.mobile-active .dropdown > a {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
 
         @keyframes slideIn {
@@ -954,7 +1001,7 @@
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
             gap: 2rem;
-            margin-top: 4rem;
+            margin-top: 2rem;
         }
 
         .fleet-gallery-item {
@@ -1038,10 +1085,18 @@
                 position: static;
                 display: none;
                 box-shadow: none;
-                background: var(--light-grey);
+                background: rgba(246, 80, 3, 0.03);
                 border-radius: 0;
-                margin: 0.5rem 0;
-                border-top: 2px solid var(--primary-orange);
+                margin: 0;
+                border-left: 3px solid var(--primary-orange);
+                padding-left: 1rem;
+            }
+
+            .dropdown-content a {
+                font-size: 1rem;
+                font-weight: 400;
+                color: var(--grey);
+                padding: 1rem 2rem;
             }
 
             .dropdown.active .dropdown-content {
@@ -1049,7 +1104,13 @@
             }
 
             .dropdown > a::after {
-                float: right;
+                content: '▼';
+                font-size: 0.7rem;
+                transition: transform 0.2s ease;
+            }
+
+            .dropdown.active > a::after {
+                transform: rotate(180deg);
             }
         }
 
@@ -1480,8 +1541,8 @@
         </div>
 
         <!-- Fleet Photo Gallery -->
-        <div style="margin-top: 5rem;">
-            <h3 style="text-align: center; font-size: 2.5rem; margin-bottom: 1rem; color: var(--dark-black);">Our Fleet in <span style="color: var(--primary-orange);">Action</span></h3>
+        <div style="margin-top: 2rem;">
+            <h3 style="text-align: center; font-size: 2.5rem; margin-bottom: 0.5rem; color: var(--dark-black);">Our Fleet in <span style="color: var(--primary-orange);">Action</span></h3>
             <p style="text-align: center; font-size: 1.2rem; color: var(--grey); margin-bottom: 3rem;">See our modern, well-maintained vehicles ready to serve you</p>
             
             <div class="fleet-gallery">
@@ -2342,7 +2403,7 @@
         <div class="footer-grid">
             <div class="footer-section">
                 <h3>Contact</h3>
-                <p style="margin-bottom: 1rem;"><strong>📍 Address</strong><br><a href="https://www.google.com/maps/search/?api=1&query=Afidnes,Greece" target="_blank" style="color: rgba(255,255,255,0.9); text-decoration: none; transition: all 0.3s;" onmouseover="this.style.color='var(--primary-orange)'" onmouseout="this.style.color='rgba(255,255,255,0.9)'">Afidnes, Greece</a></p>
+                <p style="margin-bottom: 1rem;"><strong>📍 Address</strong><br><a href="https://www.google.com/maps/search/?api=1&query=Leoforos+Tirteou,Afidnes,Greece" target="_blank" style="color: rgba(255,255,255,0.9); text-decoration: none; transition: all 0.3s;" onmouseover="this.style.color='var(--primary-orange)'" onmouseout="this.style.color='rgba(255,255,255,0.9)'">Afidnes Leoforos Tirteou</a></p>
                 <p style="margin-bottom: 1rem;"><strong>📞 Phone</strong><br><a href="tel:+302295029810" style="color: rgba(255,255,255,0.9); text-decoration: none; transition: all 0.3s;" onmouseover="this.style.color='var(--primary-orange)'" onmouseout="this.style.color='rgba(255,255,255,0.9)'">+30 2295 029810</a></p>
                 <p><strong>✉️ Email</strong><br><a href="mailto:omni@omnids.gr" style="color: rgba(255,255,255,0.9); text-decoration: none; transition: all 0.3s;" onmouseover="this.style.color='var(--primary-orange)'" onmouseout="this.style.color='rgba(255,255,255,0.9)'">omni@omnids.gr</a></p>
             </div>
@@ -2847,7 +2908,7 @@
       "email": "omni@omnids.gr",
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "Afidnes",
+        "streetAddress": "Leoforos Tirteou, Afidnes",
         "addressLocality": "Athens",
         "addressRegion": "Attica",
         "addressCountry": "GR"
