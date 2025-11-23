@@ -268,6 +268,13 @@
             display: block;
             animation: fadeInDown 0.3s ease;
         }
+        
+        /* Disable hover on mobile - use click instead */
+        @media (max-width: 968px) {
+            .dropdown:hover .dropdown-content {
+                display: none;
+            }
+        }
 
         .dropdown-content a {
             display: block;
@@ -937,6 +944,35 @@
             transform: rotate(-45deg) translate(7px, -7px);
         }
 
+        .mobile-close {
+            display: none;
+            position: absolute;
+            top: 1.5rem;
+            right: 1.5rem;
+            background: var(--primary-orange);
+            color: white;
+            border: none;
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            font-size: 1.8rem;
+            cursor: pointer;
+            z-index: 1002;
+            transition: all 0.3s ease;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+        }
+
+        .mobile-close:hover {
+            background: #e64a00;
+            transform: rotate(90deg);
+        }
+
+        .nav-links.mobile-active .mobile-close {
+            display: flex;
+        }
+
         .nav-links.mobile-active {
             display: flex;
             flex-direction: column;
@@ -951,6 +987,12 @@
             box-shadow: -5px 0 40px rgba(0, 0, 0, 0.15);
             animation: slideIn 0.3s ease;
             gap: 0;
+            overflow-y: auto;
+        }
+
+        .nav-links.mobile-active > li {
+            width: 100%;
+            flex-shrink: 0;
         }
 
         .nav-links.mobile-active a {
@@ -961,6 +1003,7 @@
             color: var(--dark-black);
             border-bottom: 1px solid rgba(0, 0, 0, 0.05);
             transition: all 0.2s ease;
+            display: block;
         }
 
         .nav-links.mobile-active a:hover {
@@ -969,8 +1012,8 @@
             color: var(--primary-orange);
         }
 
-        .nav-links.mobile-active .btn-primary {
-            margin: 1.5rem 2rem 0.5rem;
+        .nav-links.mobile-active .btn-quote {
+            margin: 1.5rem 2rem;
             padding: 1rem 2rem;
             text-align: center;
             border-bottom: none;
@@ -978,9 +1021,10 @@
             color: white;
             border-radius: 8px;
             font-weight: 600;
+            display: block;
         }
 
-        .nav-links.mobile-active .btn-primary:hover {
+        .nav-links.mobile-active .btn-quote:hover {
             background: #e64a00;
             padding-left: 2rem;
         }
@@ -1274,9 +1318,10 @@
             <span></span>
         </button>
         <ul class="nav-links">
+            <button class="mobile-close" onclick="toggleMenu()" style="display: none;">✕</button>
             <li><a href="#" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;">Home</a></li>
             <li class="dropdown">
-                <a href="#company">Our Company</a>
+                <a href="#company" onclick="return toggleDropdown(event);">Our Company</a>
                 <div class="dropdown-content">
                     <a href="#company">About Us</a>
                     <a href="#who-is-omni">Who is OMNI</a>
@@ -1285,7 +1330,7 @@
             </li>
             <li><a href="#fleet">Fleet</a></li>
             <li class="dropdown">
-                <a href="#services">Our Services</a>
+                <a href="#services" onclick="return toggleDropdown(event);">Our Services</a>
                 <div class="dropdown-content">
                     <a href="#services">Our Services</a>
                     <a href="#calculator">Request a Quote</a>
@@ -1294,7 +1339,7 @@
                 </div>
             </li>
             <li class="dropdown">
-                <a href="#trust">OMNI Experience</a>
+                <a href="#trust" onclick="return toggleDropdown(event);">OMNI Experience</a>
                 <div class="dropdown-content">
                     <a href="#trust">Delivery for Leading Companies</a>
                     <a href="#faq">Frequently Asked Questions</a>
@@ -2462,31 +2507,91 @@
             const menuToggle = document.querySelector('.menu-toggle');
             navLinks.classList.toggle('mobile-active');
             menuToggle.classList.toggle('active');
+            
+            // Close all dropdowns when closing menu
+            if (!navLinks.classList.contains('mobile-active')) {
+                document.querySelectorAll('.dropdown').forEach(dd => {
+                    dd.classList.remove('active');
+                });
+            }
         }
 
-        // Close mobile menu when clicking a link
-        document.querySelectorAll('.nav-links a').forEach(link => {
+        // Dropdown toggle function for mobile
+        function toggleDropdown(event) {
+            // Only on mobile
+            if (window.innerWidth <= 968) {
+                event.preventDefault();
+                event.stopPropagation();
+                
+                const clickedLink = event.currentTarget;
+                const dropdown = clickedLink.closest('.dropdown');
+                
+                if (dropdown) {
+                    // Use a small timeout to let any other events finish
+                    setTimeout(() => {
+                        const isCurrentlyActive = dropdown.classList.contains('active');
+                        
+                        // Close all dropdowns
+                        document.querySelectorAll('.dropdown').forEach(dd => {
+                            dd.classList.remove('active');
+                        });
+                        
+                        // If this one was closed, open it
+                        if (!isCurrentlyActive) {
+                            dropdown.classList.add('active');
+                        }
+                    }, 10);
+                }
+                
+                return false; // Prevent navigation
+            }
+            
+            return true; // Allow navigation on desktop
+        }
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', (e) => {
+            const navLinks = document.querySelector('.nav-links');
+            const menuToggle = document.querySelector('.menu-toggle');
+            const nav = document.querySelector('nav');
+            
+            if (navLinks.classList.contains('mobile-active') && 
+                !nav.contains(e.target)) {
+                navLinks.classList.remove('mobile-active');
+                menuToggle.classList.remove('active');
+                // Close all dropdowns
+                document.querySelectorAll('.dropdown').forEach(dd => {
+                    dd.classList.remove('active');
+                });
+            }
+        });
+
+        // Close mobile menu when clicking dropdown content links
+        document.querySelectorAll('.dropdown-content a').forEach(link => {
             link.addEventListener('click', () => {
                 const navLinks = document.querySelector('.nav-links');
                 const menuToggle = document.querySelector('.menu-toggle');
+                
+                if (navLinks.classList.contains('mobile-active')) {
+                    navLinks.classList.remove('mobile-active');
+                    menuToggle.classList.remove('active');
+                    document.querySelectorAll('.dropdown').forEach(dd => {
+                        dd.classList.remove('active');
+                    });
+                }
+            });
+        });
+        
+        // Close mobile menu when clicking non-dropdown links
+        document.querySelectorAll('.nav-links > li > a:not([onclick*="toggleDropdown"])').forEach(link => {
+            link.addEventListener('click', () => {
+                const navLinks = document.querySelector('.nav-links');
+                const menuToggle = document.querySelector('.menu-toggle');
+                
                 if (navLinks.classList.contains('mobile-active')) {
                     navLinks.classList.remove('mobile-active');
                     menuToggle.classList.remove('active');
                 }
-            });
-        });
-
-        // Mobile dropdown toggle
-        document.addEventListener('DOMContentLoaded', () => {
-            const dropdowns = document.querySelectorAll('.dropdown');
-            dropdowns.forEach(dropdown => {
-                const mainLink = dropdown.querySelector('a');
-                mainLink.addEventListener('click', (e) => {
-                    if (window.innerWidth <= 968) {
-                        e.preventDefault();
-                        dropdown.classList.toggle('active');
-                    }
-                });
             });
         });
 
