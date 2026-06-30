@@ -535,6 +535,228 @@
             position: relative;
         }
 
+        /* ===== DARK SECTION ALTERNATING ===== */
+        .section-dark {
+            background: var(--dark) !important;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .section-dark::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: 
+                radial-gradient(ellipse at 20% 50%, rgba(246, 80, 3, 0.06) 0%, transparent 50%),
+                radial-gradient(ellipse at 80% 50%, rgba(8, 142, 232, 0.04) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        .section-dark .section-header h2 {
+            color: white;
+        }
+
+        .section-dark .section-header p {
+            color: var(--grey-400);
+        }
+
+        .section-dark .section-tag {
+            color: var(--orange-light);
+        }
+
+        /* Dark section - service cards */
+        .section-dark .service-card {
+            background: white;
+            border-color: var(--grey-200);
+        }
+
+        .section-dark .service-card:hover {
+            border-color: transparent;
+            box-shadow: 0 12px 40px rgba(0,0,0,0.3);
+        }
+
+        .section-dark .service-card h3 {
+            color: var(--grey-900);
+        }
+
+        .section-dark .service-card p {
+            color: var(--grey-500);
+        }
+
+        .section-dark .service-card ul li {
+            color: var(--grey-500);
+        }
+
+        .section-dark .service-icon {
+            background: var(--grey-50);
+            border-color: var(--grey-200);
+        }
+
+        .section-dark .service-icon.orange { background: rgba(246, 80, 3, 0.06); border-color: rgba(246, 80, 3, 0.12); }
+        .section-dark .service-icon.blue { background: rgba(8, 142, 232, 0.06); border-color: rgba(8, 142, 232, 0.12); }
+
+        /* Dark section - feature cards */
+        .section-dark .feature-card {
+            background: white;
+            border-color: var(--grey-200);
+        }
+
+        .section-dark .feature-card:hover {
+            border-color: var(--orange);
+            box-shadow: var(--shadow-glow-orange);
+        }
+
+        .section-dark .feature-card h3 {
+            color: var(--grey-900);
+        }
+
+        .section-dark .feature-card p {
+            color: var(--grey-500);
+        }
+
+        .section-dark .feature-card .feature-num {
+            color: var(--grey-200);
+        }
+
+        /* Dark section - fleet cards */
+        .section-dark .fleet-cat-card {
+            background: var(--dark-card);
+            border-color: rgba(255,255,255,0.08);
+        }
+
+        .section-dark .fleet-cat-card:hover {
+            box-shadow: 0 12px 40px rgba(0,0,0,0.4);
+        }
+
+        .section-dark .fleet-cat-card h3 {
+            color: white;
+        }
+
+        .section-dark .fleet-cat-card .fleet-cat-badge {
+            background: rgba(255,255,255,0.06);
+            color: var(--grey-400);
+        }
+
+        .section-dark .fleet-spec {
+            background: rgba(255,255,255,0.04);
+        }
+
+        .section-dark .fleet-spec span {
+            color: white;
+        }
+
+        /* Dark section - quote */
+        .section-dark .quote-container {
+            border-color: rgba(255,255,255,0.08);
+        }
+
+        /* Dark section - coverage cards */
+        .section-dark .coverage-card {
+            background: var(--dark-card);
+            border-color: rgba(255,255,255,0.08);
+        }
+
+        .section-dark .coverage-card-header {
+            border-bottom-color: rgba(255,255,255,0.08);
+        }
+
+        .section-dark .coverage-card-header h3 {
+            color: white;
+        }
+
+        .section-dark .coverage-card-header small {
+            color: var(--grey-400);
+        }
+
+        .section-dark .coverage-list-item {
+            background: rgba(255,255,255,0.04);
+            color: var(--grey-200);
+        }
+
+        /* Dark section - FAQ */
+        .section-dark .faq-item {
+            background: var(--dark-card);
+            border-color: rgba(255,255,255,0.08);
+        }
+
+        .section-dark .faq-item:hover {
+            border-color: rgba(246, 80, 3, 0.3);
+        }
+
+        .section-dark .faq-question {
+            color: white;
+        }
+
+        .section-dark .faq-answer-inner {
+            color: var(--grey-400);
+        }
+
+        /* Dark section - careers */
+        .section-dark .career-card {
+            background: white;
+            border-color: var(--grey-200);
+        }
+
+        .section-dark .career-card h3 {
+            color: var(--grey-900);
+        }
+
+        .section-dark .career-card p {
+            color: var(--grey-500);
+        }
+
+        .section-dark .career-perks span {
+            background: var(--grey-50);
+            border-color: var(--grey-200);
+            color: var(--grey-700);
+        }
+
+        .section-dark .contact-form-card {
+            background: white;
+            border-color: var(--grey-200);
+        }
+
+        .section-dark .contact-form-card h3,
+        .section-dark .contact-form-card label {
+            color: var(--grey-900);
+        }
+
+        .section-dark .contact-form-card p {
+            color: var(--grey-500) !important;
+        }
+
+        .section-dark .contact-form-card input,
+        .section-dark .contact-form-card select,
+        .section-dark .contact-form-card textarea {
+            background: white;
+            border-color: var(--grey-200);
+            color: var(--grey-900);
+        }
+
+        .section-dark .contact-form-card input::placeholder,
+        .section-dark .contact-form-card textarea::placeholder {
+            color: var(--grey-400);
+        }
+
+        /* Dark section - contact */
+        .section-dark .contact-info-card {
+            background: rgba(255,255,255,0.04);
+            border-color: rgba(255,255,255,0.08);
+        }
+
+        .section-dark .contact-info-card:hover {
+            border-color: rgba(246, 80, 3, 0.3);
+        }
+
+        .section-dark .contact-info-card h4 {
+            color: white;
+        }
+
+        .section-dark .contact-info-card p,
+        .section-dark .contact-info-card a {
+            color: var(--grey-400);
+        }
+
         .section-header {
             text-align: center;
             margin-bottom: 4rem;
@@ -1821,7 +2043,7 @@
                     </div>
                     <div class="hero-card-stats">
                         <div class="hero-stat">
-                            <h3><span class="orange counter" data-target="4">0</span></h3>
+                            <h3><span class="orange counter" data-target="4" data-founding-year="2022">0</span></h3>
                             <p data-i18n="hero.stat1">Years Active</p>
                         </div>
                         <div class="hero-stat">
@@ -1981,7 +2203,7 @@
         </div>
         <div class="stats-grid">
             <div class="stat-card reveal">
-                <h3 class="orange"><span class="counter" data-target="4">0</span>+</h3>
+                <h3 class="orange"><span class="counter" data-target="4" data-founding-year="2022">0</span>+</h3>
                 <p data-i18n="stats.s1">Years in Business</p>
             </div>
             <div class="stat-card reveal reveal-delay-1">
@@ -2027,7 +2249,7 @@
     </section>
 
     <!-- Why OMNI -->
-    <section id="why-omni" style="background: var(--grey-50);">
+    <section id="why-omni" class="section-dark">
         <div class="section-header">
             <div class="section-tag" data-i18n="why.tag">Our Advantage</div>
             <h2 data-i18n-html="why.title">Why Choose <span class="highlight">OMNI</span></h2>
@@ -2154,7 +2376,7 @@
     </section>
 
     <!-- Quote Section -->
-    <section id="calculator" class="quote-section">
+    <section id="calculator" class="quote-section section-dark">
         <div class="section-header">
             <div class="section-tag" data-i18n="quote.tag">Free Quote</div>
             <h2 data-i18n-html="quote.title">Request a <span class="highlight">Quote</span></h2>
@@ -2306,7 +2528,7 @@
     </section>
 
     <!-- Industries Section -->
-    <section id="industries" style="background: var(--grey-50);">
+    <section id="industries" class="section-dark">
         <div class="section-header">
             <div class="section-tag" data-i18n="ind.tag">Industries</div>
             <h2 data-i18n-html="ind.title">Industry <span class="highlight">Solutions</span></h2>
@@ -2420,7 +2642,7 @@
     </section>
 
     <!-- Careers Section -->
-    <section id="careers" style="background: var(--grey-50);">
+    <section id="careers" class="section-dark">
         <div class="section-header">
             <div class="section-tag" data-i18n="careers.tag">Careers</div>
             <h2 data-i18n-html="careers.title">Join Our <span class="highlight">Team</span></h2>
@@ -3229,7 +3451,11 @@
 
         // Counter animation
         function animateCounter(el) {
-            const target = parseFloat(el.dataset.target);
+            let target = parseFloat(el.dataset.target);
+            if (el.dataset.foundingYear) {
+                target = new Date().getFullYear() - parseInt(el.dataset.foundingYear);
+                el.dataset.target = target;
+            }
             const duration = 2000;
             const increment = target / (duration / 16);
             let current = 0;
