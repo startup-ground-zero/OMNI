@@ -8,9 +8,10 @@
     <meta name="keywords" content="logistics Greece, courier Athens, transportation services, express delivery, freight services, same day delivery Greece, EU shipping, OMNI logistics">
     
     <link rel="icon" type="image/jpeg" href="omni_logo.jpg">
-    <link rel="canonical" href="https://www.omnids.gr/index-en.html">
-    <link rel="alternate" hreflang="el" href="https://www.omnids.gr/index.html">
-    <link rel="alternate" hreflang="en" href="https://www.omnids.gr/index-en.html">
+    <link rel="canonical" href="https://www.omnids.gr/">
+    <link rel="alternate" hreflang="el" href="https://www.omnids.gr/">
+    <link rel="alternate" hreflang="en" href="https://www.omnids.gr/">
+    <link rel="alternate" hreflang="x-default" href="https://www.omnids.gr/">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" as="style">
@@ -1758,8 +1759,8 @@
 
     <!-- Cookie Banner -->
     <div id="cookie-banner">
-        <p>We use cookies to improve your experience.</p>
-        <button onclick="acceptCookies()">Accept</button>
+        <p data-i18n="cookie.text">We use cookies to improve your experience.</p>
+        <button onclick="acceptCookies()" data-i18n="cookie.accept">Accept</button>
     </div>
 
     <!-- Scroll Top -->
@@ -1774,22 +1775,22 @@
             <span></span><span></span><span></span>
         </button>
         <ul class="nav-links">
-            <li><a href="#company">About</a></li>
+            <li><a href="#company" data-i18n="nav.about">About</a></li>
             <li class="dropdown">
-                <a href="#services" onclick="return toggleDropdown(event);">Services</a>
+                <a href="#services" onclick="return toggleDropdown(event);" data-i18n="nav.services">Services</a>
                 <div class="dropdown-content">
-                    <a href="#services">All Services</a>
-                    <a href="#coverage">Service Coverage</a>
-                    <a href="#industries">Industry Solutions</a>
+                    <a href="#services" data-i18n="nav.allServices">All Services</a>
+                    <a href="#coverage" data-i18n="nav.coverage">Service Coverage</a>
+                    <a href="#industries" data-i18n="nav.industries">Industry Solutions</a>
                 </div>
             </li>
-            <li><a href="#fleet">Fleet</a></li>
-            <li><a href="#why-omni">Why OMNI</a></li>
-            <li><a href="#faq">FAQ</a></li>
-            <li><a href="#careers">Careers</a></li>
-            <li><a href="#contact">Contact</a></li>
-            <li><a href="#calculator" class="btn-nav-quote">Get Quote</a></li>
-            <li><a href="index.html" class="btn-lang">GR</a></li>
+            <li><a href="#fleet" data-i18n="nav.fleet">Fleet</a></li>
+            <li><a href="#why-omni" data-i18n="nav.why">Why OMNI</a></li>
+            <li><a href="#faq" data-i18n="nav.faq">FAQ</a></li>
+            <li><a href="#careers" data-i18n="nav.careers">Careers</a></li>
+            <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
+            <li><a href="#calculator" class="btn-nav-quote" data-i18n="nav.quote">Get Quote</a></li>
+            <li><a href="#" class="btn-lang" id="langToggle" onclick="toggleLang();return false;">GR</a></li>
         </ul>
     </nav>
 
@@ -1797,12 +1798,12 @@
     <section class="hero">
         <div class="hero-grid">
             <div class="hero-text">
-                <div class="hero-badge">Professional Logistics Since 2021</div>
-                <h1>We Move Your<br>Business <span class="gradient-text">Forward</span></h1>
-                <p>Professional distribution and transportation services across Greece and the European Union. Reliable, fast, and always on time.</p>
+                <div class="hero-badge" data-i18n="hero.badge">Professional Logistics Since 2021</div>
+                <h1 data-i18n-html="hero.title">We Move Your<br>Business <span class="gradient-text">Forward</span></h1>
+                <p data-i18n="hero.subtitle">Professional distribution and transportation services across Greece and the European Union. Reliable, fast, and always on time.</p>
                 <div class="hero-buttons">
-                    <a href="#calculator" class="btn-hero-primary">Get a Free Quote &rarr;</a>
-                    <a href="#services" class="btn-hero-secondary">Explore Services</a>
+                    <a href="#calculator" class="btn-hero-primary" data-i18n-html="hero.cta1">Get a Free Quote &rarr;</a>
+                    <a href="#services" class="btn-hero-secondary" data-i18n="hero.cta2">Explore Services</a>
                 </div>
             </div>
             <div class="hero-visual">
@@ -1813,24 +1814,24 @@
                     <div class="hero-card-stats">
                         <div class="hero-stat">
                             <h3><span class="orange counter" data-target="4">0</span></h3>
-                            <p>Years Active</p>
+                            <p data-i18n="hero.stat1">Years Active</p>
                         </div>
                         <div class="hero-stat">
                             <h3><span class="blue counter" data-target="10">0</span></h3>
-                            <p>Fleet Vehicles</p>
+                            <p data-i18n="hero.stat2">Fleet Vehicles</p>
                         </div>
                         <div class="hero-stat">
                             <h3><span class="orange counter" data-target="3900">0</span>+</h3>
-                            <p>Monthly Deliveries</p>
+                            <p data-i18n="hero.stat3">Monthly Deliveries</p>
                         </div>
                         <div class="hero-stat">
                             <h3><span class="blue">98.6</span>%</h3>
-                            <p>On-Time Rate</p>
+                            <p data-i18n="hero.stat4">On-Time Rate</p>
                         </div>
                     </div>
                 </div>
-                <div class="hero-float hero-float-1">Same-Day Athens</div>
-                <div class="hero-float hero-float-2">20+ EU Countries</div>
+                <div class="hero-float hero-float-1" data-i18n="hero.float1">Same-Day Athens</div>
+                <div class="hero-float hero-float-2" data-i18n="hero.float2">20+ EU Countries</div>
             </div>
         </div>
     </section>
@@ -1838,126 +1839,126 @@
     <!-- Trust Bar -->
     <div class="trust-bar">
         <div class="trust-bar-inner">
-            <span>Retail &amp; E-Commerce</span>
+            <span data-i18n="trust.1">Retail &amp; E-Commerce</span>
             <div class="divider"></div>
-            <span>Manufacturing</span>
+            <span data-i18n="trust.2">Manufacturing</span>
             <div class="divider"></div>
-            <span>Food &amp; Beverage</span>
+            <span data-i18n="trust.3">Food &amp; Beverage</span>
             <div class="divider"></div>
-            <span>Pharmaceuticals</span>
+            <span data-i18n="trust.4">Pharmaceuticals</span>
             <div class="divider"></div>
-            <span>Construction</span>
+            <span data-i18n="trust.5">Construction</span>
             <div class="divider"></div>
-            <span>Technology</span>
+            <span data-i18n="trust.6">Technology</span>
         </div>
     </div>
 
     <!-- Services Section -->
     <section id="services" style="background: white;">
         <div class="section-header">
-            <div class="section-tag">What We Do</div>
-            <h2>Comprehensive Logistics <span class="highlight">Solutions</span></h2>
-            <p>End-to-end transportation and distribution services tailored to your business needs</p>
+            <div class="section-tag" data-i18n="services.tag">What We Do</div>
+            <h2 data-i18n-html="services.title">Comprehensive Logistics <span class="highlight">Solutions</span></h2>
+            <p data-i18n="services.subtitle">End-to-end transportation and distribution services tailored to your business needs</p>
         </div>
 
         <div class="services-grid">
             <div class="service-card reveal">
                 <div class="service-icon orange"><svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M1 3h15v13H1z"/><path d="M16 8h4l3 4v5h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></div>
-                <h3>Transportation Services</h3>
-                <p>Complete B2B &amp; B2C goods distribution across Greece.</p>
+                <h3 data-i18n="services.s1.title">Transportation Services</h3>
+                <p data-i18n="services.s1.desc">Complete B2B &amp; B2C goods distribution across Greece.</p>
                 <ul>
-                    <li>Business-to-business distribution</li>
-                    <li>Parcel and package delivery</li>
-                    <li>Corporate branch transfers</li>
-                    <li>Provincial agency deliveries</li>
+                    <li data-i18n="services.s1.l1">Business-to-business distribution</li>
+                    <li data-i18n="services.s1.l2">Parcel and package delivery</li>
+                    <li data-i18n="services.s1.l3">Corporate branch transfers</li>
+                    <li data-i18n="services.s1.l4">Provincial agency deliveries</li>
                 </ul>
             </div>
             <div class="service-card reveal">
                 <div class="service-icon blue"><svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/><path d="M3.27 6.96L12 12.01l8.73-5.05M12 22.08V12"/></svg></div>
-                <h3>Courier Services</h3>
-                <p>Fast courier solutions for businesses and e-commerce.</p>
+                <h3 data-i18n="services.s2.title">Courier Services</h3>
+                <p data-i18n="services.s2.desc">Fast courier solutions for businesses and e-commerce.</p>
                 <ul>
-                    <li>E-shop support &amp; fulfillment</li>
-                    <li>Express courier services</li>
-                    <li>Same-day delivery options</li>
-                    <li>Scheduled deliveries</li>
+                    <li data-i18n="services.s2.l1">E-shop support &amp; fulfillment</li>
+                    <li data-i18n="services.s2.l2">Express courier services</li>
+                    <li data-i18n="services.s2.l3">Same-day delivery options</li>
+                    <li data-i18n="services.s2.l4">Scheduled deliveries</li>
                 </ul>
             </div>
             <div class="service-card reveal">
                 <div class="service-icon orange"><svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><path d="M9 22V12h6v10"/></svg></div>
-                <h3>Moving Services</h3>
-                <p>Professional residential and corporate relocations.</p>
+                <h3 data-i18n="services.s3.title">Moving Services</h3>
+                <p data-i18n="services.s3.desc">Professional residential and corporate relocations.</p>
                 <ul>
-                    <li>Residential moves</li>
-                    <li>Office relocations</li>
-                    <li>Professional packing</li>
-                    <li>Furniture handling</li>
+                    <li data-i18n="services.s3.l1">Residential moves</li>
+                    <li data-i18n="services.s3.l2">Office relocations</li>
+                    <li data-i18n="services.s3.l3">Professional packing</li>
+                    <li data-i18n="services.s3.l4">Furniture handling</li>
                 </ul>
             </div>
             <div class="service-card reveal">
                 <div class="service-icon blue"><svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2M12 12v4M8 12v4M16 12v4"/></svg></div>
-                <h3>Warehousing &amp; Distribution</h3>
-                <p>Secure storage with advanced inventory management.</p>
+                <h3 data-i18n="services.s4.title">Warehousing &amp; Distribution</h3>
+                <p data-i18n="services.s4.desc">Secure storage with advanced inventory management.</p>
                 <ul>
-                    <li>Secure storage facilities</li>
-                    <li>Order fulfillment</li>
-                    <li>Cross-docking services</li>
-                    <li>Pick and pack operations</li>
+                    <li data-i18n="services.s4.l1">Secure storage facilities</li>
+                    <li data-i18n="services.s4.l2">Order fulfillment</li>
+                    <li data-i18n="services.s4.l3">Cross-docking services</li>
+                    <li data-i18n="services.s4.l4">Pick and pack operations</li>
                 </ul>
             </div>
             <div class="service-card reveal">
                 <div class="service-icon orange"><svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
-                <h3>Last Mile Delivery</h3>
-                <p>Efficient final delivery to customers with tracking.</p>
+                <h3 data-i18n="services.s5.title">Last Mile Delivery</h3>
+                <p data-i18n="services.s5.desc">Efficient final delivery to customers with tracking.</p>
                 <ul>
-                    <li>Urban delivery services</li>
-                    <li>Scheduled time windows</li>
-                    <li>Signature on delivery</li>
-                    <li>Failed delivery management</li>
+                    <li data-i18n="services.s5.l1">Urban delivery services</li>
+                    <li data-i18n="services.s5.l2">Scheduled time windows</li>
+                    <li data-i18n="services.s5.l3">Signature on delivery</li>
+                    <li data-i18n="services.s5.l4">Failed delivery management</li>
                 </ul>
             </div>
             <div class="service-card reveal">
                 <div class="service-icon blue"><svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg></div>
-                <h3>International Logistics</h3>
-                <p>Cross-border EU transportation with customs support.</p>
+                <h3 data-i18n="services.s6.title">International Logistics</h3>
+                <p data-i18n="services.s6.desc">Cross-border EU transportation with customs support.</p>
                 <ul>
-                    <li>European Union coverage</li>
-                    <li>Customs documentation</li>
-                    <li>Multi-modal transport</li>
-                    <li>Trade compliance</li>
+                    <li data-i18n="services.s6.l1">European Union coverage</li>
+                    <li data-i18n="services.s6.l2">Customs documentation</li>
+                    <li data-i18n="services.s6.l3">Multi-modal transport</li>
+                    <li data-i18n="services.s6.l4">Trade compliance</li>
                 </ul>
             </div>
             <div class="service-card reveal">
                 <div class="service-icon orange"><svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div>
-                <h3>Express &amp; Same-Day</h3>
-                <p>Urgent deliveries throughout Athens and major cities.</p>
+                <h3 data-i18n="services.s7.title">Express &amp; Same-Day</h3>
+                <p data-i18n="services.s7.desc">Urgent deliveries throughout Athens and major cities.</p>
                 <ul>
-                    <li>Same-day Athens delivery</li>
-                    <li>Express nationwide</li>
-                    <li>Priority handling</li>
-                    <li>Emergency logistics</li>
+                    <li data-i18n="services.s7.l1">Same-day Athens delivery</li>
+                    <li data-i18n="services.s7.l2">Express nationwide</li>
+                    <li data-i18n="services.s7.l3">Priority handling</li>
+                    <li data-i18n="services.s7.l4">Emergency logistics</li>
                 </ul>
             </div>
             <div class="service-card reveal">
                 <div class="service-icon blue"><svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 22s-8-4.5-8-11.8A8 8 0 0112 2a8 8 0 018 8.2c0 7.3-8 11.8-8 11.8z"/><circle cx="12" cy="10" r="3"/><path d="M2 12h2M20 12h2M12 2v2"/></svg></div>
-                <h3>Real-Time Tracking</h3>
-                <p>Advanced GPS monitoring for all shipments 24/7.</p>
+                <h3 data-i18n="services.s8.title">Real-Time Tracking</h3>
+                <p data-i18n="services.s8.desc">Advanced GPS monitoring for all shipments 24/7.</p>
                 <ul>
-                    <li>Live GPS tracking</li>
-                    <li>SMS &amp; email updates</li>
-                    <li>Proof of delivery</li>
-                    <li>Route optimization</li>
+                    <li data-i18n="services.s8.l1">Live GPS tracking</li>
+                    <li data-i18n="services.s8.l2">SMS &amp; email updates</li>
+                    <li data-i18n="services.s8.l3">Proof of delivery</li>
+                    <li data-i18n="services.s8.l4">Route optimization</li>
                 </ul>
             </div>
             <div class="service-card reveal">
                 <div class="service-icon orange"><svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v8M8 12h8"/></svg></div>
-                <h3>Value-Added Services</h3>
-                <p>Beyond delivery - complete logistics support.</p>
+                <h3 data-i18n="services.s9.title">Value-Added Services</h3>
+                <p data-i18n="services.s9.desc">Beyond delivery - complete logistics support.</p>
                 <ul>
-                    <li>P.O.D. / I.O.D. services</li>
-                    <li>Cash on Delivery (COD)</li>
-                    <li>White goods installation</li>
-                    <li>Collection for recycling</li>
+                    <li data-i18n="services.s9.l1">P.O.D. / I.O.D. services</li>
+                    <li data-i18n="services.s9.l2">Cash on Delivery (COD)</li>
+                    <li data-i18n="services.s9.l3">White goods installation</li>
+                    <li data-i18n="services.s9.l4">Collection for recycling</li>
                 </ul>
             </div>
         </div>
@@ -1966,26 +1967,26 @@
     <!-- Stats Section -->
     <section class="stats-section">
         <div class="section-header" style="margin-bottom: 3rem;">
-            <div class="section-tag" style="color: var(--orange-light);">Performance</div>
-            <h2 style="color: white;">OMNI by the <span class="highlight">Numbers</span></h2>
-            <p style="color: var(--grey-400);">Trusted by businesses across Greece and Europe</p>
+            <div class="section-tag" style="color: var(--orange-light);" data-i18n="stats.tag">Performance</div>
+            <h2 style="color: white;" data-i18n-html="stats.title">OMNI by the <span class="highlight">Numbers</span></h2>
+            <p style="color: var(--grey-400);" data-i18n="stats.subtitle">Trusted by businesses across Greece and Europe</p>
         </div>
         <div class="stats-grid">
             <div class="stat-card reveal">
                 <h3 class="orange"><span class="counter" data-target="4">0</span>+</h3>
-                <p>Years in Business</p>
+                <p data-i18n="stats.s1">Years in Business</p>
             </div>
             <div class="stat-card reveal reveal-delay-1">
                 <h3 class="blue"><span class="counter" data-target="10">0</span></h3>
-                <p>Fleet Vehicles</p>
+                <p data-i18n="stats.s2">Fleet Vehicles</p>
             </div>
             <div class="stat-card reveal reveal-delay-2">
                 <h3 class="white"><span class="counter" data-target="3900">0</span>+</h3>
-                <p>Deliveries / Month</p>
+                <p data-i18n="stats.s3">Deliveries / Month</p>
             </div>
             <div class="stat-card reveal reveal-delay-3">
                 <h3 class="orange">98.6%</h3>
-                <p>On-Time Delivery</p>
+                <p data-i18n="stats.s4">On-Time Delivery</p>
             </div>
         </div>
     </section>
@@ -1994,17 +1995,17 @@
     <section id="company" style="background: white;">
         <div class="about-grid">
             <div class="about-content">
-                <div class="section-tag" style="text-align: left;">About Us</div>
-                <h3>A Modern City Logistics Company Born from <span style="color: var(--orange);">3PL Experience</span></h3>
-                <p><strong>OMNI</strong> is a modern city logistics company originating from the 3PL services sector. We were created to cover the critical last-mile segment, offering the upgraded solutions that today's market demands.</p>
-                <p>With a steadfast commitment to professional and legally compliant delivery, OMNI continuously invests in human resources, expertise, and equipment, strengthening the sales and customer service of our partners.</p>
-                <p>We are committed to <strong style="color: var(--orange);">sustainability</strong>, investing in new trucks as well as <strong style="color: var(--orange);">fully electric vehicles</strong> up to 3.5 tons, reducing our carbon footprint.</p>
+                <div class="section-tag" style="text-align: left;" data-i18n="about.tag">About Us</div>
+                <h3 data-i18n-html="about.title">A Modern City Logistics Company Born from <span style="color: var(--orange);">3PL Experience</span></h3>
+                <p data-i18n-html="about.p1"><strong>OMNI</strong> is a modern city logistics company originating from the 3PL services sector. We were created to cover the critical last-mile segment, offering the upgraded solutions that today's market demands.</p>
+                <p data-i18n="about.p2">With a steadfast commitment to professional and legally compliant delivery, OMNI continuously invests in human resources, expertise, and equipment, strengthening the sales and customer service of our partners.</p>
+                <p data-i18n-html="about.p3">We are committed to <strong style="color: var(--orange);">sustainability</strong>, investing in new trucks as well as <strong style="color: var(--orange);">fully electric vehicles</strong> up to 3.5 tons, reducing our carbon footprint.</p>
                 
                 <div class="about-features">
-                    <div class="about-feature-item"><div class="dot orange"></div><span>3PL Expertise</span></div>
-                    <div class="about-feature-item"><div class="dot blue"></div><span>Electric Vehicles</span></div>
-                    <div class="about-feature-item"><div class="dot orange"></div><span>Local Hub / UCC</span></div>
-                    <div class="about-feature-item"><div class="dot blue"></div><span>POD Systems 5+ Years</span></div>
+                    <div class="about-feature-item"><div class="dot orange"></div><span data-i18n="about.f1">3PL Expertise</span></div>
+                    <div class="about-feature-item"><div class="dot blue"></div><span data-i18n="about.f2">Electric Vehicles</span></div>
+                    <div class="about-feature-item"><div class="dot orange"></div><span data-i18n="about.f3">Local Hub / UCC</span></div>
+                    <div class="about-feature-item"><div class="dot blue"></div><span data-i18n="about.f4">POD Systems 5+ Years</span></div>
                 </div>
             </div>
             <div class="about-visual">
@@ -2020,59 +2021,59 @@
     <!-- Why OMNI -->
     <section id="why-omni" style="background: var(--grey-50);">
         <div class="section-header">
-            <div class="section-tag">Our Advantage</div>
-            <h2>Why Choose <span class="highlight">OMNI</span></h2>
-            <p>What sets us apart from the competition</p>
+            <div class="section-tag" data-i18n="why.tag">Our Advantage</div>
+            <h2 data-i18n-html="why.title">Why Choose <span class="highlight">OMNI</span></h2>
+            <p data-i18n="why.subtitle">What sets us apart from the competition</p>
         </div>
 
         <div class="features-grid">
             <div class="feature-card reveal">
                 <span class="feature-num">01</span>
                 <div class="feature-icon">3PL</div>
-                <h3>Multi-Year 3PL Expertise</h3>
-                <p>Years of experience in 3PL services with complete understanding of last-mile delivery needs.</p>
+                <h3 data-i18n="why.f1.title">Multi-Year 3PL Expertise</h3>
+                <p data-i18n="why.f1.desc">Years of experience in 3PL services with complete understanding of last-mile delivery needs.</p>
             </div>
             <div class="feature-card reveal">
                 <span class="feature-num">02</span>
                 <div class="feature-icon blue">B2C</div>
-                <h3>Client Representation</h3>
-                <p>Every contact with the final recipient is a representation of our client - we own this responsibility.</p>
+                <h3 data-i18n="why.f2.title">Client Representation</h3>
+                <p data-i18n="why.f2.desc">Every contact with the final recipient is a representation of our client - we own this responsibility.</p>
             </div>
             <div class="feature-card reveal">
                 <span class="feature-num">03</span>
                 <div class="feature-icon">W/B</div>
-                <h3>Appliance Specialists</h3>
-                <p>Specialized expertise in white and black goods deliveries with careful handling.</p>
+                <h3 data-i18n="why.f3.title">Appliance Specialists</h3>
+                <p data-i18n="why.f3.desc">Specialized expertise in white and black goods deliveries with careful handling.</p>
             </div>
             <div class="feature-card reveal">
                 <span class="feature-num">04</span>
                 <div class="feature-icon blue">REF</div>
-                <h3>Commercial Refrigeration</h3>
-                <p>Extensive experience in delivery and installation of commercial refrigerators.</p>
+                <h3 data-i18n="why.f4.title">Commercial Refrigeration</h3>
+                <p data-i18n="why.f4.desc">Extensive experience in delivery and installation of commercial refrigerators.</p>
             </div>
             <div class="feature-card reveal">
                 <span class="feature-num">05</span>
                 <div class="feature-icon">POD</div>
-                <h3>POD Systems</h3>
-                <p>Using Proof of Delivery systems for over 5 years for full tracking and documentation.</p>
+                <h3 data-i18n="why.f5.title">POD Systems</h3>
+                <p data-i18n="why.f5.desc">Using Proof of Delivery systems for over 5 years for full tracking and documentation.</p>
             </div>
             <div class="feature-card reveal">
                 <span class="feature-num">06</span>
                 <div class="feature-icon blue">COE</div>
-                <h3>Code of Ethics</h3>
-                <p>Operating under a strict code of ethics with clear principles of responsibility.</p>
+                <h3 data-i18n="why.f6.title">Code of Ethics</h3>
+                <p data-i18n="why.f6.desc">Operating under a strict code of ethics with clear principles of responsibility.</p>
             </div>
             <div class="feature-card reveal">
                 <span class="feature-num">07</span>
                 <div class="feature-icon">SOP</div>
-                <h3>Standardized Procedures</h3>
-                <p>Faithful application of S.O.P.s across all services for consistent quality.</p>
+                <h3 data-i18n="why.f7.title">Standardized Procedures</h3>
+                <p data-i18n="why.f7.desc">Faithful application of S.O.P.s across all services for consistent quality.</p>
             </div>
             <div class="feature-card reveal">
                 <span class="feature-num">08</span>
                 <div class="feature-icon blue">CI</div>
-                <h3>Continuous Improvement</h3>
-                <p>Ongoing enhancement through reorganization and active client participation.</p>
+                <h3 data-i18n="why.f8.title">Continuous Improvement</h3>
+                <p data-i18n="why.f8.desc">Ongoing enhancement through reorganization and active client participation.</p>
             </div>
         </div>
     </section>
@@ -2080,50 +2081,50 @@
     <!-- Fleet Section -->
     <section id="fleet" style="background: white;">
         <div class="section-header">
-            <div class="section-tag">Our Fleet</div>
-            <h2>Modern Vehicles for <span class="highlight">Every Need</span></h2>
-            <p>Well-maintained vehicles equipped with the latest tracking technology</p>
+            <div class="section-tag" data-i18n="fleet.tag">Our Fleet</div>
+            <h2 data-i18n-html="fleet.title">Modern Vehicles for <span class="highlight">Every Need</span></h2>
+            <p data-i18n="fleet.subtitle">Well-maintained vehicles equipped with the latest tracking technology</p>
         </div>
 
         <div class="fleet-categories">
             <div class="fleet-cat-card reveal">
                 <div class="fleet-cat-header">
-                    <h3>VANS</h3>
-                    <span class="fleet-cat-badge">Urban</span>
+                    <h3 data-i18n="fleet.c1.name">VANS</h3>
+                    <span class="fleet-cat-badge" data-i18n="fleet.c1.badge">Urban</span>
                 </div>
                 <div class="fleet-cat-specs">
-                    <div class="fleet-spec"><label>Capacity</label><span>Up to 1,000 kg</span></div>
-                    <div class="fleet-spec"><label>Volume</label><span>6-8 m&sup3;</span></div>
+                    <div class="fleet-spec"><label data-i18n="fleet.lbl.capacity">Capacity</label><span>Up to 1,000 kg</span></div>
+                    <div class="fleet-spec"><label data-i18n="fleet.lbl.volume">Volume</label><span>6-8 m&sup3;</span></div>
                 </div>
             </div>
             <div class="fleet-cat-card reveal">
                 <div class="fleet-cat-header">
-                    <h3>Small Trucks</h3>
-                    <span class="fleet-cat-badge">Regional</span>
+                    <h3 data-i18n="fleet.c2.name">Small Trucks</h3>
+                    <span class="fleet-cat-badge" data-i18n="fleet.c2.badge">Regional</span>
                 </div>
                 <div class="fleet-cat-specs">
-                    <div class="fleet-spec"><label>Capacity</label><span>Up to 3,500 kg</span></div>
-                    <div class="fleet-spec"><label>Volume</label><span>15-20 m&sup3;</span></div>
+                    <div class="fleet-spec"><label data-i18n="fleet.lbl.capacity">Capacity</label><span>Up to 3,500 kg</span></div>
+                    <div class="fleet-spec"><label data-i18n="fleet.lbl.volume">Volume</label><span>15-20 m&sup3;</span></div>
                 </div>
             </div>
             <div class="fleet-cat-card reveal">
                 <div class="fleet-cat-header">
-                    <h3>Medium Trucks</h3>
-                    <span class="fleet-cat-badge">Long Distance</span>
+                    <h3 data-i18n="fleet.c3.name">Medium Trucks</h3>
+                    <span class="fleet-cat-badge" data-i18n="fleet.c3.badge">Long Distance</span>
                 </div>
                 <div class="fleet-cat-specs">
-                    <div class="fleet-spec"><label>Capacity</label><span>Up to 6,000 kg</span></div>
-                    <div class="fleet-spec"><label>Volume</label><span>24-35 m&sup3;</span></div>
+                    <div class="fleet-spec"><label data-i18n="fleet.lbl.capacity">Capacity</label><span>Up to 6,000 kg</span></div>
+                    <div class="fleet-spec"><label data-i18n="fleet.lbl.volume">Volume</label><span>24-35 m&sup3;</span></div>
                 </div>
             </div>
             <div class="fleet-cat-card reveal">
                 <div class="fleet-cat-header">
-                    <h3>Refrigerated</h3>
-                    <span class="fleet-cat-badge">Cold Chain</span>
+                    <h3 data-i18n="fleet.c4.name">Refrigerated</h3>
+                    <span class="fleet-cat-badge" data-i18n="fleet.c4.badge">Cold Chain</span>
                 </div>
                 <div class="fleet-cat-specs">
-                    <div class="fleet-spec"><label>Temperature</label><span>-25&deg;C to +25&deg;C</span></div>
-                    <div class="fleet-spec"><label>Monitoring</label><span>Real-time</span></div>
+                    <div class="fleet-spec"><label data-i18n="fleet.lbl.temp">Temperature</label><span>-25&deg;C to +25&deg;C</span></div>
+                    <div class="fleet-spec"><label data-i18n="fleet.lbl.monitor">Monitoring</label><span data-i18n="fleet.c4.monitor">Real-time</span></div>
                 </div>
             </div>
         </div>
@@ -2131,15 +2132,15 @@
         <div class="fleet-gallery">
             <div class="fleet-gallery-item reveal">
                 <img src="big_trucks_overview.jpg" alt="OMNI Fleet Overview" loading="lazy">
-                <div class="caption">Fleet Overview</div>
+                <div class="caption" data-i18n="fleet.g1">Fleet Overview</div>
             </div>
             <div class="fleet-gallery-item reveal">
                 <img src="big_truck_blue.jpg" alt="Blue Truck" loading="lazy">
-                <div class="caption">Last Mile Delivery</div>
+                <div class="caption" data-i18n="fleet.g2">Last Mile Delivery</div>
             </div>
             <div class="fleet-gallery-item reveal">
                 <img src="medium_truck.jpg" alt="Medium Truck" loading="lazy">
-                <div class="caption">Medium Truck - Long Distance</div>
+                <div class="caption" data-i18n="fleet.g3">Medium Truck - Long Distance</div>
             </div>
         </div>
     </section>
@@ -2147,15 +2148,15 @@
     <!-- Quote Section -->
     <section id="calculator" class="quote-section">
         <div class="section-header">
-            <div class="section-tag">Free Quote</div>
-            <h2>Request a <span class="highlight">Quote</span></h2>
-            <p>Tell us about your shipment and we'll respond within 24 hours</p>
+            <div class="section-tag" data-i18n="quote.tag">Free Quote</div>
+            <h2 data-i18n-html="quote.title">Request a <span class="highlight">Quote</span></h2>
+            <p data-i18n="quote.subtitle">Tell us about your shipment and we'll respond within 24 hours</p>
         </div>
 
         <div class="quote-container">
             <div class="quote-header">
-                <h3>Shipment Details</h3>
-                <p>Fill in the details below for a customized quote</p>
+                <h3 data-i18n="quote.header">Shipment Details</h3>
+                <p data-i18n="quote.headerDesc">Fill in the details below for a customized quote</p>
             </div>
             <div class="quote-body">
                 <form action="https://formsubmit.co/omni@omnids.gr" method="POST">
@@ -2244,9 +2245,9 @@
     <!-- Coverage Section -->
     <section id="coverage" style="background: white;">
         <div class="section-header">
-            <div class="section-tag">Coverage</div>
-            <h2>Service <span class="highlight">Coverage</span></h2>
-            <p>Delivering across Greece and throughout Europe</p>
+            <div class="section-tag" data-i18n="coverage.tag">Coverage</div>
+            <h2 data-i18n-html="coverage.title">Service <span class="highlight">Coverage</span></h2>
+            <p data-i18n="coverage.subtitle">Delivering across Greece and throughout Europe</p>
         </div>
 
         <div class="coverage-grid">
@@ -2299,9 +2300,9 @@
     <!-- Industries Section -->
     <section id="industries" style="background: var(--grey-50);">
         <div class="section-header">
-            <div class="section-tag">Industries</div>
-            <h2>Industry <span class="highlight">Solutions</span></h2>
-            <p>Specialized logistics for your sector</p>
+            <div class="section-tag" data-i18n="ind.tag">Industries</div>
+            <h2 data-i18n-html="ind.title">Industry <span class="highlight">Solutions</span></h2>
+            <p data-i18n="ind.subtitle">Specialized logistics for your sector</p>
         </div>
 
         <div class="services-grid">
@@ -2377,35 +2378,35 @@
     <!-- FAQ Section -->
     <section id="faq" style="background: white;">
         <div class="section-header">
-            <div class="section-tag">FAQ</div>
-            <h2>Frequently Asked <span class="highlight">Questions</span></h2>
-            <p>Quick answers to common questions</p>
+            <div class="section-tag" data-i18n="faq.tag">FAQ</div>
+            <h2 data-i18n-html="faq.title">Frequently Asked <span class="highlight">Questions</span></h2>
+            <p data-i18n="faq.subtitle">Quick answers to common questions</p>
         </div>
 
         <div class="faq-list" role="list" aria-label="Frequently asked questions">
             <div class="faq-item" role="listitem">
-                <div class="faq-question" onclick="toggleFaq(this)" role="button" tabindex="0" aria-expanded="false">What areas do you deliver to?</div>
-                <div class="faq-answer"><div class="faq-answer-inner">We deliver across all of Greece including islands, with same-day service in the Athens metro area. We also offer international shipping to 20+ European countries with regular scheduled routes.</div></div>
+                <div class="faq-question" onclick="toggleFaq(this)" role="button" tabindex="0" aria-expanded="false" data-i18n="faq.q1">What areas do you deliver to?</div>
+                <div class="faq-answer"><div class="faq-answer-inner" data-i18n="faq.a1">We deliver across all of Greece including islands, with same-day service in the Athens metro area. We also offer international shipping to 20+ European countries with regular scheduled routes.</div></div>
             </div>
             <div class="faq-item" role="listitem">
-                <div class="faq-question" onclick="toggleFaq(this)" role="button" tabindex="0" aria-expanded="false">How is shipping cost calculated?</div>
-                <div class="faq-answer"><div class="faq-answer-inner">Shipping costs depend on weight, dimensions, distance, and service type. Use our Quote Calculator for estimates, or contact us for exact pricing. Volume discounts available for regular shipments.</div></div>
+                <div class="faq-question" onclick="toggleFaq(this)" role="button" tabindex="0" aria-expanded="false" data-i18n="faq.q2">How is shipping cost calculated?</div>
+                <div class="faq-answer"><div class="faq-answer-inner" data-i18n="faq.a2">Shipping costs depend on weight, dimensions, distance, and service type. Use our Quote Calculator for estimates, or contact us for exact pricing. Volume discounts available for regular shipments.</div></div>
             </div>
             <div class="faq-item" role="listitem">
-                <div class="faq-question" onclick="toggleFaq(this)" role="button" tabindex="0" aria-expanded="false">What are your delivery times?</div>
-                <div class="faq-answer"><div class="faq-answer-inner">Same-day delivery in Athens, 1-2 days nationwide, 3-7 days for international. Express and time-definite options are available for urgent deliveries.</div></div>
+                <div class="faq-question" onclick="toggleFaq(this)" role="button" tabindex="0" aria-expanded="false" data-i18n="faq.q3">What are your delivery times?</div>
+                <div class="faq-answer"><div class="faq-answer-inner" data-i18n="faq.a3">Same-day delivery in Athens, 1-2 days nationwide, 3-7 days for international. Express and time-definite options are available for urgent deliveries.</div></div>
             </div>
             <div class="faq-item" role="listitem">
-                <div class="faq-question" onclick="toggleFaq(this)" role="button" tabindex="0" aria-expanded="false">Is my shipment insured?</div>
-                <div class="faq-answer"><div class="faq-answer-inner">Yes! All shipments include &euro;100 basic insurance at no extra cost. Additional insurance up to &euro;50,000 is available per shipment.</div></div>
+                <div class="faq-question" onclick="toggleFaq(this)" role="button" tabindex="0" aria-expanded="false" data-i18n="faq.q4">Is my shipment insured?</div>
+                <div class="faq-answer"><div class="faq-answer-inner" data-i18n-html="faq.a4">Yes! All shipments include &euro;100 basic insurance at no extra cost. Additional insurance up to &euro;50,000 is available per shipment.</div></div>
             </div>
             <div class="faq-item" role="listitem">
-                <div class="faq-question" onclick="toggleFaq(this)" role="button" tabindex="0" aria-expanded="false">What items cannot be shipped?</div>
-                <div class="faq-answer"><div class="faq-answer-inner">We cannot transport hazardous materials (except with permits), illegal items, perishables without proper packaging, or items exceeding vehicle capacity limits.</div></div>
+                <div class="faq-question" onclick="toggleFaq(this)" role="button" tabindex="0" aria-expanded="false" data-i18n="faq.q5">What items cannot be shipped?</div>
+                <div class="faq-answer"><div class="faq-answer-inner" data-i18n="faq.a5">We cannot transport hazardous materials (except with permits), illegal items, perishables without proper packaging, or items exceeding vehicle capacity limits.</div></div>
             </div>
             <div class="faq-item" role="listitem">
-                <div class="faq-question" onclick="toggleFaq(this)" role="button" tabindex="0" aria-expanded="false">Do you offer recurring delivery services?</div>
-                <div class="faq-answer"><div class="faq-answer-inner">Absolutely! We provide scheduled services for businesses with regular shipping needs. Volume discounts, dedicated account management, and flexible scheduling are available.</div></div>
+                <div class="faq-question" onclick="toggleFaq(this)" role="button" tabindex="0" aria-expanded="false" data-i18n="faq.q6">Do you offer recurring delivery services?</div>
+                <div class="faq-answer"><div class="faq-answer-inner" data-i18n="faq.a6">Absolutely! We provide scheduled services for businesses with regular shipping needs. Volume discounts, dedicated account management, and flexible scheduling are available.</div></div>
             </div>
         </div>
     </section>
@@ -2413,21 +2414,21 @@
     <!-- Careers Section -->
     <section id="careers" style="background: var(--grey-50);">
         <div class="section-header">
-            <div class="section-tag">Careers</div>
-            <h2>Join Our <span class="highlight">Team</span></h2>
-            <p>Build your career with a growing transportation company</p>
+            <div class="section-tag" data-i18n="careers.tag">Careers</div>
+            <h2 data-i18n-html="careers.title">Join Our <span class="highlight">Team</span></h2>
+            <p data-i18n="careers.subtitle">Build your career with a growing transportation company</p>
         </div>
 
         <div class="careers-content">
             <div class="career-card reveal">
-                <h3>Professional Drivers</h3>
-                <p>We're looking for experienced, safety-conscious drivers with excellent customer service skills to join our growing fleet.</p>
+                <h3 data-i18n="careers.cardTitle">Professional Drivers</h3>
+                <p data-i18n="careers.cardDesc">We're looking for experienced, safety-conscious drivers with excellent customer service skills to join our growing fleet.</p>
                 <div class="career-perks">
-                    <span>Competitive Salary</span>
-                    <span>Modern Vehicles</span>
-                    <span>Health Insurance</span>
-                    <span>Paid Vacation</span>
-                    <span>Career Growth</span>
+                    <span data-i18n="careers.p1">Competitive Salary</span>
+                    <span data-i18n="careers.p2">Modern Vehicles</span>
+                    <span data-i18n="careers.p3">Health Insurance</span>
+                    <span data-i18n="careers.p4">Paid Vacation</span>
+                    <span data-i18n="careers.p5">Career Growth</span>
                 </div>
             </div>
 
@@ -2478,9 +2479,9 @@
     <!-- Contact Section -->
     <section id="contact" style="background: white;">
         <div class="section-header">
-            <div class="section-tag">Contact</div>
-            <h2>Get in <span class="highlight">Touch</span></h2>
-            <p>Have a question? We'd love to hear from you</p>
+            <div class="section-tag" data-i18n="contact.tag">Contact</div>
+            <h2 data-i18n-html="contact.title">Get in <span class="highlight">Touch</span></h2>
+            <p data-i18n="contact.subtitle">Have a question? We'd love to hear from you</p>
         </div>
 
         <div class="contact-grid">
@@ -2540,7 +2541,7 @@
 
     <!-- Sticky Mobile CTA -->
     <div class="mobile-cta" id="mobileCta">
-        <a href="#calculator">Get a Free Quote &rarr;</a>
+        <a href="#calculator" data-i18n-html="mobile.cta">Get a Free Quote &rarr;</a>
     </div>
 
     <!-- Footer -->
@@ -2548,10 +2549,10 @@
         <div class="footer-grid">
             <div class="footer-brand">
                 <img src="omni_logo.jpg" alt="OMNI Logistics">
-                <p>Professional distribution and transportation services across Greece and the European Union. Your trusted logistics partner.</p>
+                <p data-i18n="footer.desc">Professional distribution and transportation services across Greece and the European Union. Your trusted logistics partner.</p>
             </div>
             <div class="footer-col">
-                <h4>Services</h4>
+                <h4 data-i18n="footer.servicesTitle">Services</h4>
                 <ul>
                     <li><a href="#services">Transportation</a></li>
                     <li><a href="#services">Courier</a></li>
@@ -2562,7 +2563,7 @@
                 </ul>
             </div>
             <div class="footer-col">
-                <h4>Company</h4>
+                <h4 data-i18n="footer.companyTitle">Company</h4>
                 <ul>
                     <li><a href="#company">About Us</a></li>
                     <li><a href="#why-omni">Why OMNI</a></li>
@@ -2572,8 +2573,8 @@
                 </ul>
             </div>
             <div class="footer-col">
-                <h4>Newsletter</h4>
-                <p style="color: var(--grey-400); font-size: 0.85rem; margin-bottom: 1rem;">Get updates on offers and news.</p>
+                <h4 data-i18n="footer.newsletter">Newsletter</h4>
+                <p style="color: var(--grey-400); font-size: 0.85rem; margin-bottom: 1rem;" data-i18n="footer.nlDesc">Get updates on offers and news.</p>
                 <form action="https://formsubmit.co/omni@omnids.gr" method="POST" style="display: flex; flex-direction: column; gap: 0.7rem;">
                     <input type="hidden" name="_subject" value="Newsletter Subscription">
                     <input type="hidden" name="_captcha" value="false">
@@ -2654,6 +2655,414 @@
     </style>
 
     <script>
+        // ===== TRANSLATIONS =====
+        const T = {
+            en: {
+                'cookie.text': 'We use cookies to improve your experience.',
+                'cookie.accept': 'Accept',
+                'nav.about': 'About',
+                'nav.services': 'Services',
+                'nav.allServices': 'All Services',
+                'nav.coverage': 'Service Coverage',
+                'nav.industries': 'Industry Solutions',
+                'nav.fleet': 'Fleet',
+                'nav.why': 'Why OMNI',
+                'nav.faq': 'FAQ',
+                'nav.careers': 'Careers',
+                'nav.contact': 'Contact',
+                'nav.quote': 'Get Quote',
+                'hero.badge': 'Professional Logistics Since 2021',
+                'hero.title': 'We Move Your<br>Business <span class="gradient-text">Forward</span>',
+                'hero.subtitle': 'Professional distribution and transportation services across Greece and the European Union. Reliable, fast, and always on time.',
+                'hero.cta1': 'Get a Free Quote &rarr;',
+                'hero.cta2': 'Explore Services',
+                'hero.stat1': 'Years Active',
+                'hero.stat2': 'Fleet Vehicles',
+                'hero.stat3': 'Monthly Deliveries',
+                'hero.stat4': 'On-Time Rate',
+                'hero.float1': 'Same-Day Athens',
+                'hero.float2': '20+ EU Countries',
+                'trust.1': 'Retail & E-Commerce',
+                'trust.2': 'Manufacturing',
+                'trust.3': 'Food & Beverage',
+                'trust.4': 'Pharmaceuticals',
+                'trust.5': 'Construction',
+                'trust.6': 'Technology',
+                'services.tag': 'What We Do',
+                'services.title': 'Comprehensive Logistics <span class="highlight">Solutions</span>',
+                'services.subtitle': 'End-to-end transportation and distribution services tailored to your business needs',
+                'services.s1.title': 'Transportation Services',
+                'services.s1.desc': 'Complete B2B & B2C goods distribution across Greece.',
+                'services.s1.l1': 'Business-to-business distribution',
+                'services.s1.l2': 'Parcel and package delivery',
+                'services.s1.l3': 'Corporate branch transfers',
+                'services.s1.l4': 'Provincial agency deliveries',
+                'services.s2.title': 'Courier Services',
+                'services.s2.desc': 'Fast courier solutions for businesses and e-commerce.',
+                'services.s2.l1': 'E-shop support & fulfillment',
+                'services.s2.l2': 'Express courier services',
+                'services.s2.l3': 'Same-day delivery options',
+                'services.s2.l4': 'Scheduled deliveries',
+                'services.s3.title': 'Moving Services',
+                'services.s3.desc': 'Professional residential and corporate relocations.',
+                'services.s3.l1': 'Residential moves',
+                'services.s3.l2': 'Office relocations',
+                'services.s3.l3': 'Professional packing',
+                'services.s3.l4': 'Furniture handling',
+                'services.s4.title': 'Warehousing & Distribution',
+                'services.s4.desc': 'Secure storage with advanced inventory management.',
+                'services.s4.l1': 'Secure storage facilities',
+                'services.s4.l2': 'Order fulfillment',
+                'services.s4.l3': 'Cross-docking services',
+                'services.s4.l4': 'Pick and pack operations',
+                'services.s5.title': 'Last Mile Delivery',
+                'services.s5.desc': 'Efficient final delivery to customers with tracking.',
+                'services.s5.l1': 'Urban delivery services',
+                'services.s5.l2': 'Scheduled time windows',
+                'services.s5.l3': 'Signature on delivery',
+                'services.s5.l4': 'Failed delivery management',
+                'services.s6.title': 'International Logistics',
+                'services.s6.desc': 'Cross-border EU transportation with customs support.',
+                'services.s6.l1': 'European Union coverage',
+                'services.s6.l2': 'Customs documentation',
+                'services.s6.l3': 'Multi-modal transport',
+                'services.s6.l4': 'Trade compliance',
+                'services.s7.title': 'Express & Same-Day',
+                'services.s7.desc': 'Urgent deliveries throughout Athens and major cities.',
+                'services.s7.l1': 'Same-day Athens delivery',
+                'services.s7.l2': 'Express nationwide',
+                'services.s7.l3': 'Priority handling',
+                'services.s7.l4': 'Emergency logistics',
+                'services.s8.title': 'Real-Time Tracking',
+                'services.s8.desc': 'Advanced GPS monitoring for all shipments 24/7.',
+                'services.s8.l1': 'Live GPS tracking',
+                'services.s8.l2': 'SMS & email updates',
+                'services.s8.l3': 'Proof of delivery',
+                'services.s8.l4': 'Route optimization',
+                'services.s9.title': 'Value-Added Services',
+                'services.s9.desc': 'Beyond delivery - complete logistics support.',
+                'services.s9.l1': 'P.O.D. / I.O.D. services',
+                'services.s9.l2': 'Cash on Delivery (COD)',
+                'services.s9.l3': 'White goods installation',
+                'services.s9.l4': 'Collection for recycling',
+                'stats.tag': 'Performance',
+                'stats.title': 'OMNI by the <span class="highlight">Numbers</span>',
+                'stats.subtitle': 'Trusted by businesses across Greece and Europe',
+                'stats.s1': 'Years in Business',
+                'stats.s2': 'Fleet Vehicles',
+                'stats.s3': 'Deliveries / Month',
+                'stats.s4': 'On-Time Delivery',
+                'about.tag': 'About Us',
+                'about.title': 'A Modern City Logistics Company Born from <span style="color: var(--orange);">3PL Experience</span>',
+                'about.p1': '<strong>OMNI</strong> is a modern city logistics company originating from the 3PL services sector. We were created to cover the critical last-mile segment, offering the upgraded solutions that today\'s market demands.',
+                'about.p2': 'With a steadfast commitment to professional and legally compliant delivery, OMNI continuously invests in human resources, expertise, and equipment, strengthening the sales and customer service of our partners.',
+                'about.p3': 'We are committed to <strong style="color: var(--orange);">sustainability</strong>, investing in new trucks as well as <strong style="color: var(--orange);">fully electric vehicles</strong> up to 3.5 tons, reducing our carbon footprint.',
+                'about.f1': '3PL Expertise',
+                'about.f2': 'Electric Vehicles',
+                'about.f3': 'Local Hub / UCC',
+                'about.f4': 'POD Systems 5+ Years',
+                'why.tag': 'Our Advantage',
+                'why.title': 'Why Choose <span class="highlight">OMNI</span>',
+                'why.subtitle': 'What sets us apart from the competition',
+                'why.f1.title': 'Multi-Year 3PL Expertise',
+                'why.f1.desc': 'Years of experience in 3PL services with complete understanding of last-mile delivery needs.',
+                'why.f2.title': 'Client Representation',
+                'why.f2.desc': 'Every contact with the final recipient is a representation of our client - we own this responsibility.',
+                'why.f3.title': 'Appliance Specialists',
+                'why.f3.desc': 'Specialized expertise in white and black goods deliveries with careful handling.',
+                'why.f4.title': 'Commercial Refrigeration',
+                'why.f4.desc': 'Extensive experience in delivery and installation of commercial refrigerators.',
+                'why.f5.title': 'POD Systems',
+                'why.f5.desc': 'Using Proof of Delivery systems for over 5 years for full tracking and documentation.',
+                'why.f6.title': 'Code of Ethics',
+                'why.f6.desc': 'Operating under a strict code of ethics with clear principles of responsibility.',
+                'why.f7.title': 'Standardized Procedures',
+                'why.f7.desc': 'Faithful application of S.O.P.s across all services for consistent quality.',
+                'why.f8.title': 'Continuous Improvement',
+                'why.f8.desc': 'Ongoing enhancement through reorganization and active client participation.',
+                'fleet.tag': 'Our Fleet',
+                'fleet.title': 'Modern Vehicles for <span class="highlight">Every Need</span>',
+                'fleet.subtitle': 'Well-maintained vehicles equipped with the latest tracking technology',
+                'fleet.c1.name': 'VANS',
+                'fleet.c1.badge': 'Urban',
+                'fleet.c2.name': 'Small Trucks',
+                'fleet.c2.badge': 'Regional',
+                'fleet.c3.name': 'Medium Trucks',
+                'fleet.c3.badge': 'Long Distance',
+                'fleet.c4.name': 'Refrigerated',
+                'fleet.c4.badge': 'Cold Chain',
+                'fleet.c4.monitor': 'Real-time',
+                'fleet.lbl.capacity': 'Capacity',
+                'fleet.lbl.volume': 'Volume',
+                'fleet.lbl.temp': 'Temperature',
+                'fleet.lbl.monitor': 'Monitoring',
+                'fleet.g1': 'Fleet Overview',
+                'fleet.g2': 'Last Mile Delivery',
+                'fleet.g3': 'Medium Truck - Long Distance',
+                'quote.tag': 'Free Quote',
+                'quote.title': 'Request a <span class="highlight">Quote</span>',
+                'quote.subtitle': 'Tell us about your shipment and we\'ll respond within 24 hours',
+                'quote.header': 'Shipment Details',
+                'quote.headerDesc': 'Fill in the details below for a customized quote',
+                'coverage.tag': 'Coverage',
+                'coverage.title': 'Service <span class="highlight">Coverage</span>',
+                'coverage.subtitle': 'Delivering across Greece and throughout Europe',
+                'ind.tag': 'Industries',
+                'ind.title': 'Industry <span class="highlight">Solutions</span>',
+                'ind.subtitle': 'Specialized logistics for your sector',
+                'faq.tag': 'FAQ',
+                'faq.title': 'Frequently Asked <span class="highlight">Questions</span>',
+                'faq.subtitle': 'Quick answers to common questions',
+                'faq.q1': 'What areas do you deliver to?',
+                'faq.a1': 'We deliver across all of Greece including islands, with same-day service in the Athens metro area. We also offer international shipping to 20+ European countries with regular scheduled routes.',
+                'faq.q2': 'How is shipping cost calculated?',
+                'faq.a2': 'Shipping costs depend on weight, dimensions, distance, and service type. Use our Quote Calculator for estimates, or contact us for exact pricing. Volume discounts available for regular shipments.',
+                'faq.q3': 'What are your delivery times?',
+                'faq.a3': 'Same-day delivery in Athens, 1-2 days nationwide, 3-7 days for international. Express and time-definite options are available for urgent deliveries.',
+                'faq.q4': 'Is my shipment insured?',
+                'faq.a4': 'Yes! All shipments include &euro;100 basic insurance at no extra cost. Additional insurance up to &euro;50,000 is available per shipment.',
+                'faq.q5': 'What items cannot be shipped?',
+                'faq.a5': 'We cannot transport hazardous materials (except with permits), illegal items, perishables without proper packaging, or items exceeding vehicle capacity limits.',
+                'faq.q6': 'Do you offer recurring delivery services?',
+                'faq.a6': 'Absolutely! We provide scheduled services for businesses with regular shipping needs. Volume discounts, dedicated account management, and flexible scheduling are available.',
+                'careers.tag': 'Careers',
+                'careers.title': 'Join Our <span class="highlight">Team</span>',
+                'careers.subtitle': 'Build your career with a growing transportation company',
+                'careers.cardTitle': 'Professional Drivers',
+                'careers.cardDesc': 'We\'re looking for experienced, safety-conscious drivers with excellent customer service skills to join our growing fleet.',
+                'careers.p1': 'Competitive Salary',
+                'careers.p2': 'Modern Vehicles',
+                'careers.p3': 'Health Insurance',
+                'careers.p4': 'Paid Vacation',
+                'careers.p5': 'Career Growth',
+                'contact.tag': 'Contact',
+                'contact.title': 'Get in <span class="highlight">Touch</span>',
+                'contact.subtitle': 'Have a question? We\'d love to hear from you',
+                'mobile.cta': 'Get a Free Quote &rarr;',
+                'footer.desc': 'Professional distribution and transportation services across Greece and the European Union. Your trusted logistics partner.',
+                'footer.servicesTitle': 'Services',
+                'footer.companyTitle': 'Company',
+                'footer.newsletter': 'Newsletter',
+                'footer.nlDesc': 'Get updates on offers and news.'
+            },
+            gr: {
+                'cookie.text': 'Χρησιμοποιούμε cookies για τη βελτίωση της εμπειρίας σας.',
+                'cookie.accept': 'Αποδοχή',
+                'nav.about': 'Εταιρεία',
+                'nav.services': 'Υπηρεσίες',
+                'nav.allServices': 'Όλες οι Υπηρεσίες',
+                'nav.coverage': 'Κάλυψη',
+                'nav.industries': 'Κλάδοι',
+                'nav.fleet': 'Στόλος',
+                'nav.why': 'Γιατί OMNI',
+                'nav.faq': 'FAQ',
+                'nav.careers': 'Καριέρα',
+                'nav.contact': 'Επικοινωνία',
+                'nav.quote': 'Προσφορά',
+                'hero.badge': 'Επαγγελματικά Logistics από το 2021',
+                'hero.title': 'Κινούμε την<br>Επιχείρησή σας <span class="gradient-text">Μπροστά</span>',
+                'hero.subtitle': 'Επαγγελματικές υπηρεσίες διανομής και μεταφοράς σε Ελλάδα και Ευρωπαϊκή Ένωση. Αξιόπιστα, γρήγορα και πάντα στην ώρα τους.',
+                'hero.cta1': 'Δωρεάν Προσφορά &rarr;',
+                'hero.cta2': 'Οι Υπηρεσίες μας',
+                'hero.stat1': 'Έτη Λειτουργίας',
+                'hero.stat2': 'Οχήματα Στόλου',
+                'hero.stat3': 'Παραδόσεις / Μήνα',
+                'hero.stat4': 'Εμπρόθεσμες',
+                'hero.float1': 'Αυθημερόν Αθήνα',
+                'hero.float2': '20+ Χώρες ΕΕ',
+                'trust.1': 'Λιανεμπόριο & E-Commerce',
+                'trust.2': 'Βιομηχανία',
+                'trust.3': 'Τρόφιμα & Ποτά',
+                'trust.4': 'Φαρμακευτικά',
+                'trust.5': 'Κατασκευές',
+                'trust.6': 'Τεχνολογία',
+                'services.tag': 'Τι Κάνουμε',
+                'services.title': 'Ολοκληρωμένες Λύσεις <span class="highlight">Logistics</span>',
+                'services.subtitle': 'Υπηρεσίες μεταφοράς και διανομής προσαρμοσμένες στις ανάγκες σας',
+                'services.s1.title': 'Υπηρεσίες Μεταφοράς',
+                'services.s1.desc': 'Ολοκληρωμένη διανομή εμπορευμάτων B2B & B2C σε όλη την Ελλάδα.',
+                'services.s1.l1': 'Διανομή επιχείρηση-προς-επιχείρηση',
+                'services.s1.l2': 'Παράδοση δεμάτων & πακέτων',
+                'services.s1.l3': 'Μεταφορές μεταξύ υποκαταστημάτων',
+                'services.s1.l4': 'Παραδόσεις σε πρακτορεία επαρχίας',
+                'services.s2.title': 'Υπηρεσίες Courier',
+                'services.s2.desc': 'Γρήγορες λύσεις courier για επιχειρήσεις και e-commerce.',
+                'services.s2.l1': 'Υποστήριξη e-shop & fulfillment',
+                'services.s2.l2': 'Express υπηρεσίες courier',
+                'services.s2.l3': 'Αυθημερόν παράδοση',
+                'services.s2.l4': 'Προγραμματισμένες παραδόσεις',
+                'services.s3.title': 'Μετακομίσεις',
+                'services.s3.desc': 'Επαγγελματικές μετακομίσεις κατοικιών και επιχειρήσεων.',
+                'services.s3.l1': 'Μετακομίσεις κατοικιών',
+                'services.s3.l2': 'Μετακομίσεις γραφείων',
+                'services.s3.l3': 'Επαγγελματική συσκευασία',
+                'services.s3.l4': 'Χειρισμός επίπλων',
+                'services.s4.title': 'Αποθήκευση & Διανομή',
+                'services.s4.desc': 'Ασφαλής αποθήκευση με σύγχρονη διαχείριση αποθεμάτων.',
+                'services.s4.l1': 'Ασφαλείς αποθηκευτικοί χώροι',
+                'services.s4.l2': 'Εκτέλεση παραγγελιών',
+                'services.s4.l3': 'Υπηρεσίες cross-docking',
+                'services.s4.l4': 'Λειτουργίες pick & pack',
+                'services.s5.title': 'Παράδοση Τελευταίου Μιλίου',
+                'services.s5.desc': 'Αποτελεσματική τελική παράδοση με παρακολούθηση.',
+                'services.s5.l1': 'Αστικές υπηρεσίες παράδοσης',
+                'services.s5.l2': 'Προγραμματισμένα χρονικά παράθυρα',
+                'services.s5.l3': 'Υπογραφή κατά την παράδοση',
+                'services.s5.l4': 'Διαχείριση αποτυχημένων παραδόσεων',
+                'services.s6.title': 'Διεθνή Logistics',
+                'services.s6.desc': 'Διασυνοριακές μεταφορές ΕΕ με τελωνειακή υποστήριξη.',
+                'services.s6.l1': 'Κάλυψη Ευρωπαϊκής Ένωσης',
+                'services.s6.l2': 'Τελωνειακή τεκμηρίωση',
+                'services.s6.l3': 'Συνδυασμένες μεταφορές',
+                'services.s6.l4': 'Εμπορική συμμόρφωση',
+                'services.s7.title': 'Express & Αυθημερόν',
+                'services.s7.desc': 'Επείγουσες παραδόσεις σε Αθήνα και μεγάλες πόλεις.',
+                'services.s7.l1': 'Αυθημερόν παράδοση Αθήνα',
+                'services.s7.l2': 'Express πανελλαδικά',
+                'services.s7.l3': 'Προτεραιότητα χειρισμού',
+                'services.s7.l4': 'Logistics έκτακτης ανάγκης',
+                'services.s8.title': 'Παρακολούθηση Real-Time',
+                'services.s8.desc': 'Προηγμένη GPS παρακολούθηση αποστολών 24/7.',
+                'services.s8.l1': 'Ζωντανή GPS παρακολούθηση',
+                'services.s8.l2': 'SMS & email ενημερώσεις',
+                'services.s8.l3': 'Απόδειξη παράδοσης',
+                'services.s8.l4': 'Βελτιστοποίηση διαδρομών',
+                'services.s9.title': 'Υπηρεσίες Προστιθέμενης Αξίας',
+                'services.s9.desc': 'Πέρα από την παράδοση - ολοκληρωμένη υποστήριξη.',
+                'services.s9.l1': 'P.O.D. / I.O.D. υπηρεσίες',
+                'services.s9.l2': 'Αντικαταβολή (COD)',
+                'services.s9.l3': 'Εγκατάσταση λευκών συσκευών',
+                'services.s9.l4': 'Συλλογή για ανακύκλωση',
+                'stats.tag': 'Επιδόσεις',
+                'stats.title': 'OMNI σε <span class="highlight">Αριθμούς</span>',
+                'stats.subtitle': 'Εμπιστεύονται επιχειρήσεις σε Ελλάδα και Ευρώπη',
+                'stats.s1': 'Έτη Λειτουργίας',
+                'stats.s2': 'Οχήματα Στόλου',
+                'stats.s3': 'Παραδόσεις / Μήνα',
+                'stats.s4': 'Εμπρόθεσμη Παράδοση',
+                'about.tag': 'Σχετικά',
+                'about.title': 'Μια Σύγχρονη Εταιρεία City Logistics με Καταγωγή από <span style="color: var(--orange);">3PL</span>',
+                'about.p1': 'Η <strong>OMNI</strong> είναι μια σύγχρονη εταιρεία city logistics που προέρχεται από τον κλάδο 3PL. Δημιουργήθηκε για να καλύψει το κρίσιμο last-mile, προσφέροντας τις αναβαθμισμένες λύσεις που απαιτεί η αγορά.',
+                'about.p2': 'Με σταθερή δέσμευση στην επαγγελματική και νόμιμη παράδοση, η OMNI επενδύει συνεχώς σε ανθρώπινο δυναμικό, τεχνογνωσία και εξοπλισμό, ενισχύοντας τις πωλήσεις και την εξυπηρέτηση των συνεργατών της.',
+                'about.p3': 'Είμαστε αφοσιωμένοι στη <strong style="color: var(--orange);">βιωσιμότητα</strong>, επενδύοντας σε νέα φορτηγά καθώς και σε <strong style="color: var(--orange);">πλήρως ηλεκτρικά οχήματα</strong> έως 3,5 τόνους, μειώνοντας το αποτύπωμα άνθρακα.',
+                'about.f1': 'Τεχνογνωσία 3PL',
+                'about.f2': 'Ηλεκτρικά Οχήματα',
+                'about.f3': 'Τοπικό Hub / UCC',
+                'about.f4': 'POD Συστήματα 5+ Έτη',
+                'why.tag': 'Πλεονέκτημά μας',
+                'why.title': 'Γιατί να Επιλέξετε <span class="highlight">OMNI</span>',
+                'why.subtitle': 'Τι μας ξεχωρίζει από τον ανταγωνισμό',
+                'why.f1.title': 'Πολυετής Εμπειρία 3PL',
+                'why.f1.desc': 'Χρόνια εμπειρίας σε υπηρεσίες 3PL με πλήρη κατανόηση του last-mile.',
+                'why.f2.title': 'Εκπροσώπηση Πελάτη',
+                'why.f2.desc': 'Κάθε επαφή με τον τελικό παραλήπτη είναι εκπροσώπηση του πελάτη μας.',
+                'why.f3.title': 'Ειδικοί σε Ηλεκτρικές Συσκευές',
+                'why.f3.desc': 'Εξειδίκευση σε παράδοση λευκών και μαύρων συσκευών με προσεκτικό χειρισμό.',
+                'why.f4.title': 'Εμπορική Ψύξη',
+                'why.f4.desc': 'Εκτεταμένη εμπειρία σε παράδοση και εγκατάσταση επαγγελματικών ψυγείων.',
+                'why.f5.title': 'Συστήματα POD',
+                'why.f5.desc': 'Χρήση συστημάτων Proof of Delivery για 5+ χρόνια.',
+                'why.f6.title': 'Κώδικας Δεοντολογίας',
+                'why.f6.desc': 'Λειτουργία υπό αυστηρό κώδικα δεοντολογίας με σαφείς αρχές.',
+                'why.f7.title': 'Τυποποιημένες Διαδικασίες',
+                'why.f7.desc': 'Πιστή εφαρμογή S.O.P.s σε όλες τις υπηρεσίες.',
+                'why.f8.title': 'Συνεχής Βελτίωση',
+                'why.f8.desc': 'Ενεργή συμμετοχή πελατών στη διαδικασία εξέλιξής μας.',
+                'fleet.tag': 'Ο Στόλος μας',
+                'fleet.title': 'Σύγχρονα Οχήματα για <span class="highlight">Κάθε Ανάγκη</span>',
+                'fleet.subtitle': 'Καλοσυντηρημένα οχήματα με την τελευταία τεχνολογία παρακολούθησης',
+                'fleet.c1.name': 'ΒΑΝΑΚΙΑ',
+                'fleet.c1.badge': 'Αστικά',
+                'fleet.c2.name': 'Μικρά Φορτηγά',
+                'fleet.c2.badge': 'Περιφέρεια',
+                'fleet.c3.name': 'Μεσαία Φορτηγά',
+                'fleet.c3.badge': 'Υπεραστικά',
+                'fleet.c4.name': 'Ψυγεία',
+                'fleet.c4.badge': 'Ψυχρή Αλυσίδα',
+                'fleet.c4.monitor': 'Real-time',
+                'fleet.lbl.capacity': 'Χωρητικότητα',
+                'fleet.lbl.volume': 'Όγκος',
+                'fleet.lbl.temp': 'Θερμοκρασία',
+                'fleet.lbl.monitor': 'Παρακολούθηση',
+                'fleet.g1': 'Επισκόπηση Στόλου',
+                'fleet.g2': 'Παράδοση Τελευταίου Μιλίου',
+                'fleet.g3': 'Μεσαίο Φορτηγό - Υπεραστικά',
+                'quote.tag': 'Δωρεάν Προσφορά',
+                'quote.title': 'Ζητήστε <span class="highlight">Προσφορά</span>',
+                'quote.subtitle': 'Πείτε μας για την αποστολή σας και θα απαντήσουμε εντός 24 ωρών',
+                'quote.header': 'Στοιχεία Αποστολής',
+                'quote.headerDesc': 'Συμπληρώστε τα παρακάτω για εξατομικευμένη προσφορά',
+                'coverage.tag': 'Κάλυψη',
+                'coverage.title': 'Γεωγραφική <span class="highlight">Κάλυψη</span>',
+                'coverage.subtitle': 'Παραδόσεις σε Ελλάδα και Ευρώπη',
+                'ind.tag': 'Κλάδοι',
+                'ind.title': 'Λύσεις ανά <span class="highlight">Κλάδο</span>',
+                'ind.subtitle': 'Εξειδικευμένα logistics για τον τομέα σας',
+                'faq.tag': 'FAQ',
+                'faq.title': 'Συχνές <span class="highlight">Ερωτήσεις</span>',
+                'faq.subtitle': 'Γρήγορες απαντήσεις σε συνήθεις ερωτήσεις',
+                'faq.q1': 'Σε ποιες περιοχές παραδίδετε;',
+                'faq.a1': 'Παραδίδουμε σε όλη την Ελλάδα συμπεριλαμβανομένων των νησιών, με αυθημερόν υπηρεσία στην Αττική. Προσφέρουμε επίσης διεθνείς αποστολές σε 20+ χώρες της ΕΕ.',
+                'faq.q2': 'Πώς υπολογίζεται το κόστος αποστολής;',
+                'faq.a2': 'Το κόστος εξαρτάται από βάρος, διαστάσεις, απόσταση και τύπο υπηρεσίας. Χρησιμοποιήστε τη φόρμα προσφοράς ή επικοινωνήστε μαζί μας. Εκπτώσεις όγκου για τακτικές αποστολές.',
+                'faq.q3': 'Ποιοι είναι οι χρόνοι παράδοσης;',
+                'faq.a3': 'Αυθημερόν στην Αθήνα, 1-2 ημέρες πανελλαδικά, 3-7 ημέρες διεθνώς. Express επιλογές διαθέσιμες για επείγουσες παραδόσεις.',
+                'faq.q4': 'Είναι ασφαλισμένη η αποστολή μου;',
+                'faq.a4': 'Ναι! Όλες οι αποστολές περιλαμβάνουν &euro;100 βασική ασφάλιση χωρίς επιπλέον κόστος. Πρόσθετη ασφάλιση μέχρι &euro;50.000 ανά αποστολή.',
+                'faq.q5': 'Τι αντικείμενα δεν μπορούν να αποσταλούν;',
+                'faq.a5': 'Δεν μεταφέρουμε επικίνδυνα υλικά (εκτός με άδεια), παράνομα αντικείμενα, ευπαθή χωρίς κατάλληλη συσκευασία ή αντικείμενα που υπερβαίνουν τα όρια χωρητικότητας.',
+                'faq.q6': 'Προσφέρετε επαναλαμβανόμενες υπηρεσίες;',
+                'faq.a6': 'Απολύτως! Παρέχουμε προγραμματισμένες υπηρεσίες για επιχειρήσεις με τακτικές ανάγκες. Εκπτώσεις όγκου, αποκλειστικός account manager και ευέλικτος προγραμματισμός.',
+                'careers.tag': 'Καριέρα',
+                'careers.title': 'Γίνε Μέλος της <span class="highlight">Ομάδας</span>',
+                'careers.subtitle': 'Χτίσε την καριέρα σου σε μια αναπτυσσόμενη εταιρεία μεταφορών',
+                'careers.cardTitle': 'Επαγγελματίες Οδηγοί',
+                'careers.cardDesc': 'Αναζητούμε έμπειρους, υπεύθυνους οδηγούς με εξαιρετικές δεξιότητες εξυπηρέτησης για τον αναπτυσσόμενο στόλο μας.',
+                'careers.p1': 'Ανταγωνιστικός Μισθός',
+                'careers.p2': 'Σύγχρονα Οχήματα',
+                'careers.p3': 'Ασφάλιση Υγείας',
+                'careers.p4': 'Άδεια με Αποδοχές',
+                'careers.p5': 'Εξέλιξη Καριέρας',
+                'contact.tag': 'Επικοινωνία',
+                'contact.title': 'Επικοινωνήστε <span class="highlight">Μαζί μας</span>',
+                'contact.subtitle': 'Έχετε ερώτηση; Θα χαρούμε να σας ακούσουμε',
+                'mobile.cta': 'Δωρεάν Προσφορά &rarr;',
+                'footer.desc': 'Επαγγελματικές υπηρεσίες διανομής και μεταφοράς σε Ελλάδα και Ευρωπαϊκή Ένωση. Ο αξιόπιστος συνεργάτης σας στα logistics.',
+                'footer.servicesTitle': 'Υπηρεσίες',
+                'footer.companyTitle': 'Εταιρεία',
+                'footer.newsletter': 'Ενημερωτικό Δελτίο',
+                'footer.nlDesc': 'Ενημερωθείτε για προσφορές και νέα.'
+            }
+        };
+
+        // ===== LANGUAGE ENGINE =====
+        let currentLang = localStorage.getItem('omni-lang') || 'en';
+
+        function setLang(lang) {
+            currentLang = lang;
+            localStorage.setItem('omni-lang', lang);
+            document.documentElement.lang = lang === 'gr' ? 'el' : 'en';
+            document.getElementById('langToggle').textContent = lang === 'en' ? 'GR' : 'EN';
+            
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if (T[lang] && T[lang][key]) el.textContent = T[lang][key];
+            });
+            document.querySelectorAll('[data-i18n-html]').forEach(el => {
+                const key = el.getAttribute('data-i18n-html');
+                if (T[lang] && T[lang][key]) el.innerHTML = T[lang][key];
+            });
+        }
+
+        function toggleLang() {
+            setLang(currentLang === 'en' ? 'gr' : 'en');
+        }
+
+        // Apply saved language on load
+        document.addEventListener('DOMContentLoaded', () => {
+            if (currentLang !== 'en') setLang(currentLang);
+        });
+
         // Mobile Menu
         function toggleMenu() {
             document.querySelector('.nav-links').classList.toggle('mobile-active');
