@@ -2587,46 +2587,62 @@
         <div class="footer-bottom">
             <p>&copy; 2025 OMNI Logistics. All rights reserved.</p>
             <div class="footer-bottom-links">
-                <a href="#" onclick="showModal('privacy');return false;">Privacy</a>
-                <a href="#" onclick="showModal('terms');return false;">Terms</a>
-                <a href="#" onclick="showModal('shipping');return false;">Shipping</a>
-                <a href="#" onclick="showModal('insurance');return false;">Insurance</a>
+                <a href="#" onclick="showModal('privacy');return false;" data-i18n="footer.privacy">Privacy</a>
+                <a href="#" onclick="showModal('terms');return false;" data-i18n="footer.terms">Terms</a>
+                <a href="#" onclick="showModal('shipping');return false;" data-i18n="footer.shipping">Shipping</a>
+                <a href="#" onclick="showModal('insurance');return false;" data-i18n="footer.insurance">Insurance</a>
             </div>
         </div>
     </footer>
 
     <!-- Hidden Legal Sections -->
     <div id="privacy" style="display:none;">
-        <h2 style="font-family:'Space Grotesk',sans-serif; font-size:1.8rem; margin-bottom:1.5rem;">Privacy Policy</h2>
+        <h2 style="font-family:'Space Grotesk',sans-serif; font-size:1.8rem; margin-bottom:1.5rem;" data-i18n="legal.privacy.title">Privacy Policy</h2>
         <p style="color:var(--grey-500); margin-bottom:1.5rem;">Last updated: November 21, 2025</p>
-        <h3 style="margin-bottom:0.5rem;">1. Information We Collect</h3>
-        <p style="color:var(--grey-500); margin-bottom:1.5rem;">OMNI collects contact details, shipment information, and billing data necessary for our services.</p>
-        <h3 style="margin-bottom:0.5rem;">2. How We Use Your Information</h3>
-        <p style="color:var(--grey-500); margin-bottom:1.5rem;">Used to process shipments, communicate updates, and improve services. We do not sell personal information.</p>
-        <h3 style="margin-bottom:0.5rem;">3. Data Security</h3>
-        <p style="color:var(--grey-500); margin-bottom:1.5rem;">Industry-standard security with GDPR-compliant encryption.</p>
-        <h3 style="margin-bottom:0.5rem;">4. Your Rights</h3>
-        <p style="color:var(--grey-500);">Right to access, correct, or delete personal data. Contact omni@omnids.gr.</p>
+        <h3 style="margin-bottom:0.5rem;" data-i18n="legal.privacy.h1">1. Information We Collect</h3>
+        <p style="color:var(--grey-500); margin-bottom:1.5rem;" data-i18n="legal.privacy.p1">OMNI Logistics collects information necessary to provide our transportation and logistics services, including contact details, shipment information, and billing data. We use this information solely for service delivery and customer support.</p>
+        <h3 style="margin-bottom:0.5rem;" data-i18n="legal.privacy.h2">2. How We Use Your Information</h3>
+        <p style="color:var(--grey-500); margin-bottom:1.5rem;" data-i18n="legal.privacy.p2">Your information is used to process shipments, communicate delivery updates, provide customer support, and improve our services. We do not sell or share your personal information with third parties except as required for service delivery.</p>
+        <h3 style="margin-bottom:0.5rem;" data-i18n="legal.privacy.h3">3. Data Security</h3>
+        <p style="color:var(--grey-500); margin-bottom:1.5rem;" data-i18n="legal.privacy.p3">We implement industry-standard security measures to protect your data. All sensitive information is encrypted and stored securely in compliance with Greek and European data protection regulations (GDPR).</p>
+        <h3 style="margin-bottom:0.5rem;" data-i18n="legal.privacy.h4">4. Your Rights</h3>
+        <p style="color:var(--grey-500);" data-i18n="legal.privacy.p4">You have the right to access, correct, or delete your personal data. Contact us at omni@omnids.gr to exercise these rights.</p>
     </div>
     <div id="terms" style="display:none;">
-        <h2 style="font-family:'Space Grotesk',sans-serif; font-size:1.8rem; margin-bottom:1.5rem;">Terms of Service</h2>
+        <h2 style="font-family:'Space Grotesk',sans-serif; font-size:1.8rem; margin-bottom:1.5rem;" data-i18n="legal.terms.title">Terms of Service</h2>
         <p style="color:var(--grey-500); margin-bottom:1.5rem;">Last updated: November 21, 2025</p>
-        <h3 style="margin-bottom:0.5rem;">1. Service Agreement</h3>
-        <p style="color:var(--grey-500); margin-bottom:1.5rem;">By using OMNI services, you agree to these terms.</p>
-        <h3 style="margin-bottom:0.5rem;">2. Customer Responsibilities</h3>
-        <p style="color:var(--grey-500); margin-bottom:1.5rem;">Accurate shipment information and proper packaging required.</p>
-        <h3 style="margin-bottom:0.5rem;">3. Payment Terms</h3>
-        <p style="color:var(--grey-500); margin-bottom:1.5rem;">Payment due as specified in the service agreement.</p>
-        <h3 style="margin-bottom:0.5rem;">4. Liability</h3>
-        <p style="color:var(--grey-500);">Limited to declared shipment value per insurance policy.</p>
+        <h3 style="margin-bottom:0.5rem;" data-i18n="legal.terms.h1">1. Service Agreement</h3>
+        <p style="color:var(--grey-500); margin-bottom:1.5rem;" data-i18n="legal.terms.p1">By using OMNI Logistics services, you agree to these terms. We provide transportation and logistics services as described in our service offerings and quotes.</p>
+        <h3 style="margin-bottom:0.5rem;" data-i18n="legal.terms.h2">2. Customer Responsibilities</h3>
+        <p style="color:var(--grey-500); margin-bottom:1.5rem;" data-i18n="legal.terms.p2">Customers must provide accurate shipment information, proper packaging, and ensure all items comply with transportation regulations. Prohibited items will not be transported.</p>
+        <h3 style="margin-bottom:0.5rem;" data-i18n="legal.terms.h3">3. Payment Terms</h3>
+        <p style="color:var(--grey-500); margin-bottom:1.5rem;" data-i18n="legal.terms.p3">Payment is due as specified in the service agreement. Late payments may result in service suspension and additional charges.</p>
+        <h3 style="margin-bottom:0.5rem;" data-i18n="legal.terms.h4">4. Limitation of Liability</h3>
+        <p style="color:var(--grey-500);" data-i18n="legal.terms.p4">OMNI Logistics liability is limited to the declared value of the shipment as specified in our insurance policy. See our Insurance Information for details.</p>
     </div>
     <div id="shipping" style="display:none;">
-        <h2 style="font-family:'Space Grotesk',sans-serif; font-size:1.8rem; margin-bottom:1.5rem;">Shipping Policy</h2>
-        <p style="color:var(--grey-500); margin-bottom:1.5rem;">Same-day Athens. Express nationwide 1-2 days. International 3-7 days. All shipments include real-time GPS tracking.</p>
+        <h2 style="font-family:'Space Grotesk',sans-serif; font-size:1.8rem; margin-bottom:1.5rem;" data-i18n="legal.shipping.title">Shipping Policy</h2>
+        <p style="color:var(--grey-500); margin-bottom:1.5rem;">Last updated: November 21, 2025</p>
+        <h3 style="margin-bottom:0.5rem;" data-i18n="legal.shipping.h1">1. Delivery Times</h3>
+        <p style="color:var(--grey-500); margin-bottom:1.5rem;" data-i18n="legal.shipping.p1">Standard delivery times vary by service type and destination. Same-day delivery available in Athens metro area. Express nationwide delivery 1-2 business days. International shipping 3-7 business days depending on destination.</p>
+        <h3 style="margin-bottom:0.5rem;" data-i18n="legal.shipping.h2">2. Tracking</h3>
+        <p style="color:var(--grey-500); margin-bottom:1.5rem;" data-i18n="legal.shipping.p2">All shipments include real-time GPS tracking. You will receive tracking information via email and SMS. Track your shipment 24/7 through our website or mobile app.</p>
+        <h3 style="margin-bottom:0.5rem;" data-i18n="legal.shipping.h3">3. Packaging Requirements</h3>
+        <p style="color:var(--grey-500); margin-bottom:1.5rem;" data-i18n="legal.shipping.p3">Items must be properly packaged to withstand normal transportation conditions. Fragile items require special packaging. We offer packaging services for an additional fee.</p>
+        <h3 style="margin-bottom:0.5rem;" data-i18n="legal.shipping.h4">4. Refused or Undeliverable Shipments</h3>
+        <p style="color:var(--grey-500);" data-i18n="legal.shipping.p4">If a shipment cannot be delivered, we will contact you to arrange redelivery or return. Additional charges may apply for storage and redelivery attempts.</p>
     </div>
     <div id="insurance" style="display:none;">
-        <h2 style="font-family:'Space Grotesk',sans-serif; font-size:1.8rem; margin-bottom:1.5rem;">Insurance Information</h2>
-        <p style="color:var(--grey-500); margin-bottom:1.5rem;">All shipments include &euro;100 basic insurance. Premium available up to &euro;50,000 per shipment at 2% of declared value. Claims within 7 days, processed in 14 business days.</p>
+        <h2 style="font-family:'Space Grotesk',sans-serif; font-size:1.8rem; margin-bottom:1.5rem;" data-i18n="legal.insurance.title">Insurance Information</h2>
+        <p style="color:var(--grey-500); margin-bottom:1.5rem;">Last updated: November 21, 2025</p>
+        <h3 style="margin-bottom:0.5rem;" data-i18n="legal.insurance.h1">1. Standard Coverage</h3>
+        <p style="color:var(--grey-500); margin-bottom:1.5rem;" data-i18n="legal.insurance.p1">All shipments include basic insurance coverage up to &euro;100 per shipment at no additional cost. This covers loss or damage during normal transportation.</p>
+        <h3 style="margin-bottom:0.5rem;" data-i18n="legal.insurance.h2">2. Additional Insurance</h3>
+        <p style="color:var(--grey-500); margin-bottom:1.5rem;" data-i18n="legal.insurance.p2">Higher value shipments can be insured for their full declared value. Premium insurance rates are 2% of declared value. Maximum coverage available: &euro;50,000 per shipment.</p>
+        <h3 style="margin-bottom:0.5rem;" data-i18n="legal.insurance.h3">3. Claims Process</h3>
+        <p style="color:var(--grey-500); margin-bottom:1.5rem;" data-i18n="legal.insurance.p3">To file a claim, contact us within 7 days of delivery with photos and documentation. Claims are typically processed within 14 business days. Approved claims are paid within 30 days.</p>
+        <h3 style="margin-bottom:0.5rem;" data-i18n="legal.insurance.h4">4. Exclusions</h3>
+        <p style="color:var(--grey-500);" data-i18n="legal.insurance.p4">Insurance does not cover improper packaging, prohibited items, acts of nature, or items not declared on the shipping manifest. See full terms for complete exclusion list.</p>
     </div>
 
     <!-- Modal -->
@@ -2843,7 +2859,47 @@
                 'footer.servicesTitle': 'Services',
                 'footer.companyTitle': 'Company',
                 'footer.newsletter': 'Newsletter',
-                'footer.nlDesc': 'Get updates on offers and news.'
+                'footer.nlDesc': 'Get updates on offers and news.',
+                'footer.privacy': 'Privacy',
+                'footer.terms': 'Terms',
+                'footer.shipping': 'Shipping',
+                'footer.insurance': 'Insurance',
+                'legal.privacy.title': 'Privacy Policy',
+                'legal.privacy.h1': '1. Information We Collect',
+                'legal.privacy.p1': 'OMNI Logistics collects information necessary to provide our transportation and logistics services, including contact details, shipment information, and billing data. We use this information solely for service delivery and customer support.',
+                'legal.privacy.h2': '2. How We Use Your Information',
+                'legal.privacy.p2': 'Your information is used to process shipments, communicate delivery updates, provide customer support, and improve our services. We do not sell or share your personal information with third parties except as required for service delivery.',
+                'legal.privacy.h3': '3. Data Security',
+                'legal.privacy.p3': 'We implement industry-standard security measures to protect your data. All sensitive information is encrypted and stored securely in compliance with Greek and European data protection regulations (GDPR).',
+                'legal.privacy.h4': '4. Your Rights',
+                'legal.privacy.p4': 'You have the right to access, correct, or delete your personal data. Contact us at omni@omnids.gr to exercise these rights.',
+                'legal.terms.title': 'Terms of Service',
+                'legal.terms.h1': '1. Service Agreement',
+                'legal.terms.p1': 'By using OMNI Logistics services, you agree to these terms. We provide transportation and logistics services as described in our service offerings and quotes.',
+                'legal.terms.h2': '2. Customer Responsibilities',
+                'legal.terms.p2': 'Customers must provide accurate shipment information, proper packaging, and ensure all items comply with transportation regulations. Prohibited items will not be transported.',
+                'legal.terms.h3': '3. Payment Terms',
+                'legal.terms.p3': 'Payment is due as specified in the service agreement. Late payments may result in service suspension and additional charges.',
+                'legal.terms.h4': '4. Limitation of Liability',
+                'legal.terms.p4': 'OMNI Logistics liability is limited to the declared value of the shipment as specified in our insurance policy. See our Insurance Information for details.',
+                'legal.shipping.title': 'Shipping Policy',
+                'legal.shipping.h1': '1. Delivery Times',
+                'legal.shipping.p1': 'Standard delivery times vary by service type and destination. Same-day delivery available in Athens metro area. Express nationwide delivery 1-2 business days. International shipping 3-7 business days depending on destination.',
+                'legal.shipping.h2': '2. Tracking',
+                'legal.shipping.p2': 'All shipments include real-time GPS tracking. You will receive tracking information via email and SMS. Track your shipment 24/7 through our website or mobile app.',
+                'legal.shipping.h3': '3. Packaging Requirements',
+                'legal.shipping.p3': 'Items must be properly packaged to withstand normal transportation conditions. Fragile items require special packaging. We offer packaging services for an additional fee.',
+                'legal.shipping.h4': '4. Refused or Undeliverable Shipments',
+                'legal.shipping.p4': 'If a shipment cannot be delivered, we will contact you to arrange redelivery or return. Additional charges may apply for storage and redelivery attempts.',
+                'legal.insurance.title': 'Insurance Information',
+                'legal.insurance.h1': '1. Standard Coverage',
+                'legal.insurance.p1': 'All shipments include basic insurance coverage up to \u20AC100 per shipment at no additional cost. This covers loss or damage during normal transportation.',
+                'legal.insurance.h2': '2. Additional Insurance',
+                'legal.insurance.p2': 'Higher value shipments can be insured for their full declared value. Premium insurance rates are 2% of declared value. Maximum coverage available: \u20AC50,000 per shipment.',
+                'legal.insurance.h3': '3. Claims Process',
+                'legal.insurance.p3': 'To file a claim, contact us within 7 days of delivery with photos and documentation. Claims are typically processed within 14 business days. Approved claims are paid within 30 days.',
+                'legal.insurance.h4': '4. Exclusions',
+                'legal.insurance.p4': 'Insurance does not cover improper packaging, prohibited items, acts of nature, or items not declared on the shipping manifest. See full terms for complete exclusion list.'
             },
             gr: {
                 'cookie.text': 'Χρησιμοποιούμε cookies για τη βελτίωση της εμπειρίας σας.',
@@ -3031,7 +3087,47 @@
                 'footer.servicesTitle': 'Υπηρεσίες',
                 'footer.companyTitle': 'Εταιρεία',
                 'footer.newsletter': 'Ενημερωτικό Δελτίο',
-                'footer.nlDesc': 'Ενημερωθείτε για προσφορές και νέα.'
+                'footer.nlDesc': 'Ενημερωθείτε για προσφορές και νέα.',
+                'footer.privacy': 'Απόρρητο',
+                'footer.terms': 'Όροι',
+                'footer.shipping': 'Αποστολές',
+                'footer.insurance': 'Ασφάλιση',
+                'legal.privacy.title': 'Πολιτική Απορρήτου',
+                'legal.privacy.h1': '1. Πληροφορίες που Συλλέγουμε',
+                'legal.privacy.p1': 'Η OMNI Logistics συλλέγει πληροφορίες απαραίτητες για την παροχή υπηρεσιών μεταφοράς, συμπεριλαμβανομένων στοιχείων επικοινωνίας, πληροφοριών αποστολής και δεδομένων χρέωσης. Χρησιμοποιούμε αυτές τις πληροφορίες αποκλειστικά για την παροχή υπηρεσιών.',
+                'legal.privacy.h2': '2. Πώς Χρησιμοποιούμε τα Δεδομένα σας',
+                'legal.privacy.p2': 'Τα δεδομένα σας χρησιμοποιούνται για επεξεργασία αποστολών, ενημερώσεις παράδοσης, υποστήριξη πελατών και βελτίωση υπηρεσιών. Δεν πουλάμε ούτε μοιραζόμαστε προσωπικά δεδομένα με τρίτους.',
+                'legal.privacy.h3': '3. Ασφάλεια Δεδομένων',
+                'legal.privacy.p3': 'Εφαρμόζουμε πρότυπα ασφαλείας για την προστασία των δεδομένων σας. Όλες οι ευαίσθητες πληροφορίες κρυπτογραφούνται σύμφωνα με τον GDPR.',
+                'legal.privacy.h4': '4. Τα Δικαιώματά σας',
+                'legal.privacy.p4': 'Έχετε δικαίωμα πρόσβασης, διόρθωσης ή διαγραφής των προσωπικών σας δεδομένων. Επικοινωνήστε στο omni@omnids.gr.',
+                'legal.terms.title': 'Όροι Χρήσης',
+                'legal.terms.h1': '1. Συμφωνία Υπηρεσιών',
+                'legal.terms.p1': 'Χρησιμοποιώντας τις υπηρεσίες της OMNI Logistics, συμφωνείτε με αυτούς τους όρους. Παρέχουμε υπηρεσίες μεταφοράς και logistics όπως περιγράφονται στις προσφορές μας.',
+                'legal.terms.h2': '2. Ευθύνες Πελάτη',
+                'legal.terms.p2': 'Οι πελάτες πρέπει να παρέχουν ακριβείς πληροφορίες αποστολής, κατάλληλη συσκευασία και να διασφαλίζουν τη συμμόρφωση με τους κανονισμούς μεταφοράς.',
+                'legal.terms.h3': '3. Όροι Πληρωμής',
+                'legal.terms.p3': 'Η πληρωμή οφείλεται σύμφωνα με τη συμφωνία υπηρεσιών. Καθυστερημένες πληρωμές μπορεί να οδηγήσουν σε αναστολή υπηρεσιών.',
+                'legal.terms.h4': '4. Περιορισμός Ευθύνης',
+                'legal.terms.p4': 'Η ευθύνη της OMNI Logistics περιορίζεται στη δηλωμένη αξία της αποστολής σύμφωνα με την ασφαλιστική πολιτική μας.',
+                'legal.shipping.title': 'Πολιτική Αποστολών',
+                'legal.shipping.h1': '1. Χρόνοι Παράδοσης',
+                'legal.shipping.p1': 'Οι χρόνοι παράδοσης ποικίλλουν ανά υπηρεσία και προορισμό. Αυθημερόν στην Αττική. Express πανελλαδικά 1-2 εργάσιμες. Διεθνώς 3-7 εργάσιμες ανάλογα τον προορισμό.',
+                'legal.shipping.h2': '2. Παρακολούθηση',
+                'legal.shipping.p2': 'Όλες οι αποστολές περιλαμβάνουν GPS παρακολούθηση σε πραγματικό χρόνο. Θα λάβετε ενημερώσεις μέσω email και SMS. Παρακολουθήστε 24/7 μέσω της ιστοσελίδας μας.',
+                'legal.shipping.h3': '3. Απαιτήσεις Συσκευασίας',
+                'legal.shipping.p3': 'Τα αντικείμενα πρέπει να συσκευάζονται κατάλληλα. Τα εύθραυστα χρειάζονται ειδική συσκευασία. Προσφέρουμε υπηρεσίες συσκευασίας με επιπλέον χρέωση.',
+                'legal.shipping.h4': '4. Αρνηθείσες ή Αδύνατες Παραδόσεις',
+                'legal.shipping.p4': 'Αν μια αποστολή δεν μπορεί να παραδοθεί, θα επικοινωνήσουμε μαζί σας. Ενδέχεται επιπλέον χρεώσεις για αποθήκευση και επαναπαράδοση.',
+                'legal.insurance.title': 'Πληροφορίες Ασφάλισης',
+                'legal.insurance.h1': '1. Βασική Κάλυψη',
+                'legal.insurance.p1': 'Όλες οι αποστολές περιλαμβάνουν βασική ασφάλιση έως \u20AC100 ανά αποστολή χωρίς επιπλέον κόστος. Αυτό καλύπτει απώλεια ή ζημιά κατά τη μεταφορά.',
+                'legal.insurance.h2': '2. Πρόσθετη Ασφάλιση',
+                'legal.insurance.p2': 'Αποστολές υψηλής αξίας μπορούν να ασφαλιστούν για την πλήρη δηλωμένη αξία. Ασφάλιστρα 2% της δηλωμένης αξίας. Μέγιστη κάλυψη: \u20AC50.000 ανά αποστολή.',
+                'legal.insurance.h3': '3. Διαδικασία Αποζημίωσης',
+                'legal.insurance.p3': 'Για αίτηση αποζημίωσης, επικοινωνήστε εντός 7 ημερών με φωτογραφίες. Οι αιτήσεις επεξεργάζονται σε 14 εργάσιμες. Εγκεκριμένες αποζημιώσεις καταβάλλονται σε 30 ημέρες.',
+                'legal.insurance.h4': '4. Εξαιρέσεις',
+                'legal.insurance.p4': 'Η ασφάλιση δεν καλύπτει ακατάλληλη συσκευασία, απαγορευμένα αντικείμενα, φυσικές καταστροφές ή αντικείμενα μη δηλωμένα. Δείτε τους πλήρεις όρους.'
             }
         };
 
@@ -3219,6 +3315,15 @@
                 document.getElementById('modalContent').innerHTML = s.innerHTML;
                 document.getElementById('legalModal').style.display = 'block';
                 document.body.style.overflow = 'hidden';
+                // Re-apply translations to modal content
+                document.querySelectorAll('#modalContent [data-i18n]').forEach(el => {
+                    const key = el.getAttribute('data-i18n');
+                    if (T[currentLang] && T[currentLang][key]) el.textContent = T[currentLang][key];
+                });
+                document.querySelectorAll('#modalContent [data-i18n-html]').forEach(el => {
+                    const key = el.getAttribute('data-i18n-html');
+                    if (T[currentLang] && T[currentLang][key]) el.innerHTML = T[currentLang][key];
+                });
             }
         }
         function closeModal() {
