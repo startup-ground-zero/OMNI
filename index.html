@@ -8,8 +8,12 @@
     <meta name="keywords" content="logistics Greece, courier Athens, transportation services, express delivery, freight services, same day delivery Greece, EU shipping, OMNI logistics">
     
     <link rel="icon" type="image/jpeg" href="omni_logo.jpg">
+    <link rel="canonical" href="https://www.omnids.gr/index-en.html">
+    <link rel="alternate" hreflang="el" href="https://www.omnids.gr/index.html">
+    <link rel="alternate" hreflang="en" href="https://www.omnids.gr/index-en.html">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" as="style">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
     
     <meta property="og:title" content="OMNI Distribution Services - Professional Transportation Services in Greece & EU">
@@ -1708,6 +1712,44 @@
         .reveal-delay-1 { transition-delay: 0.1s; }
         .reveal-delay-2 { transition-delay: 0.2s; }
         .reveal-delay-3 { transition-delay: 0.3s; }
+
+        /* ===== STICKY MOBILE CTA ===== */
+        .mobile-cta {
+            display: none;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 0.8rem 1.2rem;
+            background: rgba(255,255,255,0.95);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-top: 1px solid rgba(0,0,0,0.06);
+            z-index: 997;
+            transform: translateY(100%);
+            transition: transform 0.3s ease;
+        }
+
+        .mobile-cta.visible { transform: translateY(0); }
+
+        .mobile-cta a {
+            display: block;
+            background: var(--gradient-orange);
+            color: white;
+            text-align: center;
+            padding: 0.9rem;
+            border-radius: 100px;
+            font-weight: 700;
+            font-size: 0.92rem;
+            text-decoration: none;
+            font-family: 'Space Grotesk', sans-serif;
+            box-shadow: 0 4px 16px rgba(246, 80, 3, 0.3);
+        }
+
+        @media (max-width: 768px) {
+            .mobile-cta { display: block; }
+            #cookie-banner { bottom: 72px; }
+        }
     </style>
 </head>
 <body>
@@ -1724,9 +1766,9 @@
     <button id="scroll-top" onclick="window.scrollTo({top:0,behavior:'smooth'})">&#8593;</button>
 
     <!-- Navigation -->
-    <nav>
+    <nav role="navigation" aria-label="Main navigation">
         <a href="#" class="nav-logo" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;">
-            <img src="omni_logo.jpg" alt="OMNI Logistics">
+            <img src="omni_logo.jpg" alt="OMNI Logistics" fetchpriority="high">
         </a>
         <button class="menu-toggle" onclick="toggleMenu()" aria-label="Toggle menu">
             <span></span><span></span><span></span>
@@ -2119,7 +2161,7 @@
                 <form action="https://formsubmit.co/omni@omnids.gr" method="POST">
                     <input type="hidden" name="_subject" value="New Quote Request - OMNI Logistics">
                     <input type="hidden" name="_captcha" value="false">
-                    <input type="hidden" name="_next" value="https://www.omnids.gr/index-en.html?success=quote">
+                    <input type="hidden" name="_next" value="https://www.omnids.gr/#calculator">
                     
                     <div class="form-grid">
                         <div class="form-group">
@@ -2340,29 +2382,29 @@
             <p>Quick answers to common questions</p>
         </div>
 
-        <div class="faq-list">
-            <div class="faq-item">
-                <div class="faq-question" onclick="toggleFaq(this)">What areas do you deliver to?</div>
+        <div class="faq-list" role="list" aria-label="Frequently asked questions">
+            <div class="faq-item" role="listitem">
+                <div class="faq-question" onclick="toggleFaq(this)" role="button" tabindex="0" aria-expanded="false">What areas do you deliver to?</div>
                 <div class="faq-answer"><div class="faq-answer-inner">We deliver across all of Greece including islands, with same-day service in the Athens metro area. We also offer international shipping to 20+ European countries with regular scheduled routes.</div></div>
             </div>
-            <div class="faq-item">
-                <div class="faq-question" onclick="toggleFaq(this)">How is shipping cost calculated?</div>
+            <div class="faq-item" role="listitem">
+                <div class="faq-question" onclick="toggleFaq(this)" role="button" tabindex="0" aria-expanded="false">How is shipping cost calculated?</div>
                 <div class="faq-answer"><div class="faq-answer-inner">Shipping costs depend on weight, dimensions, distance, and service type. Use our Quote Calculator for estimates, or contact us for exact pricing. Volume discounts available for regular shipments.</div></div>
             </div>
-            <div class="faq-item">
-                <div class="faq-question" onclick="toggleFaq(this)">What are your delivery times?</div>
+            <div class="faq-item" role="listitem">
+                <div class="faq-question" onclick="toggleFaq(this)" role="button" tabindex="0" aria-expanded="false">What are your delivery times?</div>
                 <div class="faq-answer"><div class="faq-answer-inner">Same-day delivery in Athens, 1-2 days nationwide, 3-7 days for international. Express and time-definite options are available for urgent deliveries.</div></div>
             </div>
-            <div class="faq-item">
-                <div class="faq-question" onclick="toggleFaq(this)">Is my shipment insured?</div>
+            <div class="faq-item" role="listitem">
+                <div class="faq-question" onclick="toggleFaq(this)" role="button" tabindex="0" aria-expanded="false">Is my shipment insured?</div>
                 <div class="faq-answer"><div class="faq-answer-inner">Yes! All shipments include &euro;100 basic insurance at no extra cost. Additional insurance up to &euro;50,000 is available per shipment.</div></div>
             </div>
-            <div class="faq-item">
-                <div class="faq-question" onclick="toggleFaq(this)">What items cannot be shipped?</div>
+            <div class="faq-item" role="listitem">
+                <div class="faq-question" onclick="toggleFaq(this)" role="button" tabindex="0" aria-expanded="false">What items cannot be shipped?</div>
                 <div class="faq-answer"><div class="faq-answer-inner">We cannot transport hazardous materials (except with permits), illegal items, perishables without proper packaging, or items exceeding vehicle capacity limits.</div></div>
             </div>
-            <div class="faq-item">
-                <div class="faq-question" onclick="toggleFaq(this)">Do you offer recurring delivery services?</div>
+            <div class="faq-item" role="listitem">
+                <div class="faq-question" onclick="toggleFaq(this)" role="button" tabindex="0" aria-expanded="false">Do you offer recurring delivery services?</div>
                 <div class="faq-answer"><div class="faq-answer-inner">Absolutely! We provide scheduled services for businesses with regular shipping needs. Volume discounts, dedicated account management, and flexible scheduling are available.</div></div>
             </div>
         </div>
@@ -2396,7 +2438,7 @@
                 <form action="https://formsubmit.co/omni@omnids.gr" method="POST" enctype="multipart/form-data">
                     <input type="hidden" name="_subject" value="New Job Application - OMNI Logistics">
                     <input type="hidden" name="_captcha" value="false">
-                    <input type="hidden" name="_next" value="https://www.omnids.gr/index-en.html?success=career">
+                    <input type="hidden" name="_next" value="https://www.omnids.gr/#careers">
                     
                     <div class="form-grid" style="grid-template-columns: 1fr 1fr;">
                         <div class="form-group">
@@ -2445,7 +2487,7 @@
             <div class="contact-info">
                 <div class="contact-info-card">
                     <h4>Address</h4>
-                    <p><a href="https://www.google.com/maps/search/?api=1&query=Leoforos+Tirteou,Afidnes,Greece" target="_blank" rel="noopener">Afidnes, Leoforos Tirteou</a></p>
+                    <p><a href="https://www.google.com/maps/search/?api=1&query=Leoforos+Tirteou,Afidnes,Greece" target="_blank" rel="noopener noreferrer">Afidnes, Leoforos Tirteou</a></p>
                 </div>
                 <div class="contact-info-card">
                     <h4>Phone</h4>
@@ -2466,7 +2508,7 @@
                 <form action="https://formsubmit.co/omni@omnids.gr" method="POST">
                     <input type="hidden" name="_subject" value="New Contact Request - OMNI Logistics">
                     <input type="hidden" name="_captcha" value="false">
-                    <input type="hidden" name="_next" value="https://www.omnids.gr/index-en.html?success=contact">
+                    <input type="hidden" name="_next" value="https://www.omnids.gr/#contact">
                     
                     <div class="form-grid" style="grid-template-columns: 1fr 1fr;">
                         <div class="form-group">
@@ -2495,6 +2537,11 @@
             </div>
         </div>
     </section>
+
+    <!-- Sticky Mobile CTA -->
+    <div class="mobile-cta" id="mobileCta">
+        <a href="#calculator">Get a Free Quote &rarr;</a>
+    </div>
 
     <!-- Footer -->
     <footer>
@@ -2530,7 +2577,7 @@
                 <form action="https://formsubmit.co/omni@omnids.gr" method="POST" style="display: flex; flex-direction: column; gap: 0.7rem;">
                     <input type="hidden" name="_subject" value="Newsletter Subscription">
                     <input type="hidden" name="_captcha" value="false">
-                    <input type="hidden" name="_next" value="https://www.omnids.gr/index-en.html?success=newsletter">
+                    <input type="hidden" name="_next" value="https://www.omnids.gr/#newsletter">
                     <input type="email" name="email" placeholder="Your email" required style="padding: 0.7rem 1rem; border: 1px solid rgba(255,255,255,0.1); border-radius: 100px; background: rgba(255,255,255,0.05); color: white; font-size: 0.85rem; font-family: inherit;">
                     <button type="submit" style="background: var(--orange); color: white; padding: 0.7rem; border: none; border-radius: 100px; font-weight: 700; cursor: pointer; font-family: inherit; font-size: 0.85rem;">Subscribe</button>
                 </form>
@@ -2707,9 +2754,41 @@
         function toggleFaq(el) {
             const item = el.parentElement;
             const wasActive = item.classList.contains('active');
-            document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('active'));
-            if (!wasActive) item.classList.add('active');
+            document.querySelectorAll('.faq-item').forEach(i => {
+                i.classList.remove('active');
+                i.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+            });
+            if (!wasActive) {
+                item.classList.add('active');
+                el.setAttribute('aria-expanded', 'true');
+            }
         }
+
+        // FAQ keyboard support
+        document.querySelectorAll('.faq-question').forEach(q => {
+            q.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    toggleFaq(q);
+                }
+            });
+        });
+
+        // Sticky Mobile CTA
+        (function() {
+            const cta = document.getElementById('mobileCta');
+            if (!cta) return;
+            let lastScroll = 0;
+            window.addEventListener('scroll', () => {
+                const y = window.scrollY;
+                if (y > 500) {
+                    cta.classList.add('visible');
+                } else {
+                    cta.classList.remove('visible');
+                }
+                lastScroll = y;
+            }, { passive: true });
+        })();
 
         // Form loading states
         document.querySelectorAll('form').forEach(form => {
