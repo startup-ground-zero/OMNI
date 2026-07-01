@@ -3629,23 +3629,21 @@
                     headers: { 'Accept': 'application/json' }
                 }).then(response => {
                     if (response.ok) {
-                        return response.json().then(() => {
-                            this.style.display = 'none';
-                            const successMsg = document.createElement('div');
-                            successMsg.className = 'form-success-message';
-                            const title = isCareer ? 'Application Submitted!' : 'Successfully Submitted!';
-                            const msg = isCareer ? "Thank you for applying. We'll review your CV and get back to you soon." : "Thank you for reaching out. We'll get back to you within 24 hours.";
-                            successMsg.innerHTML = `
-                                <div style="text-align: center; padding: 2rem 1rem;">
-                                    <div style="width: 64px; height: 64px; background: #10b981; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.2rem;">
-                                        <svg width="28" height="28" fill="none" stroke="white" stroke-width="3" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>
-                                    </div>
-                                    <h3 style="font-size: 1.3rem; font-weight: 700; margin-bottom: 0.5rem; color: var(--grey-900);">${title}</h3>
-                                    <p style="color: var(--grey-500); font-size: 0.92rem;">${msg}</p>
+                        this.style.display = 'none';
+                        const successMsg = document.createElement('div');
+                        successMsg.className = 'form-success-message';
+                        const title = isCareer ? 'Application Submitted!' : 'Successfully Submitted!';
+                        const msg = isCareer ? "Thank you for applying. We'll review your CV and get back to you soon." : "Thank you for reaching out. We'll get back to you within 24 hours.";
+                        successMsg.innerHTML = `
+                            <div style="text-align: center; padding: 2rem 1rem;">
+                                <div style="width: 64px; height: 64px; background: #10b981; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.2rem;">
+                                    <svg width="28" height="28" fill="none" stroke="white" stroke-width="3" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>
                                 </div>
-                            `;
-                            parent.appendChild(successMsg);
-                        });
+                                <h3 style="font-size: 1.3rem; font-weight: 700; margin-bottom: 0.5rem; color: var(--grey-900);">${title}</h3>
+                                <p style="color: var(--grey-500); font-size: 0.92rem;">${msg}</p>
+                            </div>
+                        `;
+                        parent.appendChild(successMsg);
                     } else {
                         return response.text().then(text => {
                             console.error('FormSubmit error:', response.status, text);
